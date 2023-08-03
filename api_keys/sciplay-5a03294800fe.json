@@ -1,0 +1,14 @@
+{
+    "type": "service_account",
+    "project_id": "sciplay",
+    "private_key_id": "5a03294800fe9f9f0c0afaa4f3adc1a35c9b9344",
+    "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDO6wqD5VVbiRNc\nhMRvFkRYoOjSElgsUv8EWhaCrxiKoxC62OMJoWEtd/aK+PXzSEC8wPsLXLSkrjzw\n0ZWOHxPfmOBrJZ27xJDVkpPE+TkiC9pnDZSImkXU9E7I8wcL4YkB9sEhK9XCY6dm\n8U4lTLELr/ulOUQhE0id4+egNl1O7NitfK1470gYrfa+syP22u/ZjP84Nm5JW93m\n1AJc+tw5kvRi9xdbtiSqv+vCrOnWvi1r3sFi/60ZwIRvM62gJTUEKIiB3tMRVMgS\ngUFYBx/AfGo5t9swM0/xuLonz4ZabaVMjkWeJ8rw6QLeCu3ejZfY9kUhtmBodPm1\nALTMrMR7AgMBAAECggEAB6FMg/dC9zB40aKRCR+jFDmVcZmnkrWEyIj3PN5uuJNc\nHJJph4Nh7VFNJWwaIFx7tqTPHRN6vc/cWMJXEiSR5l7hd6dYHQJvQiY442c6n3Ic\ncvcMkR+kj5PAC/zvjOqbfhe2oMiDBhCyrZhxr0JtYjxHupyqpyWU5JhGLvbnk0TA\n7j3hS53tLYrORUxRyDg8NncynpR7dvfigcBejT2J8xll8GMeOmOXRQv6wU07DfQm\n+c+C2upnbTLOoEvHDyZE6Ep7Rq5fkg6ph2kkEJp6k2Fn6U8prhCVeuNEbX2HDhSY\nlx6hlNfThtMvcChG5RPUxaTXsvOdSduxptrlxYA+0QKBgQDv8Pqb6UONxqzYTlLD\nYq4MTTaECiD1P6Gslpx5djqbeLfLzAAC5KsShujBErM7xFog2scOmJ0cHeqPzb+o\nQzb1yoWf2SXWeotaR/61u381OEClXDxGLKD0seWOeOCeKyOjo26wVn876HY8e1F/\nDRUGKPaCPyYHEpG1BW1OFNASxQKBgQDcxELXbE05SDCYh/jNs4dzC7q33eIgd5yE\nVMj7NP02um2WJSdj0wK0AXUGZNYeukUEzWvy8IcupraMRxYp6rzOdIczZNKYZzwE\n+3MijhET7khF9GQsJ0cffVOzwn/5hz+yB9ZqnC77ObydxxtFtvtf4oifhp4qSZD5\n+0spGEHuPwKBgDG0MbXqdFwCM/v6/ZoL7xINTKW9k2Y6cDtYV8GxhCKAt1I4SChR\nRj7oQ377aLWQzzrPFz0m0CTq7ZQsgu9QPSpdcaDTUstDR2rETzdGR+u2Y23d1X6T\n8CPAVlVVJPKe7RsQ1/UfdevrE9MjmJZBF4HXKnmAq1f7uMNPBH2QQiohAoGAEiLt\netUi4vnTRDSnc/6zuffUtxY7ZX9uFFEC0eBgjQZzyknzGnhTWIZmHshZ7txOnz5h\nB+xKrsJzbMLKR1dJe4yHLumxg2O3wpEFvGj/biu9NEIHmLkBVszs+2+XI+DAkteh\n/dAm6+yqWivpSajmrdHmd3SPudmhV2gVnKKph/ECgYEA37/u5fbA9NkEFTA4oVvQ\nHlAeL/QQRowpTWPNDIzuZ6QQpHan+Uy13UDLUQ1iRUSRXPnGIe4ojtDru1yCY1N6\n5Yj9pnsEzyeCArzBd5MzwoZObCCqBrrJca30GJbvrhhJD841oJpxOp82piNTgy5q\n3OsGpFK4b3kiTzXFRLAWYis=\n-----END PRIVATE KEY-----\n",
+    "client_email": "fetchdata@sciplay.iam.gserviceaccount.com",
+    "client_id": "106550086768811073807",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://oauth2.googleapis.com/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/fetchdata%40sciplay.iam.gserviceaccount.com",
+    "universe_domain": "googleapis.com"
+  }
+  
