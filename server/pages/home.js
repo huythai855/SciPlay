@@ -42,22 +42,22 @@ async function getCourses() {
     });
     // console.log(rows);
 
-    const courses = [];
-    rows.map(async(obj) => {
-        let course = await getDataFromBigQuery(bigqueryClient, {
-        datasetId: 'sciplay_dataset',
-        tableId: 'courses',
-        column: ['name', 'description'],
-        conditions: [`course_id = ${obj.course_id}`],
-        limit: 1,
-        });
+    for (let i = 0; i < rows.length; i++)
+    {
+        const { course_id } = rows[i];
+        const course = await getDataFromBigQuery(bigqueryClient, {
+                    datasetId: 'sciplay_dataset',
+                    tableId: 'courses',
+                    column: ['name', 'description'],
+                    conditions: [`course_id = ${course_id}`],
+                    limit: 1,
+                });
+        rows[i] = course[0];
+        rows[i].course_id = `${course_id}`;
+    }
 
-        // console.log(course);
-        courses.push(course[0]);
-        // console.log(courses);
-    });
-
-    return courses;
+    // console.log(rows);
+    return rows;
 }
 // getCourses();
 
@@ -73,20 +73,22 @@ async function getLessons() {
     // console.log(rows);
 
     // rows = [{lesson_id : '1'}, {lesson_id : '2'}, {lesson_id : '3'}, {lesson_id : '4'}]
-    const lessons = [];
-    rows.map(async(obj) => {
-        let lesson = await getDataFromBigQuery(bigqueryClient, {
-        datasetId: 'sciplay_dataset',
-        tableId: 'lesson',
-        column: ['name', 'course_id', 'lesson_id'],
-        conditions: [`lesson_id = ${obj.lesson_id}`],
-        limit: 1,
+    for (let i = 0; i < rows.length; i++)
+    {
+        const { lesson_id } = rows[i];
+        const lesson = await getDataFromBigQuery(bigqueryClient, {
+            datasetId: 'sciplay_dataset',
+            tableId: 'lesson',
+            column: ['name', 'course_id', 'lesson_id'],
+            conditions: [`lesson_id = ${lesson_id}`],
+            limit: 1,
         });
 
         // console.log(lesson);
-        lessons.push(lesson[0]);
-    });
+        rows[i] = lesson[0];
+    }
 
-    return lessons;
+    // console.log(rows);
+    return rows;
 }
 // getLessons();
