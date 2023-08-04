@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const { BigQuery } = require('@google-cloud/bigquery');
 const { Storage } = require('@google-cloud/storage');
 const cors = require('cors');
-const { getStudent, getCourse, getLesson, getStudentCourses, getStudentLessons, getFinishedCourses, getRanking, getLatestThreads, getThread, getThreadComment, getInsideCourse } = require('./helper');
+const { getStudent, getCourse, getLesson, getStudentCourses, getStudentLessons, getFinishedCourses, getRanking, getLatestThreads, getThread, getThreadComment, getInsideCourse, getTopicLesson } = require('./helper');
 
 const app = express();
 const port = 3000;
@@ -40,7 +40,7 @@ app.get('/api/course', async (req, res) => {
     try {
         const user_id = req.query.user_id;
         const course_id = req.query.course_id;
-        // console.log(`LESSON_ID: ${lesson_id}`);
+        const course_path_id = req.query.course_path_id;
 
         if (course_id === undefined) {
             const student = await getStudent(user_id);
@@ -52,19 +52,48 @@ app.get('/api/course', async (req, res) => {
             // console.log(data);
             res.json(data);
         } else {
-            const student = await getStudent(user_id);
-            const topics = await getInsideCourse(course_id);
-            const data = {
-                student,
-                topics,
-            };
-            // console.log(data);
-            res.json(data);
+            if (course_path_id === undefined) {
+                const student = await getStudent(user_id);
+                const topics = await getInsideCourse(course_id);
+                const data = {
+                    student,
+                    topics,
+                };
+                // console.log(data);
+                res.json(data);
+            }
+            else {
+                const student = await getStudent(user_id);
+                const lessons = await getTopicLesson(course_path_id);
+                const data = {
+                    student,
+                    lessons,
+                }
+                res.json(data);
+            }
         }
     } catch (err) {
         res.status(500).json({ message: 'Cannot fetch data' });
     }
 });
+
+app.get('/api/lesson', async (req, res) => {
+    try {
+        const user_id = req.query.user_id;
+        const lesson_id = req.query.lesson_id;
+
+        const student = await getStudent(user_id);
+        const lesson = await getLesson(lesson_id);
+        const data = {
+            student,
+            lesson,
+        }
+        // console.log(data);
+        res.json(data);
+    } catch (err) {
+        res.status(500).json({ message: 'Cannot fetch data' });
+    }
+})
 
 app.get('/api/user', async (req, res) => {
     try {
@@ -92,7 +121,7 @@ app.get('/api/ranking', async (req, res) => {
         const student = await getStudent(user_id);
 
         const data = {
-            student, 
+            student,
             rank
         }
         res.json(data);
@@ -109,11 +138,17 @@ app.get('/api/thread', async (req, res) => {
         if (thread_id === undefined) {
             const student = await getStudent(user_id);
             const threads = await getLatestThreads();
+            const data = {
+                student,
+                threads,
+            }
             res.json(data);
         } else {
+            const student = await getStudent(user_id);
             const content = await getThread(thread_id);
             const comments = await getThreadComment(thread_id);
             const data = {
+                student,
                 content,
                 comments,
             }
@@ -126,7 +161,6 @@ app.get('/api/thread', async (req, res) => {
 
 
 
-app.listen(port, () => {
-    console.log(`Server is running on http://localhost:${port}`);
-  });
-  
+// app.listen(port, () => {
+//     console.log(`Server is running on http://localhost:${port}`);
+//   });

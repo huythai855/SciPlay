@@ -210,7 +210,7 @@ async function getThreadComment(thread_id){
 }
 
 // async function Test () {
-//     const stu = await getRanking('current_level', '10');
+//     const stu = await getTopicLesson('1');
 //     console.log(stu);
 // }
 // Test();
@@ -227,4 +227,5 @@ module.exports = {
     getLatestThreads,
     getThread,
     getThreadComment,
+    getTopicLesson
 }
