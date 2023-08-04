@@ -23,7 +23,7 @@ def euclid_distance(course1, course2, science_ness_weight, duration_weight):
     #print(math.sqrt((course1.difficulty - course2.difficulty) **2 + science_ness_weight * (course1.science_ness - course2.science_ness) **2 + duration_weight * (course1.duration - course2.duration) **2 + (course1.total_users - course2.total_users) ** 2))
     return math.sqrt((course1.difficulty - course2.difficulty) **2 + science_ness_weight * (course1.science_ness - course2.science_ness) **2 + duration_weight * (course1.duration - course2.duration) **2 + (course1.total_users - course2.total_users) ** 2)
 
-def cosine_similarity(course1, course2, science_ness_weight = 0.2, duration_weight = 0.4):
+def cosine_similarity(course1, course2, science_ness_weight = 0.2, duration_weight = 0.2):
     if course2.chosen == True:
         return -math.inf
     len1 = math.sqrt(course1.difficulty **2 + science_ness_weight * course1.science_ness **2 + duration_weight * course1.duration **2 + course1.total_users **2)
@@ -40,9 +40,9 @@ def recommend_courses(courseA, course_list, k, distance_func):
         return None
     sorted_courses = []
     if distance_func == euclid_distance:
-        sorted_courses = sorted(course_list, key=lambda x: euclid_distance(courseA, x, 0.2, 0.4))
+        sorted_courses = sorted(course_list, key=lambda x: euclid_distance(courseA, x, 0.2, 0.2))
     elif distance_func == cosine_similarity:
-        sorted_courses = sorted(course_list, key = lambda x: cosine_similarity(courseA, x, 0.2, 0.4))
+        sorted_courses = sorted(course_list, key = lambda x: cosine_similarity(courseA, x, 0.2, 0.2))
     return sorted_courses[:k]
 
 

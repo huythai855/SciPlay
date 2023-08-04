@@ -10,8 +10,8 @@ class Courses {
         this.course_name = course_name;
         this.difficulty = difficulty;
         this.science_ness = science_ness;
-        this.duration = duration;
-        this.total_users = total_users;
+        this.duration = duration / 100;
+        this.total_users = total_users / 100;
     }
 }
 
