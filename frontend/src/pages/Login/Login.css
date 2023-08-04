@@ -2,7 +2,7 @@
 .header {
     min-height: 100vh;
     width: 100%;
-    background-image:url(./assets/background1.png);
+    background-image:url(../../assets/background1.png);
     background-position: center;
     background-size: cover;
     position: relative;
