@@ -147,7 +147,7 @@ async function getTopicLesson(course_path_id){
 ///RANK
 // Rank in descending
 async function getRanking(order, limit) {
-    const query = 'SELECT name, total_stars, current_level FROM `sciplay_dataset.student_information` ORDER BY ' + order + ' DESC LIMIT ' + limit + ';';
+    const query = 'SELECT fullname, total_stars, current_level FROM `sciplay_dataset.student_information` ORDER BY ' + order + ' DESC LIMIT ' + limit + ';';
     const options = {
         query: query,
         location: 'US',
@@ -209,19 +209,20 @@ async function getThreadComment(thread_id){
     return rows;
 }
 
-async function Test () {
-    const stu = await getStudentLessons('3');
-    console.log(stu);
-}
-Test();
+// async function Test () {
+//     const stu = await getRanking('current_level', '10');
+//     console.log(stu);
+// }
+// Test();
 
 module.exports = {
     getStudent,
     getCourse, 
-    getLesson, 
     getStudentCourses,
-    getStudentLessons,
     getFinishedCourses,
+    getInsideCourse,
+    getLesson, 
+    getStudentLessons,
     getRanking, 
     getLatestThreads,
     getThread,

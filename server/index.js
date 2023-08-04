@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const { BigQuery } = require('@google-cloud/bigquery');
 const { Storage } = require('@google-cloud/storage');
 const cors = require('cors');
-const { getStudent, getCourse, getLesson, getStudentCourses, getStudentLessons, getFinishedCourses, getRanking, getLatestThreads, getThread, getThreadComment } = require('./helper');
+const { getStudent, getCourse, getLesson, getStudentCourses, getStudentLessons, getFinishedCourses, getRanking, getLatestThreads, getThread, getThreadComment, getInsideCourse } = require('./helper');
 
 const app = express();
 const port = 3000;
@@ -53,10 +53,10 @@ app.get('/api/course', async (req, res) => {
             res.json(data);
         } else {
             const student = await getStudent(user_id);
-            const lesson = await getLesson(lesson_id);
+            const topics = await getInsideCourse(course_id);
             const data = {
                 student,
-                lesson,
+                topics,
             };
             // console.log(data);
             res.json(data);
@@ -107,7 +107,8 @@ app.get('/api/thread', async (req, res) => {
         const thread_id = req.query.thread_id;
 
         if (thread_id === undefined) {
-            const data = await getLatestThreads();
+            const student = await getStudent(user_id);
+            const threads = await getLatestThreads();
             res.json(data);
         } else {
             const content = await getThread(thread_id);
@@ -123,3 +124,9 @@ app.get('/api/thread', async (req, res) => {
     }
 });
 
+
+
+app.listen(port, () => {
+    console.log(`Server is running on http://localhost:${port}`);
+  });
+  
