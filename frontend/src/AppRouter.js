@@ -13,11 +13,11 @@ function AppRouter() {
         <Routes>
           <Route path="/" exact element={<Home/>} />
           <Route path="/login" element={<Login/>} />
-          <Route path="/learn" element={<Learn/>} />
+          <Route path="/learning" element={<Learn/>} />
           {/* <Route path="/homepage" element={<HomePage />} /> */}
           <Route path="/lesson/:id" element={<Lesson />} />
 
-          <Route path="/coursepath" element={<Coursepath/>} />
+          <Route path="/physic-page" element={<Coursepath/>} />
 
 
           {/* 404 page if you guy wanna edit :> */}

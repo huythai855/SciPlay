@@ -1,5 +1,5 @@
 
-.header {
+.headera {
     min-height: 100vh;
     width: 100%;
     background-image:url(../../assets/background1.png);
@@ -8,13 +8,13 @@
     position: relative;
     background-color: #DBF1FF;
 }
-.header img{
+.headera img{
     width: 450px;
     padding-left: 60px;
     padding-top: 50px;
    
 }
-.header p {
+.headera p {
     font-family: Montserrat;
     color:  #4860D4;
     font-size: 24px;
@@ -22,7 +22,7 @@
     padding-top: 10px;
     padding-left: 60px;
 }
-.header button{
+.headera button{
     display: inline-flex;
     text-decoration: none;
     font-family: Montserrat;
@@ -41,7 +41,7 @@
     cursor: pointer;
     
 }
-.header button:hover{
+.headera button:hover{
     color: #DBF1FF;
 border: 2px solid #4860D4;
 background: #4860D4;

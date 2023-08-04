@@ -18,6 +18,7 @@ import Logo from "../../assets/logo.png"
 import Line1 from "../../assets/line-1.png"
 import Arrow from "../../assets/layer-1-2.png"
 import Rectangle from "../../assets/rectangle-6.png"
+import Rectangle23 from "../../assets/rectangle-23.png"
 import Lac1 from "../../assets/lac1.gif"
 import Lac2 from "../../assets/lac2.gif"
 import Lac3 from "../../assets/lac3.gif"
@@ -72,6 +73,7 @@ function Home() {
             <div className="text-wrapper-3">Diễn đàn</div>
           </div>
           <div className="rankings">
+          
             <div className="ranking">
               <div className="overlap-group-3">
                 <img className="icon-4" alt="Icon" src={Icon2} />
@@ -83,11 +85,14 @@ function Home() {
             <img className="icon-5" alt="Icon" src={Icon1} />
             <div className="text-wrapper-5">Thử thách</div>
           </div>
-          <div className="learn">
+          <div >
+            <Link className='learn' to ='/learning'>
             <img className="icon-6" alt="Icon" src={Icon} />
             <div className="text-wrapper-6">Học</div>
+            </Link>
           </div>
           <Link className="home" to="/homepage">
+         
             <img className="layer" alt="Layer" src={Icon0}/>
             <div className="text-wrapper-7">Trang chủ</div>
           </Link>

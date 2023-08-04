@@ -6,7 +6,7 @@ function Login({ history }) {
 
   return (
     <div>
-    <section class ="header">
+    <section class ="headera">
     <img src ={Logo}/>
         <p>NỀN TẢNG GIÁO DỤC KHOA HỌC TỰ NHIÊN</p>
         
