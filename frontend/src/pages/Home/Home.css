@@ -62,12 +62,18 @@
 .courseBox{
   list-style: none;
   font-family:Montserrat ;
+  flex-basis: 100%;
+    margin-bottom: 5%;
+    margin-left: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
   border: 5px solid #4860D4;
   border-collapse: separate;
-  border-spacing: 15px;
+
   background-color: #ffd092;
   float: left;
   width: 33%;
+  justify-items: center;
  border-radius: 10px;
 }
   

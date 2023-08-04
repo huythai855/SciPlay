@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import './Home.css'
+import './Learn.css'
 import Owl from '../../assets/logo1.png'
-function Home() {
-  const [data, setData] = useState([]);
+function Learn() {
+    const [data, setData] = useState([]);
   // const [gifUrl, setGifUrl] = useState([]);
 
   useEffect(() => {
@@ -22,11 +22,9 @@ function Home() {
   }, [data]); // Theo dõi sự thay đổi của biến data
 
 
-
   return (
-    
-    <div className='trang-chu'>
-      <h1>Chào mừng đến với SciPlay</h1>
+<div className='learn'>
+      <h1>Chào mừng đến với SciPlay12243</h1>
       <h2>Hôm nay bạn muốn học gì?</h2>
       <section className='nav'>
       <img src ={Owl}/>
@@ -57,7 +55,26 @@ function Home() {
       
       <ul>
         {data.map(item => (
-          <li className='courseBox' key={item.lesson_id}>
+          <li className='learnBox' key={item.lesson_id}>
+            <Link to={`/lesson/${item.lesson_id}`}>{item.name}</Link>
+            <br />
+            {item.url ? (
+              <img src={item.url} style={{ width: '100px'}} alt="GIF" />
+            ) : (
+              <p>Loading...</p>
+            )}
+
+          </li>
+        ))}
+      </ul>
+                
+
+      <br />
+      <h3>Lớp dành cho bạn</h3>
+      
+      <ul>
+        {data.map(item => (
+          <li className='learnBox' key={item.lesson_id}>
             <Link to={`/lesson/${item.lesson_id}`}>{item.name}</Link>
             <br />
             {item.url ? (
@@ -71,7 +88,8 @@ function Home() {
       </ul>
       
     </div>
-  );
+    
+  )
 }
 
-export default Home;
+export default Learn
