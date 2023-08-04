@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-
+import './Home.css'
+import Owl from '../../assets/logo1.png'
 function Home() {
   const [data, setData] = useState([]);
   // const [gifUrl, setGifUrl] = useState([]);
@@ -23,37 +24,40 @@ function Home() {
 
 
   return (
-    <div>
+    
+    <div className='trang-chu'>
       <h1>Chào mừng đến với SciPlay</h1>
       <h2>Hôm nay bạn muốn học gì?</h2>
+      <section className='nav'>
+      <img src ={Owl}/>
 
-      <ul>
-        <li>
-          <Link to="/homepage">Trang chủ</Link>
-        </li>
-        <li>
-          <Link to="/homepage">Học</Link>
-        </li>
-        <li>
-          <Link to="/homepage">Thử Thách</Link>
-        </li>
-        <li>
-          <Link to="/homepage">Xếp hạng</Link>
-        </li>
-        <li>
-          <Link to="/homepage">Diễn đàn</Link>
-        </li>
-        <li>
-          <Link to="/homepage">Cửa hàng</Link>
-        </li>
-      </ul>
+      <Link to ='/homepage'>
+        <button>Trang chủ</button>
+        </Link>
+        <Link to ='/homepage'>
+        <button>Học</button>
+        </Link>
+        <Link to ='/homepage'>
+        <button>Thử Thách</button>
+        </Link>
+        <Link to ='/homepage'>
+        <button>Xếp hạng</button>
+        </Link>
+        <Link to ='/homepage'>
+        <button>Diễn đàn</button>
+        </Link>
+        <Link to ='/homepage'>
+        <button>Cửa hàng</button>
+        </Link>
+      </section>
+      
 
       <br />
       <h3>Các khóa đang học</h3>
       
       <ul>
         {data.map(item => (
-          <li key={item.lesson_id}>
+          <li className='courseBox' key={item.lesson_id}>
             <Link to={`/lesson/${item.lesson_id}`}>{item.name}</Link>
             <br />
             {item.url ? (
