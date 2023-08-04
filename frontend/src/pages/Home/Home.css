@@ -9,9 +9,11 @@
 
 .homepage .overlap-wrapper {
   background-color: #ffffff;
-  border: 1px none;
+  border: none;
   height: 1081px;
   width: 1920px;
+  height: 100%;
+  width: 100%;
 }
 
 .homepage .overlap {
@@ -19,8 +21,10 @@
   background-position: 50% 50%;
   background-size: cover;
   height: 1080px;
-  position: relative;
-  top: 1px;
+  width: 1920px;
+  position: absolute;
+  top: -9px;
+  left: 0px;
 }
 
 .homepage .search-bar {
@@ -176,6 +180,9 @@
   height: 76px;
   position: relative;
   width: 73px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .homepage .vector {
@@ -210,6 +217,9 @@
   position: absolute;
   top: 49px;
   width: 27px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .homepage .level {
@@ -217,14 +227,9 @@
   font-family: "Montserrat", Helvetica;
   font-size: 14px;
   font-weight: 600;
-  height: 9px;
-  left: 50px;
-  letter-spacing: 0;
   line-height: normal;
-  position: absolute;
+  position: relative;
   text-align: center;
-  top: 61px;
-  white-space: nowrap;
   width: 20px;
 }
 
@@ -472,11 +477,11 @@
   font-size: 54px;
   font-weight: 900;
   height: 66px;
-  left: 13px;
+  left: 24px;
   letter-spacing: 2.7px;
   line-height: normal;
   position: absolute;
-  top: 0;
+  top: -17px;
   width: 272px;
 }
 
@@ -620,7 +625,7 @@
 .homepage .text-wrapper-9 {
   color: #465fd2;
   font-family: "Montserrat", Helvetica;
-  font-size: 32px;
+  font-size: 28px;
   font-weight: 600;
   height: 37px;
   left: 34px;
@@ -629,7 +634,7 @@
   position: absolute;
   top: 14px;
   white-space: nowrap;
-  width: 270px;
+  width: match-parent;
 }
 
 .homepage .rectangle-4 {
@@ -676,7 +681,7 @@
 .homepage .text-wrapper-10 {
   color: #465fd2;
   font-family: "Montserrat", Helvetica;
-  font-size: 32px;
+  font-size: 28px;
   font-weight: 600;
   height: 39px;
   left: 34px;
@@ -684,7 +689,7 @@
   line-height: normal;
   position: absolute;
   top: 12px;
-  width: 124px;
+  width: match-parent;
 }
 
 .homepage .rectangle-6 {
@@ -731,7 +736,7 @@
 .homepage .text-wrapper-11 {
   color: #465fd2;
   font-family: "Montserrat", Helvetica;
-  font-size: 32px;
+  font-size: 28px;
   font-weight: 600;
   height: 39px;
   left: 33px;
@@ -739,7 +744,7 @@
   line-height: normal;
   position: absolute;
   top: 12px;
-  width: 124px;
+  width: match-parent;
 }
 
 .homepage .rectangle-8 {
@@ -803,11 +808,11 @@
   font-size: 28px;
   font-weight: 600;
   height: 39px;
-  left: 14px;
+  left: 16px;
   letter-spacing: 0;
   line-height: normal;
   position: absolute;
-  top: 6px;
+  top: 10px;
   width: 275px;
 }
 
@@ -829,7 +834,7 @@
 
 .homepage .text-wrapper-13 {
   color: #465fd2;
-  font-family: "Montserrat", Helvetica;
+  font-family: "Montserrat", Helvetih-1ca;
   font-size: 20px;
   font-weight: 400;
   height: 28px;
@@ -874,7 +879,7 @@
   left: 189px;
   position: absolute;
   top: 172px;
-  width: 123px;
+  width: 130px;
 }
 
 .homepage .text-wrapper-16 {
@@ -888,7 +893,7 @@
   line-height: normal;
   position: absolute;
   top: 0;
-  width: 100px;
+  width: 130px;
 }
 
 .homepage .vector-3 {
@@ -994,6 +999,5 @@
   letter-spacing: 0;
   line-height: normal;
   position: absolute;
-  top: 46px;
-  width: 1094px;
+  top: 20px;
 }

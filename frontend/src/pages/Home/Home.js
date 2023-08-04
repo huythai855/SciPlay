@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+// import Calendar from 'react-calendar';
+// import 'react-calendar/dist/Calendar.css';
 import './Home.css'
+
 import Line2 from "../../assets/line-2.png"
 import Icon5 from "../../assets/icon-5.png"
 import Bell from "../../assets/bell-1.png"
@@ -18,12 +21,18 @@ import Logo from "../../assets/logo.png"
 import Line1 from "../../assets/line-1.png"
 import Arrow from "../../assets/layer-1-2.png"
 import Rectangle from "../../assets/rectangle-6.png"
-import Rectangle23 from "../../assets/rectangle-23.png"
 import Lac1 from "../../assets/lac1.gif"
 import Lac2 from "../../assets/lac2.gif"
 import Lac3 from "../../assets/lac3.gif"
-function Home() {
-  
+
+
+function Home() {  
+  const [date, setDate] = useState(new Date());
+
+  const onChange = date => {
+    setDate(date);
+  };
+
   return (
     <div className="homepage">
     <div className="overlap-wrapper">
@@ -57,8 +66,9 @@ function Home() {
                 <img className="vector" alt="Vector" src={VectorR} />
                 <img className="img" alt="Vector" src={VectorA} />
                 <img className="vector-2" alt="Vector" src={VectorB} />
-                <div className="fill" />
-                <div className="level">15</div>
+                <div className="fill">
+                  <div className="level">15</div>
+                </div>
               </div>
             </div>
           </div>
@@ -73,7 +83,6 @@ function Home() {
             <div className="text-wrapper-3">Diễn đàn</div>
           </div>
           <div className="rankings">
-          
             <div className="ranking">
               <div className="overlap-group-3">
                 <img className="icon-4" alt="Icon" src={Icon2} />
@@ -85,14 +94,11 @@ function Home() {
             <img className="icon-5" alt="Icon" src={Icon1} />
             <div className="text-wrapper-5">Thử thách</div>
           </div>
-          <div >
-            <Link className='learn' to ='/learning'>
+          <div className="learn">
             <img className="icon-6" alt="Icon" src={Icon} />
             <div className="text-wrapper-6">Học</div>
-            </Link>
           </div>
           <Link className="home" to="/homepage">
-         
             <img className="layer" alt="Layer" src={Icon0}/>
             <div className="text-wrapper-7">Trang chủ</div>
           </Link>
@@ -151,7 +157,7 @@ function Home() {
           <div className="div-wrapper">
             <div className="overlap-3">
               <div className="rectangle-5" />
-              <div className="text-wrapper-10">Quiz 2</div>
+              <div className="text-wrapper-10">Luyện tập hóa học</div>
               <div className="rectangle-6" />
               <img className="layer-3" alt="Layer" src={Arrow} />
             </div>
@@ -159,7 +165,7 @@ function Home() {
           <div className="quiz-2">
             <div className="overlap-4">
               <div className="rectangle-7" />
-              <div className="text-wrapper-11">Quiz 3</div>
+              <div className="text-wrapper-11">Luyện tập sinh học</div>
               <div className="rectangle-8" />
               <img className="layer-4" alt="Layer" src={Arrow} />
             </div>
@@ -179,8 +185,7 @@ function Home() {
                     <div className="text-wrapper-15">3 bài học</div>
                   </div>
                   <div className="group-4">
-                    <div className="text-wrapper-16">Tham gia</div>
-                    <img className="vector-3" alt="Vector" src={Arrow} />
+                    <div className="text-wrapper-16">&nbsp;Tham gia &nbsp;&nbsp;▶</div>
                   </div>
                 </div>
               </div>
@@ -201,8 +206,7 @@ function Home() {
                 </div>
               </div>
               <div className="group-5">
-                <div className="text-wrapper-16">Tham gia</div>
-                <img className="vector-3" alt="Vector" src={Arrow} />
+                <div className="text-wrapper-16">&nbsp;Tham gia &nbsp;&nbsp;▶</div>
               </div>
               <img className="dcim-afcc" alt="Dcim afcc" src={Lac2} />
             </div>
@@ -221,8 +225,7 @@ function Home() {
                 </div>
               </div>
               <div className="group-5">
-                <div className="text-wrapper-16">Tham gia</div>
-                <img className="vector-3" alt="Vector" src={Arrow} />
+                <div className="text-wrapper-16">&nbsp;Tham gia &nbsp;&nbsp;▶</div>
               </div>
               <img className="img-2" alt="Img" src={Lac3} />
             </div>
