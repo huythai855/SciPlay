@@ -1,0 +1,20 @@
+.navSec_noBullets{
+    list-style-type: none;
+    width: fit-content;
+    padding: 0;
+    position: sticky;
+    top: 200px;
+    left:0;
+}
+.NavButton{
+    background-color: transparent;
+    text-decoration: none;
+    text-align-all: center;
+    width: 70px;
+    height: 70px;
+    border: 0;
+
+}
+.NavButton:hover{
+    background-color: #CAE8FB;
+}
