@@ -38,7 +38,7 @@ function Home() {
           <Link to="/homepage">Thử Thách</Link>
         </li>
         <li>
-          <Link to="/homepage">Xếp hạng</Link>
+          <Link to="/rankings?user_id=1&ord=current_level">Xếp hạng</Link>
         </li>
         <li>
           <Link to="/homepage">Diễn đàn</Link>
