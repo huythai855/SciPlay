@@ -10,8 +10,8 @@ class Courses {
         this.course_name = course_name;
         this.difficulty = difficulty;
         this.science_ness = science_ness;
-        this.duration = duration / 100;
-        this.total_users = total_users / 100;
+        this.duration = duration / 1000;
+        this.total_users = total_users / 1000;
     }
 }
 
@@ -74,12 +74,12 @@ function recommend_courses(course, k, distance_func) {
 
 // test
 const courses = [
-    new Courses(1, "Ly 2", 2, -1, 300, 600),
-    new Courses(2, "Ly 3", 3, -1, 300, 200),
-    new Courses(3, "Hoa 1", 1, 0, 280, 402),
-    new Courses(4, "Hoa 3", 3, 0, 500, 120),
-    new Courses(5, "Toan 3", 3, 1, 1000, 500),
-    new Courses(6, "Sinh 2", 2, -2, 300, 600),
+    new Courses(1, "Ly 2", 2, -1, 30000, 600),
+    new Courses(2, "Ly 3", 3, -1, 30000, 200),
+    new Courses(3, "Hoa 1", 1, 0, 28000, 402),
+    new Courses(4, "Hoa 3", 3, 0, 50000, 120),
+    new Courses(5, "Toan 3", 3, 1, 10000, 500),
+    new Courses(6, "Sinh 2", 2, -2, 30000, 600),
 ];
 
 if (typeof module !== 'undefined' && module.exports) {
@@ -96,7 +96,7 @@ if (typeof module !== 'undefined' && module.exports) {
 // If using Node.js in another file, import the necessary functions and classes:
 //   const { Courses, euclid_distance, recommend_courses, courses } = require('./filename.js');
 
-const courseA = new Courses(0, "Ly 1", 1, -1, 350, 800);
+const courseA = new Courses(0, "Ly 1", 1, -1, 35000, 800);
 const recommended = recommend_courses(courseA, 3, euclid_distance);
 for (const course of recommended) {
     console.log(course.course_name);

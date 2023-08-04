@@ -40,7 +40,7 @@ function recommendSimilarCourses(currentCourses, allCourses, k) {
         if (!currentCourses.includes(course)) {
             for (let j = 0; j < currentCourses.length; j++) {
                 const currentCourse = currentCourses[j];
-                recommendations.push([euclid_distance(currentCourse, course, 0.2, 0.2), course]);
+                recommendations.push([euclid_distance(currentCourse, course, 0.2, 0.4), course]);
             }
         }
     }
