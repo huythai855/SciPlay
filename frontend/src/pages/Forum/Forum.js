@@ -78,14 +78,17 @@ function Forum() {
               <img className="layer-3" alt="Layer" src={Icon1} />
               <div className="text-wrapper-5">Thử thách</div>
             </div>
-            <div className='learn'>
-          
+            <div>
+            <Link className="learn" to="/learning">
               <img className="layer-4" alt="Layer" src={Icon} />
               <div className="text-wrapper-6">Học</div>
+              </Link>
             </div>
-            <div className="home">
+            <div>
+            <Link className="home" to="/homepage">
               <img className="layer-5" alt="Layer" src={Icon0}/>
               <div className="text-wrapper-7">Trang chủ</div>
+              </Link>
             </div>
           </div>
           <img className="logo" alt="Logo" src={Logo}/>

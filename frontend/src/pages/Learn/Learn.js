@@ -70,9 +70,11 @@ function Learn() {
               <div className="text-wrapper-2">Cửa hàng</div>
               <img className="vector-3" alt="Vector" src={Icon4} />
             </div>
-            <div className="overlap-group-3">
+            <div>
+            <Link className="overlap-group-3" to="/forum">
               <img className="layer" alt="Layer" src={Icon3} />
               <div className="text-wrapper-3">Diễn đàn</div>
+              </Link>
             </div>
             <div className="overlap-2">
               <div className="rankings">
