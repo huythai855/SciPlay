@@ -5,6 +5,7 @@ import Lesson from './pages/Lesson/Lesson';
 import Login from './pages/Login/Login';
 import Learn from './pages/Learn/Learn';
 import Coursepath from './pages/Course/Coursepath';
+import Quiz from "./pages/Lesson/Quiz/Quiz";
 
 function AppRouter() {
   return (
@@ -16,7 +17,7 @@ function AppRouter() {
           <Route path="/learning" element={<Learn/>} />
           {/* <Route path="/homepage" element={<HomePage />} /> */}
           <Route path="/lesson/:id" element={<Lesson />} />
-
+          <Route path="/quiz" element={<Quiz/>} />
           <Route path="/physic-page" element={<Coursepath/>} />
 
 
