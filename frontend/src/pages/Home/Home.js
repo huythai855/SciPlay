@@ -177,7 +177,8 @@ function Home() {
         </div>
         <div className="learning-class">
           <div className="text-wrapper-8">Các lớp đang học</div>
-          <div className="basic-phy">
+          <div>
+            <Link className='basic-phy' to="/coursepath">
             <div className="overlap-5">
               <div className="group-3">
                 <div className="overlap-group-5">
@@ -195,6 +196,7 @@ function Home() {
               </div>
               <img className="falling-apple" alt="Falling apple" src={Lac1} />
             </div>
+            </Link>
           </div>
           <div className="adv-phy">
             <div className="overlap-5">

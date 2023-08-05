@@ -37,9 +37,11 @@ function Coursepath() {
               <div className="text-wrapper-3">Xếp hạng</div>
             </div>
           </div>
-          <div className="forum">
+          <div>
+          <Link className="overlap-group-4" to="/forum">
             <img className="icon-3" alt="Icon" src={Icon5} />
             <div className="text-wrapper-4">Diễn đàn</div>
+            </Link>
           </div>
           <div className="shop">
             <div className="text-wrapper-5">Cửa hàng</div>
@@ -52,10 +54,12 @@ function Coursepath() {
             </Link>
           </div>
         </div>
-        <div className="gravity">
+        <div >
+        <Link className="gravity" to="/coursedetail">
           <div className="h-1-wrapper">
             <h1 className="h-1">TRỌNG LỰC</h1>
           </div>
+          </Link>
         </div>
         <div className="spped">
           <div className="div-wrapper">
