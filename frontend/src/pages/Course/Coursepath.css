@@ -1,0 +1,341 @@
+.physic-page {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    zoom:80%;
+  }
+  
+  .physic-page .overlap-wrapper {
+    background-color: #ffffff;
+    border: 1px none;
+    height: 1081px;
+    overflow: hidden;
+    width: 1920px;
+  }
+  
+  .physic-page .overlap {
+    height: 1081px;
+    position: relative;
+    width: 2091px;
+  }
+  
+  .physic-page .background {
+    height: 1080px;
+    left: 0;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    width: 1920px;
+  }
+  
+  .physic-page .back-universe {
+    height: 1081px;
+    left: 0;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    width: 1920px;
+  }
+  
+  .physic-page .group {
+    height: 60px;
+    left: 24px;
+    position: absolute;
+    top: 46px;
+    width: 84px;
+  }
+  
+  .physic-page .navbar {
+    height: 735px;
+    left: 15px;
+    position: absolute;
+    top: 166px;
+    width: 112px;
+  }
+  
+  .physic-page .learn {
+    background-color: #966bd463;
+    border-radius: 26px;
+    height: 97px;
+    left: 0;
+    position: absolute;
+    top: 118px;
+    width: 112px;
+  }
+  
+  .physic-page .div {
+    height: 71px;
+    left: 24px;
+    position: absolute;
+    top: 24px;
+    width: 65px;
+  }
+  
+  .physic-page .icon {
+    height: 49px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 63px;
+  }
+  
+  .physic-page .text-wrapper {
+    color: #0fc0f0;
+    font-family: "Montserrat", Helvetica;
+    font-size: 16px;
+    font-weight: 600;
+    height: 20px;
+    left: 15px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 51px;
+  }
+  
+  .physic-page .challenge {
+    height: 68px;
+    left: 14px;
+    position: absolute;
+    top: 265px;
+    width: 86px;
+  }
+  
+  .physic-page .img {
+    height: 46px;
+    left: 10px;
+    position: absolute;
+    top: 0;
+    width: 57px;
+  }
+  
+  .physic-page .text-wrapper-2 {
+    color: #0fc0f0;
+    font-family: "Montserrat", Helvetica;
+    font-size: 16px;
+    font-weight: 600;
+    height: 20px;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 48px;
+  }
+  
+  .physic-page .ranking {
+    height: 75px;
+    left: 12px;
+    position: absolute;
+    top: 383px;
+    width: 81px;
+  }
+  
+  .physic-page .overlap-group {
+    height: 75px;
+    position: relative;
+    width: 79px;
+  }
+  
+  .physic-page .icon-2 {
+    height: 55px;
+    left: 11px;
+    position: absolute;
+    top: 0;
+    width: 53px;
+  }
+  
+  .physic-page .text-wrapper-3 {
+    color: #0fc0f0;
+    font-family: "Montserrat", Helvetica;
+    font-size: 16px;
+    font-weight: 600;
+    height: 20px;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 55px;
+  }
+  
+  .physic-page .overlap-group-4 {
+    height: 70px;
+    left: 11px;
+    position: absolute;
+    top: 520px;
+    width: 77px;
+  }
+  
+  .physic-page .icon-3 {
+    height: 50px;
+    left: 6px;
+    position: absolute;
+    top: 0;
+    width: 63px;
+  }
+  
+  .physic-page .text-wrapper-4 {
+    color: #0fc0f0;
+    font-family: "Montserrat", Helvetica;
+    font-size: 16px;
+    font-weight: 600;
+    height: 20px;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 50px;
+  }
+  
+  .physic-page .shop {
+    height: 76px;
+    left: 0;
+    position: absolute;
+    top: 659px;
+    width: 82px;
+  }
+  
+  .physic-page .text-wrapper-5 {
+    color: #0fc0f0;
+    font-family: "Montserrat", Helvetica;
+    font-size: 16px;
+    font-weight: 600;
+    height: 20px;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 56px;
+  }
+  
+  .physic-page .icon-4 {
+    height: 53px;
+    left: 12px;
+    position: absolute;
+    top: 0;
+    width: 56px;
+  }
+  
+  .physic-page .home {
+    height: 74px;
+    left: 7px;
+    position: absolute;
+    top: 0;
+    width: 85px;
+  }
+  
+  .physic-page .text-wrapper-6 {
+    color: #0fc0f0;
+    font-family: "Montserrat", Helvetica;
+    font-size: 16px;
+    font-weight: 600;
+    height: 20px;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 54px;
+  }
+  
+  .physic-page .icon-5 {
+    height: 50px;
+    left: 18px;
+    position: absolute;
+    top: 0;
+    width: 50px;
+  }
+  
+  .physic-page .gravity {
+    height: 328px;
+    left: 213px;
+    position: absolute;
+    top: 585px;
+    width: 696px;
+  }
+  
+  .physic-page .h-1-wrapper {
+    background-image: url(../../assets/island-03-1.png);
+    background-position: 50% 50%;
+    background-size: cover;
+    height: 328px;
+    position: relative;
+    width: 694px;
+  }
+  
+  .physic-page .h-1 {
+    color: #ffffff;
+    font-family: "Potta One", Helvetica;
+    font-size: 64px;
+    font-weight: 400;
+    height: 87px;
+    left: 52px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 70px;
+    width: 438px;
+  }
+  
+  .physic-page .spped {
+    height: 318px;
+    left: 1425px;
+    position: absolute;
+    top: 454px;
+    width: 666px;
+  }
+  
+  .physic-page .div-wrapper {
+    background-image: url(../../assets/group.png);
+    background-size: 100% 100%;
+    height: 318px;
+    position: relative;
+    width: 495px;
+  }
+  
+  .physic-page .text-wrapper-7 {
+    color: #ffffff;
+    font-family: "Potta One", Helvetica;
+    font-size: 64px;
+    font-weight: 400;
+    height: 87px;
+    left: 57px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 72px;
+    width: 438px;
+  }
+  
+  .physic-page .light {
+    height: 357px;
+    left: 835px;
+    position: absolute;
+    top: 681px;
+    width: 794px;
+  }
+  
+  .physic-page .overlap-2 {
+    background-image: url(../../assets/island-07-1.png);
+    background-position: 50% 50%;
+    background-size: cover;
+    height: 357px;
+    position: relative;
+    width: 792px;
+  }
+  
+  .physic-page .text-wrapper-8 {
+    color: #ffffff;
+    font-family: "Potta One", Helvetica;
+    font-size: 64px;
+    font-weight: 400;
+    height: 87px;
+    left: 65px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 60px;
+    width: 438px;
+  }
+  
