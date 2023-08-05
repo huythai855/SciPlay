@@ -3,7 +3,11 @@ const bodyParser = require('body-parser');
 const { BigQuery } = require('@google-cloud/bigquery');
 const { Storage } = require('@google-cloud/storage');
 const cors = require('cors');
-const { getStudent, getCourse, getLesson, getStudentCourses, getStudentLessons, getFinishedCourses, getRanking, getLatestThreads, getThread, getThreadComment, getInsideCourse, getTopicLesson } = require('./helper');
+const { 
+    getStudent, getCourse, getLesson, getStudentCourses, getStudentLessons, 
+    getFinishedCourses, getRanking, getLatestThreads, getThread, getThreadComment, 
+    getInsideCourse, getTopicLesson } = require('./helper');
+const { getRecommendation } = require('./rec_from_some')
 
 const app = express();
 const port = 3000;
@@ -45,11 +49,13 @@ app.get('/api/course', async (req, res) => {
         if (course_id === undefined) {
             const student = await getStudent(user_id);
             const courses = await getStudentCourses(user_id);
+            const recommend = await getRecommendation(user_id, 3);
             const data = {
                 student,
                 courses,
+                recommend
             }
-            // console.log(data);
+            // console.log(data)
             res.json(data);
         } else {
             if (course_path_id === undefined) {
