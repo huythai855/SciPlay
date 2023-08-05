@@ -12,7 +12,7 @@ function AppRouter() {
     <Router>
       <div>
         <Routes>
-          <Route path="/" exact element={<Home/>} />
+          <Route path="/homepage" exact element={<Home/>} />
           <Route path="/login" element={<Login/>} />
           <Route path="/rankings" element={<Rankings/>} />
           <Route path="/learning" element={<Learn/>} />

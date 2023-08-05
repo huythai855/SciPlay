@@ -17,19 +17,13 @@ import  layer1_3 from '../../assets/Rankings/layer-1-3.png';
 import logo from '../../assets/Rankings/logo.png';
 import axios from 'axios';
 import { Link, useParams } from 'react-router-dom';
+
 function Rankings() {
     const [data, setData] = useState({});
     const [ranking, setRanking] = useState([]);
     const {id} = useParams();
     let {uid} = useParams();
-
-
-
-
-
-    //.log("Params:");
-    //console.log("UID:",uid);
-    //console.log("ORD:",ord);
+    let rankingNumber = ["1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th"];
 
 
     useEffect(() =>  {
@@ -39,23 +33,13 @@ function Rankings() {
         if (ord === null){
             ord = "current_level";
         }
-        console.log(userId);
-        console.log(ord);
 
-
-
-
-         axios.get(`http://192.168.1.23:3000/api/ranking?user_id=${userId}&ord=${ord}`)
+         axios.get(`http://localhost:3000/api/ranking?user_id=${userId}&ord=${ord}`)
             .then(response => {
-
                 const { student, rank } = response.data;
                 setData(response.data);
-                // console.log(data);
-
-                // console.log("Type: ", typeof data)
-
                 setRanking(rank);
-                // console.log("Rank: ", rank);
+
                 console.log("Ranking: ", ranking);
             })
             .catch(error => {
@@ -105,19 +89,24 @@ function Rankings() {
                     <div className="board">
                         <div className="overlap-2">
                             <img className="div-line" alt="Div line" src={divline} />
+
+                            <div className="board-rank-header">
+                                <div className="name-header">Họ và tên</div>
+                                <div className="level-header">Cấp độ</div>
+                                <div className="star-header">Số sao</div>
+                            </div>
+
+
                             <div className="board-rank" />
-
                             {
-                                // console.log("Ranking: ", typeof ranking)
-
-                                ranking.map((item, index) => (
+                                ranking.slice(0,8).map((item, index) => (
                                 <div key={index}>
                                     <div className="rank-info">
                                         <div className="name">{item.fullname}</div>
-                                        <div className="level-2">{item.total_stars}</div>
-                                        <div className="stars-2">100</div>
+                                        <div className="level-2">{item.current_level}</div>
+                                        <div className="stars-2">{item.total_stars}</div>
                                         <img className="line-2" alt="Line" src={line}/>
-                                        <div className="rank">1st</div>
+                                        <div className="rank">{rankingNumber[index]}</div>
                                     </div>
                                 </div>))
                             }
