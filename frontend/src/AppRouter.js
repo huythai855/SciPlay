@@ -4,6 +4,8 @@ import Home from './pages/Home/Home';
 import Lesson from './pages/Lesson/Lesson';
 import Login from './pages/Login/Login';
 import Rankings from "./pages/Rankings/Rankings";
+import Learn from './pages/Learn/Learn';
+import Coursepath from './pages/Course/Coursepath';
 
 function AppRouter() {
   return (
@@ -13,8 +15,11 @@ function AppRouter() {
           <Route path="/" exact element={<Home/>} />
           <Route path="/login" element={<Login/>} />
           <Route path="/rankings" element={<Rankings/>} />
-          {/* <Route path="/homepage" element={<HomePage />} /> */}
+          <Route path="/learning" element={<Learn/>} />
           <Route path="/lesson/:id" element={<Lesson />} />
+
+          <Route path="/physic-page" element={<Coursepath/>} />
+
 
           {/* 404 page if you guy wanna edit :> */}
           {/*<Route path='*' element={<Home/>} />   */}

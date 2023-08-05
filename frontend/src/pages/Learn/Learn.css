@@ -1,0 +1,802 @@
+.learning {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  zoom:80%;
+}
+
+.learning .overlap-wrapper {
+  background-color: #ffffff;
+  border: 1px none;
+  height: 1081px;
+  overflow: hidden;
+  width: 1920px;
+}
+
+.learning .overlap {
+  height: 1121px;
+  position: relative;
+}
+
+.learning .background {
+  height: 1080px;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 1920px;
+}
+
+.learning .search-bar {
+  height: 79px;
+  left: 311px;
+  position: absolute;
+  top: 37px;
+  width: 768px;
+}
+
+.learning .overlap-group {
+  border-radius: 46.5px;
+  height: 79px;
+  position: relative;
+  width: 766px;
+}
+
+.learning .text {
+  color: #465fd2;
+  font-family: "Balsamiq Sans", Helvetica;
+  font-size: 36px;
+  font-weight: 400;
+  height: 43px;
+  left: 37px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 18px;
+  white-space: nowrap;
+}
+
+.learning .rectangle {
+  border: 5px solid;
+  border-color: #465fd2;
+  border-radius: 46.5px;
+  height: 79px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 766px;
+}
+
+.learning .group {
+  height: 43px;
+  left: 682px;
+  position: absolute;
+  top: 18px;
+  width: 43px;
+}
+
+.learning .div {
+  height: 43px;
+  position: relative;
+  width: 45px;
+}
+
+.learning .ellipse {
+  border: 3px solid;
+  border-color: #465fd2;
+  border-radius: 17px/16.5px;
+  height: 33px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 34px;
+}
+
+.learning .line {
+  height: 16px;
+  left: 26px;
+  position: absolute;
+  top: 27px;
+  width: 19px;
+}
+
+.learning .info {
+  height: 78px;
+  left: 1406px;
+  position: absolute;
+  top: 37px;
+  width: 481px;
+}
+
+.learning .stars {
+  height: 62px;
+  left: 0;
+  position: absolute;
+  top: 11px;
+  width: 189px;
+}
+
+.learning .text-wrapper {
+  color: #465fd2;
+  font-family: "Montserrat", Helvetica;
+  font-size: 32px;
+  font-weight: 600;
+  height: 39px;
+  left: 60px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 14px;
+}
+
+.learning .icon {
+  height: 45px;
+  left: 8px;
+  position: absolute;
+  top: 7px;
+  width: 47px;
+}
+
+.learning .bell {
+  height: 49px;
+  left: 145px;
+  object-fit: cover;
+  position: absolute;
+  top: 7px;
+  width: 42px;
+}
+
+.learning .user {
+  height: 78px;
+  left: 231px;
+  position: absolute;
+  top: 0;
+  width: 252px;
+}
+
+.learning .user-text {
+  color: #465fd2;
+  font-family: "Montserrat", Helvetica;
+  font-size: 32px;
+  font-weight: 600;
+  height: 78px;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 0;
+}
+
+.learning .overlap-group-wrapper {
+  height: 74px;
+  left: 176px;
+  overflow: hidden;
+  position: absolute;
+  top: 3px;
+  width: 74px;
+}
+
+.learning .overlap-group-2 {
+  height: 76px;
+  position: relative;
+  width: 73px;
+}
+
+.learning .vector {
+  height: 73px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 73px;
+}
+
+.learning .img {
+  height: 27px;
+  left: 9px;
+  position: absolute;
+  top: 39px;
+  width: 55px;
+}
+
+.learning .vector-2 {
+  height: 21px;
+  left: 26px;
+  position: absolute;
+  top: 14px;
+  width: 21px;
+}
+
+.learning .fill {
+  background-color: #465fd2;
+  border-radius: 13.5px;
+  height: 27px;
+  left: 46px;
+  position: absolute;
+  top: 49px;
+  width: 27px;
+}
+
+.learning .level {
+  color: #ffffff;
+  font-family: "Montserrat", Helvetica;
+  font-size: 14px;
+  font-weight: 600;
+  height: 9px;
+  left: 50px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 61px;
+  white-space: nowrap;
+  width: 20px;
+}
+
+.learning .nav-bar {
+  height: 737px;
+  left: 4px;
+  position: absolute;
+  top: 187px;
+  width: 112px;
+}
+
+.learning .shop {
+  height: 76px;
+  left: 18px;
+  position: absolute;
+  top: 661px;
+  width: 82px;
+}
+
+.learning .text-wrapper-2 {
+  color: #465fd2;
+  font-family: "Montserrat", Helvetica;
+  font-size: 16px;
+  font-weight: 600;
+  height: 20px;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 56px;
+}
+
+.learning .vector-3 {
+  height: 53px;
+  left: 12px;
+  position: absolute;
+  top: 0;
+  width: 56px;
+}
+
+.learning .forum {
+  height: 70px;
+  left: 20px;
+  position: absolute;
+  top: 530px;
+  width: 77px;
+}
+
+.learning .layer {
+  height: 50px;
+  left: 6px;
+  position: absolute;
+  top: 0;
+  width: 63px;
+}
+
+.learning .text-wrapper-3 {
+  color: #465fd2;
+  font-family: "Montserrat", Helvetica;
+  font-size: 16px;
+  font-weight: 600;
+  height: 20px;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 50px;
+}
+
+.learning .overlap-2 {
+  height: 356px;
+  left: 0;
+  position: absolute;
+  top: 116px;
+  width: 112px;
+}
+
+.learning .rankings {
+  height: 356px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 112px;
+}
+
+.learning .rectangle-2 {
+  height: 97px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 112px;
+}
+
+.learning .xep-hang {
+  height: 75px;
+  left: 18px;
+  position: absolute;
+  top: 280px;
+  width: 81px;
+}
+
+.learning .overlap-group-3 {
+  height: 75px;
+  position: relative;
+  width: 79px;
+}
+
+.learning .layer-2 {
+  height: 55px;
+  left: 11px;
+  position: absolute;
+  top: 0;
+  width: 53px;
+}
+
+.learning .text-wrapper-4 {
+  color: #465fd2;
+  font-family: "Montserrat", Helvetica;
+  font-size: 16px;
+  font-weight: 600;
+  height: 20px;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 55px;
+}
+
+.learning .challenge {
+  height: 68px;
+  left: 16px;
+  position: absolute;
+  top: 150px;
+  width: 86px;
+}
+
+.learning .layer-3 {
+  height: 46px;
+  left: 10px;
+  position: absolute;
+  top: 0;
+  width: 57px;
+}
+
+.learning .text-wrapper-5 {
+  color: #465fd2;
+  font-family: "Montserrat", Helvetica;
+  font-size: 16px;
+  font-weight: 600;
+  height: 20px;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 48px;
+}
+
+.learning .learn {
+  height: 71px;
+  left: 24px;
+  position: absolute;
+  top: 18px;
+  width: 65px;
+}
+
+.learning .layer-4 {
+  height: 49px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 63px;
+}
+
+.learning .text-wrapper-6 {
+  color: #465fd2;
+  font-family: "Montserrat", Helvetica;
+  font-size: 16px;
+  font-weight: 600;
+  height: 20px;
+  left: 15px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 51px;
+}
+
+.learning .home {
+  height: 71px;
+  left: 14px;
+  position: absolute;
+  top: 0;
+  width: 85px;
+}
+
+.learning .layer-5 {
+  height: 50px;
+  left: 16px;
+  position: absolute;
+  top: 0;
+  width: 50px;
+}
+
+.learning .text-wrapper-7 {
+  color: #465fd2;
+  font-family: "Montserrat", Helvetica;
+  font-size: 16px;
+  font-weight: 600;
+  height: 20px;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 51px;
+}
+
+.learning .logo {
+  height: 58px;
+  left: 13px;
+  object-fit: cover;
+  position: absolute;
+  top: 75px;
+  width: 82px;
+}
+
+.learning .header {
+  background-color: transparent;
+  height: 259px;
+  left: 148px;
+  position: absolute;
+  top: 187px;
+  width: 1601px;
+}
+
+.learning .div-wrapper {
+  height: 259px;
+  width: 1605px;
+}
+
+.learning .overlap-3 {
+  background: linear-gradient(180deg, rgb(201.88, 255, 226.31) 0%, rgb(158.18, 185.23, 254.79) 100%);
+  border-radius: 57px;
+  height: 259px;
+  position: relative;
+  width: 1601px;
+}
+
+.learning .h-1 {
+  color: #0066ff;
+  font-family: Montserrat;
+  font-size: 48px;
+  font-weight: 900;
+  left: 60px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 21px;
+}
+
+.learning .p {
+  color: #0066ff;
+  font-family: "Inter", Helvetica;
+  font-size: 20px;
+  font-weight: 400;
+  left: 60px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 105px;
+  white-space: nowrap;
+}
+
+.learning .group-2 {
+  height: 62px;
+  left: 60px;
+  position: absolute;
+  top: 155px;
+  width: 280px;
+}
+
+.learning .overlap-group-4 {
+  border: 5px solid;
+  border-color: #ffffff;
+  border-radius: 81px;
+  height: 62px;
+  position: relative;
+  width: 278px;
+}
+
+.learning .text-wrapper-8 {
+  color: #ffffff;
+  font-family: "Inter", Helvetica;
+  font-size: 26px;
+  font-weight: 900;
+  left: 41px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 11px;
+  white-space: nowrap;
+}
+
+.learning .course-class {
+  height: 275px;
+  left: 148px;
+  position: absolute;
+  top: 518px;
+  width: 1552px;
+}
+
+.learning .title {
+  color: #465fd2;
+  font-family: "Montserrat", Helvetica;
+  font-size: 32px;
+  font-weight: 600;
+  height: 39px;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 0;
+}
+
+.learning .overlap-wrapper-2 {
+  height: 210px;
+  left: 0;
+  position: absolute;
+  top: 63px;
+  width: 345px;
+}
+
+.learning .overlap-4 {
+  height: 210px;
+  position: relative;
+  width: 353px;
+}
+
+.learning .group-3 {
+  height: 210px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 353px;
+}
+
+.learning .overlap-group-5 {
+  background-color: #bbe1e9;
+  border-radius: 19px;
+  height: 210px;
+  position: relative;
+  width: 345px;
+}
+
+.learning .text-wrapper-9 {
+  color: #465fd2;
+  font-family: "Montserrat", Helvetica;
+  font-size: 28px;
+  font-weight: 600;
+  height: 39px;
+  left: 14px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 6px;
+  width: 275px;
+}
+
+.learning .overlap-5 {
+  height: 117px;
+  left: 14px;
+  position: absolute;
+  top: 50px;
+  width: 331px;
+}
+
+.learning .rectangle-3 {
+  height: 117px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 303px;
+}
+
+.learning .text-wrapper-10 {
+  color: #465fd2;
+  font-family: "Montserrat", Helvetica;
+  font-size: 20px;
+  font-weight: 400;
+  height: 28px;
+  left: 10px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 74px;
+  width: 321px;
+}
+
+.learning .text-wrapper-11 {
+  color: #465fd2;
+  font-family: "Montserrat", Helvetica;
+  font-size: 20px;
+  font-weight: 400;
+  height: 28px;
+  left: 10px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 45px;
+  width: 275px;
+}
+
+.learning .text-wrapper-12 {
+  color: #465fd2;
+  font-family: "Montserrat", Helvetica;
+  font-size: 20px;
+  font-weight: 400;
+  height: 28px;
+  left: 10px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 16px;
+  width: 275px;
+}
+
+.learning .group-4 {
+  height: 28px;
+  left: 189px;
+  position: absolute;
+  top: 172px;
+  width: 123px;
+}
+
+.learning .text-wrapper-13 {
+  color: #465fd2;
+  font-family: "Montserrat", Helvetica;
+  font-size: 20px;
+  font-weight: 700;
+  height: 28px;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 0;
+  width: 100px;
+}
+
+.learning .vector-4 {
+  height: 19px;
+  left: 106px;
+  position: absolute;
+  top: 6px;
+  width: 15px;
+}
+
+.learning .falling-apple {
+  height: 98px;
+  left: 186px;
+  position: absolute;
+  top: 67px;
+  width: 134px;
+}
+
+.learning .overlap-wrapper-3 {
+  height: 210px;
+  left: 403px;
+  position: absolute;
+  top: 63px;
+  width: 348px;
+}
+
+.learning .group-5 {
+  height: 28px;
+  left: 196px;
+  position: absolute;
+  top: 172px;
+  width: 123px;
+}
+
+.learning .dcim-afcc {
+  height: 70px;
+  left: 147px;
+  object-fit: cover;
+  position: absolute;
+  top: 85px;
+  width: 201px;
+}
+
+.learning .overlap-wrapper-4 {
+  height: 210px;
+  left: 802px;
+  position: absolute;
+  top: 63px;
+  width: 345px;
+}
+
+.learning .overlap-group-6 {
+  background-color: #f5ddc7;
+  border-radius: 19px;
+  height: 210px;
+  position: relative;
+  width: 345px;
+}
+
+.learning .img-2 {
+  height: 71px;
+  left: 173px;
+  object-fit: cover;
+  position: absolute;
+  top: 76px;
+  width: 135px;
+}
+
+.learning .overlap-wrapper-5 {
+  height: 210px;
+  left: 1205px;
+  position: absolute;
+  top: 65px;
+  width: 345px;
+}
+
+.learning .img-3 {
+  height: 63px;
+  left: 155px;
+  object-fit: cover;
+  position: absolute;
+  top: 80px;
+  width: 152px;
+}
+
+.learning .couse-sugg {
+  height: 275px;
+  left: 148px;
+  position: absolute;
+  top: 846px;
+  width: 1552px;
+}
+
+.learning .overlap-group-7 {
+  background-color: #ffbdbd;
+  border-radius: 19px;
+  height: 210px;
+  position: relative;
+  width: 345px;
+}
+
+.learning .vector-5 {
+  height: 19px;
+  left: -4733px;
+  position: absolute;
+  top: 443px;
+  width: 15px;
+}
+
+.learning .overlap-group-8 {
+  background-color: #bdcfff;
+  border-radius: 19px;
+  height: 210px;
+  position: relative;
+  width: 345px;
+}
+
+.learning .overlap-group-9 {
+  background-color: #a5ffb9;
+  border-radius: 19px;
+  height: 210px;
+  position: relative;
+  width: 345px;
+}
