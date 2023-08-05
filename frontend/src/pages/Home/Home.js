@@ -233,7 +233,7 @@ function Home() {
           <div className="adv-phy">
             <div className="overlap-5">
               <div className="group-3">
-                <div className="overlap-group-5">
+                <div className="overlap-group-20">
                   <div className="text-wrapper-12">{courses.length > 0 ? courses[1].name : "Vật lý trung bình"}</div>
                   <div className="overlap-6">
                     <img className="rectangle-9" alt="Rectangle" src={Rectangle} />

@@ -94,7 +94,7 @@ function Learn() {
           </div>
           <div className="info">
             <div className="stars">
-              <div className="text-wrapper">500</div>
+              <div className="text-wrapper">{student.stars ? student.stars : 200}</div>
               <img className="icon" alt="Icon" src={Icon5} />
               <img className="bell" alt="Bell" src={Bell} />
             </div>
@@ -150,7 +150,10 @@ function Learn() {
               </Link>
             </div>
           </div>
-          <img className="logo" alt="Logo" src={Logo} />
+          {/* <img className="logo" alt="Logo" src={Logo} /> */}
+          <Link className="home" to="/homepage">
+            <img className="logo" alt="Icon" src={Logo} />
+          </Link>
           <header className="header">
             <div className="div-wrapper">
               <div className="overlap-3">
@@ -169,7 +172,7 @@ function Learn() {
             <div className="overlap-wrapper-2">
               <div className="overlap-4">
                 <div className="group-3">
-                <Link className='learn1' to ='/physic-page'>
+                <Link className='learn1' to ='/course-path'>
                   <div className="overlap-group-5">
                     <div className="text-wrapper-9">{courses.length > 0 ? courses[0].name : "Vật lý cơ bản"}</div>
                     <div className="overlap-5">
@@ -191,7 +194,7 @@ function Learn() {
             <div className="overlap-wrapper-3">
               <div className="overlap-4">
                 <div className="group-3">
-                  <div className="overlap-group-5">
+                  <div className="overlap-group-20">
                     <div className="text-wrapper-9">{courses.length > 0 ? courses[1].name : "Vật lý trung bình"}</div>
                     <div className="overlap-5">
                       <img className="rectangle-3" alt="Rectangle" src={Rectangle}/>
@@ -231,7 +234,7 @@ function Learn() {
             <div className="overlap-wrapper-5">
               <div className="overlap-4">
                 <div className="group-3">
-                  <div className="overlap-group-6">
+                  <div className="overlap-group-19">
                     <div className="text-wrapper-9">{courses.length > 0 ? courses[3].name : "Toán học cơ bản"}</div>
                     <div className="overlap-5">
                       <img className="rectangle-3" alt="Rectangle" src={Rectangle}/>
@@ -255,7 +258,7 @@ function Learn() {
               <div className="overlap-4">
                 <div className="group-3">
                   <div className="overlap-group-7">
-                    <div className="text-wrapper-9">{recommend.length > 0 ? recommend[0].name : "Hóa học cơ bản1"}</div>
+                    <div className="text-wrapper-9">{recommend.length > 0 ? recommend[0].name : "Hóa học cơ bản"}</div>
                     <div className="overlap-5">
                       <img className="rectangle-3" alt="Rectangle" src={Rectangle} />
                       <div className="text-wrapper-10">1 giờ</div>
@@ -274,8 +277,8 @@ function Learn() {
             <div className="overlap-wrapper-3">
               <div className="overlap-4">
                 <div className="group-3">
-                  <div className="overlap-group-8">
-                    <div className="text-wrapper-9">{recommend.length > 0 ? recommend[1].name : "Hóa học trung bình1"}</div>
+                  <div className="overlap-group-18">
+                    <div className="text-wrapper-9">{recommend.length > 0 ? recommend[1].name : "Hóa học trung bình"}</div>
                     <div className="overlap-5">
                       <img className="rectangle-3" alt="Rectangle" src={Rectangle} />
                       <div className="text-wrapper-10">1 giờ</div>
@@ -295,7 +298,7 @@ function Learn() {
               <div className="overlap-4">
                 <div className="group-3">
                   <div className="overlap-group-9">
-                    <div className="text-wrapper-9">{recommend.length > 0 ? recommend[2].name : "Sinh học trung bình1"}</div>
+                    <div className="text-wrapper-9">{recommend.length > 0 ? recommend[2].name : "Sinh học trung bình"}</div>
                     <div className="overlap-5">
                       <img className="rectangle-3" alt="Rectangle" src={Rectangle} />
                       <div className="text-wrapper-10">1 giờ</div>
@@ -315,7 +318,7 @@ function Learn() {
               <div className="overlap-4">
                 <div className="group-3">
                   <div className="overlap-group-8">
-                    <div className="text-wrapper-9">{recommend.length > 0 ? recommend[3].name : "Toán học trung bình1"}</div>
+                    <div className="text-wrapper-9">{recommend.length > 0 ? recommend[3].name : "Toán học trung bình"}</div>
                     <div className="overlap-5">
                       <img className="rectangle-3" alt="Rectangle" src={Rectangle} />
                       <div className="text-wrapper-10">1 giờ</div>

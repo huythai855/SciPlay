@@ -229,7 +229,7 @@
   line-height: normal;
   position: absolute;
   text-align: center;
-  top: 61px;
+  top: 54.5px;
   white-space: nowrap;
   width: 20px;
 }
@@ -317,11 +317,12 @@
 }
 
 .learning .rectangle-2 {
-  height: 97px;
-  left: 0;
+  height: 100px;
+  left: 12px;
   position: absolute;
-  top: 0;
+  top: 13px;
   width: 112px;
+  /* display: none; */
 }
 
 .learning .xep-hang {
@@ -448,7 +449,7 @@
 
 .learning .logo {
   height: 58px;
-  left: 13px;
+  left: 7px;
   object-fit: cover;
   position: absolute;
   top: 75px;
@@ -584,6 +585,14 @@
   width: 345px;
 }
 
+.learning .overlap-group-20 {
+  background-color: #cab5eb;
+  border-radius: 19px;
+  height: 210px;
+  position: relative;
+  width: 345px;
+}
+
 .learning .text-wrapper-9 {
   color: #465fd2;
   font-family: "Montserrat", Helvetica;
@@ -690,7 +699,7 @@
   height: 98px;
   left: 186px;
   position: absolute;
-  top: 67px;
+  top: 60px;
   width: 134px;
 }
 
@@ -730,6 +739,14 @@
 
 .learning .overlap-group-6 {
   background-color: #f5ddc7;
+  border-radius: 19px;
+  height: 210px;
+  position: relative;
+  width: 345px;
+}
+
+.learning .overlap-group-19 {
+  background-color: #c1f3c1;
   border-radius: 19px;
   height: 210px;
   position: relative;
@@ -795,8 +812,16 @@
   width: 15px;
 }
 
-.learning .overlap-group-8 {
+.learning .overlap-group-18 {
   background-color: #bdcfff;
+  border-radius: 19px;
+  height: 210px;
+  position: relative;
+  width: 345px;
+}
+
+.learning .overlap-group-8 {
+  background-color: #ddcae2;
   border-radius: 19px;
   height: 210px;
   position: relative;
