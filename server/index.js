@@ -3,11 +3,13 @@ const bodyParser = require('body-parser');
 const { BigQuery } = require('@google-cloud/bigquery');
 const { Storage } = require('@google-cloud/storage');
 const cors = require('cors');
+
 const { 
     getStudent, getCourse, getLesson, getStudentCourses, getStudentLessons, 
     getFinishedCourses, getRanking, getLatestThreads, getThread, getThreadComment, 
     getInsideCourse, getTopicLesson } = require('./helper');
 const { getRecommendation } = require('./rec_from_some')
+
 
 const app = express();
 const port = 3000;
@@ -21,6 +23,39 @@ app.use(cors());
 //     console.log(stu);
 // }
 // Test();
+
+app.get('/api/login', async (req, res) => {
+    console.log("Login API triggered");
+    console.log(req.query);
+    const email = req.query.email;
+    const password = req.query.password;
+    const user = await getUser(email, password);
+    
+    console.log(email);
+    console.log(password);
+    console.log(user);
+
+
+    try {
+        const email = req.query.email;
+        const password = req.query.password;
+        const user = await getUser(email, password);
+        
+        // console.log(email);
+        // console.log(password);
+        console.log("User: ", user);
+
+        if (user === undefined) {
+            res.json({ "error": true, "student_id" : undefined});
+        }
+        else {
+            const student = await getStudent(user.user_id);
+            res.json({"error": false, "student_id": student.student_id});
+        }
+    } catch (err) {
+        res.status(500).json({ message: 'Cannot fetch data from /api/login' });
+    }
+});
 
 app.get('/api/homepage', async (req, res) => {
     try {

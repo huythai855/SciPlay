@@ -2,13 +2,14 @@ const { getDataFromBigQuery } = require('./big_query/query.js');
 const { insertDataToBigQuery } = require('./big_query/insert.js');
 const { updateDataInBigQuery } = require('./big_query/update.js');
 const { bigqueryClient } = require('./big_query_client.js');
+const { get } = require('mongoose');
 
 // Student informations
 async function getStudent(user_id) {
     const [rows] = await getDataFromBigQuery(bigqueryClient, {
         datasetId: 'sciplay_dataset',
         tableId: 'student_information',
-        column: ['fullname', 'current_stars', 'current_level', 'date_of_birth'],
+        column: ['fullname', 'current_stars', 'current_level', 'date_of_birth', 'student_id'],
         conditions: [`student_id = ${user_id}`],
         limit: 1,
     });
@@ -23,8 +24,22 @@ async function getStudent(user_id) {
         age: (new Date().getFullYear()-parseInt(year)).toString(),
         stars: rows.current_stars,
         level: rows.current_level,
+        student_id: rows.student_id,
     }
     return student;
+}
+
+// USER
+async function getUser(email, password) {
+    const [rows] = await getDataFromBigQuery(bigqueryClient, {
+        datasetId: 'sciplay_dataset',
+        tableId: 'user_information',
+        column: ['user_id'],
+        conditions: [`email = "${email}"`, `password = "${password}"`],
+        limit: 1,
+    });
+
+    return rows;
 }
 
 ///COURSE
@@ -227,5 +242,6 @@ module.exports = {
     getLatestThreads,
     getThread,
     getThreadComment,
-    getTopicLesson
+    getTopicLesson,
+    getUser
 }
