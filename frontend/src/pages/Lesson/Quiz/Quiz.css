@@ -80,7 +80,8 @@
         font-weight: bolder;
         font-family: Montserrat, ui-sans-serif;
         top: 10px;
-        left: 80px;
+        padding-left: 80px;
+        width: 730px;
     }
 }
 
@@ -96,7 +97,8 @@
         font-weight: bolder;
         font-family: Montserrat, ui-sans-serif;
         top: 10px;
-        left: 80px;
+        padding-left: 80px;
+        width: 730px;
     }
 }
 
@@ -111,7 +113,8 @@
         font-weight: bolder;
         font-family: Montserrat, ui-sans-serif;
         top: 10px;
-        left: 80px;
+        padding-left: 80px;
+        width: 730px;
     }
 }
 
@@ -121,15 +124,15 @@
     position: absolute;
     top: 191px;
     width: 730px;
-
+    background-size: 100px;
     .text{
         font-size: 40px;
         font-weight: bolder;
         font-family: Montserrat, ui-sans-serif;
-        top: 10px;
-        left: 80px;
+        top: 10px;       /*10*/
+        padding-left: 80px;
+        width: 730px;
     }
-
 }
 
 .wrong{

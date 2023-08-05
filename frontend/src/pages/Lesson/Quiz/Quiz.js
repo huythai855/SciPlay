@@ -11,7 +11,7 @@ import axios from 'axios';
 import { Link, useParams } from 'react-router-dom';
 
 function Quiz () {
-
+    let ansStatus = ['none','none', 'none' ,'none']; //none || wrong || correct
     const handleClick = event => {
         if(event.target.id === "A"){
             console.log("OptionA");
@@ -27,7 +27,6 @@ function Quiz () {
         }
     };
 
-    let ansStatus = ['none','none', 'none' ,'none']; //none || wrong || correct
 
     // const [data, setData] = useState({});
     // const {lessonId} = useParams();
@@ -72,27 +71,27 @@ function Quiz () {
                     <img className="logo" alt="Logo" src={logo} />
                     <div className="quiz-sys">
                         <div className="overlap-group">
-                            <div className="quiz">
-                                <div className="OptionA" onClick={handleClick}>
+                            <div className="quiz" onClick={handleClick}>
+                                <div className="OptionA" >
                                     <div className={ansStatus[0] === 'none' ? 'none' : (ansStatus[0] === 'correct' ? 'correct' : 'wrong')} >
-                                        <p id="A" className="text">Đây là đáp án A</p>
+                                        <p id="A" className="text"> Đây là đáp án A</p>
                                         <img id ="A" className="option-a" alt="Option a" src={opA} />
                                     </div>
                                 </div>
 
-                                <div className="OptionB" onClick={handleClick}>
+                                <div className="OptionB">
                                     <div className={ansStatus[1] === 'none' ? 'none' : (ansStatus[1] === 'correct' ? 'correct' : 'wrong')}>
                                         <img id="B" className="option-b" alt="Option b" src={opB} />
                                         <p id="B" className="text">Đây là đáp án B</p>
                                     </div>
                                 </div>
-                                <div className="OptionC" onClick={handleClick}>
+                                <div className="OptionC" >
                                     <div className={ansStatus[2] === 'none' ? 'none' : (ansStatus[2] === 'correct' ? 'correct' : 'wrong')}>
                                         <img id="C" className="option-c" alt="Option c" src={opC} />
                                         <p id="C" className="text">Đây là đáp án C</p>
                                     </div>
                                 </div>
-                                <div className="OptionD" onClick={handleClick}>
+                                <div className="OptionD">
                                     <div className={ansStatus[3] === 'none' ? 'none' : (ansStatus[3] === 'correct' ? 'correct' : 'wrong')}>
                                         <img id="D" className="option-d" alt="Option d" src={opD} />
                                         <p id="D" className="text">Đây là đáp án D</p>
