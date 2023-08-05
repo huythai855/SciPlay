@@ -18,8 +18,8 @@ function AppRouter() {
           <Route path="/learning" element={<Learn/>} />
           <Route path="/lesson/:id" element={<Lesson />} />
 
-          <Route path="/physic-page" element={<Coursepath/>} />
-
+          <Route path="/course-path" element={<Coursepath/>} />
+          <Route path="/" element={<Login/>} />
 
           {/* 404 page if you guy wanna edit :> */}
           {/*<Route path='*' element={<Home/>} />   */}

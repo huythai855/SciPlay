@@ -2,7 +2,7 @@ const { getDataFromBigQuery } = require('./big_query/query.js');
 const { insertDataToBigQuery } = require('./big_query/insert.js');
 const { updateDataInBigQuery } = require('./big_query/update.js');
 const { bigqueryClient } = require('./big_query_client.js');
-const { get } = require('mongoose');
+// const { get } = require('mongoose');
 
 // Student informations
 async function getStudent(user_id) {
@@ -15,12 +15,15 @@ async function getStudent(user_id) {
     });
     // console.log(rows);
 
-    const name = rows.fullname.split(/\s+/);
+    let name = rows.fullname.split(/\s+/);
+    console.log(name);
+    const nameArray = name.slice(-2).join(' ');
+    name = nameArray
     const year = rows.date_of_birth.value.split('-');
 
     const student = {
         fullname: rows.fullname,
-        name: name[name.length-1],
+        name: name,
         age: (new Date().getFullYear()-parseInt(year)).toString(),
         stars: rows.current_stars,
         level: rows.current_level,
@@ -61,7 +64,7 @@ async function getStudentCourses(user_id) {
         tableId: 'course_attendance',
         column: ['course_id'],
         conditions: [`student_id=${user_id}`],
-        limit: 3,
+        limit: 4,
     });
     // console.log(rows);
 
