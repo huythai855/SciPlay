@@ -2,7 +2,7 @@ const { getDataFromBigQuery } = require('./big_query/query.js');
 const { insertDataToBigQuery } = require('./big_query/insert.js');
 const { updateDataInBigQuery } = require('./big_query/update.js');
 const { bigqueryClient } = require('./big_query_client.js');
-const { get } = require('mongoose');
+// const { get } = require('mongoose');
 
 // Student informations
 async function getStudent(user_id) {
@@ -61,7 +61,7 @@ async function getStudentCourses(user_id) {
         tableId: 'course_attendance',
         column: ['course_id'],
         conditions: [`student_id=${user_id}`],
-        limit: 3,
+        limit: 4,
     });
     // console.log(rows);
 

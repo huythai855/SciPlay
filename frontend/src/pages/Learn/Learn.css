@@ -711,12 +711,13 @@
 }
 
 .learning .dcim-afcc {
-  height: 70px;
-  left: 147px;
+  height: 98px;
+  left: 180px;
   object-fit: cover;
   position: absolute;
-  top: 85px;
-  width: 201px;
+  top: 60px;
+  width: 134px;
+  
 }
 
 .learning .overlap-wrapper-4 {
@@ -736,7 +737,7 @@
 }
 
 .learning .img-2 {
-  height: 71px;
+  height: 80px;
   left: 173px;
   object-fit: cover;
   position: absolute;
@@ -753,12 +754,21 @@
 }
 
 .learning .img-3 {
-  height: 63px;
-  left: 155px;
+  height: 98px;
+  left: 165px;
   object-fit: cover;
   position: absolute;
-  top: 80px;
-  width: 152px;
+  top: 60px;
+  width: 134px;
+}
+
+.learning .img-4 {
+  height: 98px;
+  left: 165px;
+  object-fit: cover;
+  position: absolute;
+  top: 60px;
+  width: 134px;
 }
 
 .learning .couse-sugg {
