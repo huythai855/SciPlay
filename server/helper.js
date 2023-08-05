@@ -15,12 +15,15 @@ async function getStudent(user_id) {
     });
     // console.log(rows);
 
-    const name = rows.fullname.split(/\s+/);
+    let name = rows.fullname.split(/\s+/);
+    console.log(name);
+    const nameArray = name.slice(-2).join(' ');
+    name = nameArray
     const year = rows.date_of_birth.value.split('-');
 
     const student = {
         fullname: rows.fullname,
-        name: name[name.length-1],
+        name: name,
         age: (new Date().getFullYear()-parseInt(year)).toString(),
         stars: rows.current_stars,
         level: rows.current_level,
