@@ -3,13 +3,14 @@ import axios from 'axios';
 import Logo from '../../assets/logoname.png'
 import './Login.css'
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
-import { Form, FormGroup, Label, Input, Button, Col } from 'reactstrap';
+import { Button, Form, FormGroup, Label, Input, Col } from 'reactstrap';
 
 
 function Login({ history }) {
   const [email, setEmail] = useState(''); // Khởi tạo trạng thái cho tên người dùng
   const [password, setPassword] = useState(''); // Khởi tạo trạng thái cho mật khẩu người dùng
   const [data, setData] = useState({"status": "unreceived"}); // Khởi tạo trạng thái cho lỗi
+  const [showLoadingAnimation, setShowLoadingAnimation] = useState(false); // Khởi tạo trạng thái cho animation
   let errorHappened = false;
   const errorHappenedRef = useRef(errorHappened);
   // TODO: add logic change for isVisible
@@ -60,6 +61,8 @@ function Login({ history }) {
   };
 
   const handleSubmit = async (event) => {
+    setShowLoadingAnimation(true);
+
     await event.preventDefault();
 
     axios.get(`http://localhost:3000/api/login?email=${email}&password=${password}`)
@@ -119,6 +122,9 @@ function Login({ history }) {
               * Sai tên đăng nhập hoặc mật khẩu
             </div>
 
+            <div className={`overlay ${showLoadingAnimation ? 'active' : ''}`}></div>
+            <div className={`load ${showLoadingAnimation ? 'visible' : 'hidden'}`}></div>
+
             <FormGroup row>
               <Col sm={{ size: 6, offset: 3 }}>
                 <Button className='buttonClass' color="primary" type="submit">Đăng nhập</Button>
@@ -128,11 +134,8 @@ function Login({ history }) {
           </Form>
         </div>
 
-
-        {/* <Link to='/homepage'>
-          <button>LOGIN</button>
-        </Link> */}
       </section>
+
 
     </div>
   );

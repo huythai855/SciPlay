@@ -4,7 +4,7 @@ const { BigQuery } = require('@google-cloud/bigquery');
 const { Storage } = require('@google-cloud/storage');
 const cors = require('cors');
 const { getStudent, getUser, getCourse, getLesson, getStudentCourses, getStudentLessons, getFinishedCourses, getRanking, getLatestThreads, getThread, getThreadComment, getInsideCourse, getTopicLesson } = require('./helper');
-const { get } = require('mongoose');
+// const { get } = require('mongoose');
 
 const app = express();
 const port = 3000;
