@@ -7,9 +7,9 @@ import { Form, FormGroup, Label, Input, Button, Col } from 'reactstrap';
 
 
 function Login({ history }) {
-  const [username, setUsername] = useState(''); // Khởi tạo trạng thái cho tên người dùng
+  const [email, setEmail] = useState(''); // Khởi tạo trạng thái cho tên người dùng
   const [password, setPassword] = useState(''); // Khởi tạo trạng thái cho mật khẩu người dùng
-  const [data, setData] = useState(false); // Khởi tạo trạng thái cho lỗi
+  const [data, setData] = useState({"status": "unreceived"}); // Khởi tạo trạng thái cho lỗi
   let errorHappened = false;
   const errorHappenedRef = useRef(errorHappened);
   // TODO: add logic change for isVisible
@@ -28,42 +28,65 @@ function Login({ history }) {
     errorHappened = urlSearchParams.get('error');
     errorHappenedRef.current = errorHappened === 'true';
     console.log("errorHappened: ", errorHappened);
-
   }, []);
 
+  useEffect(() => {
+    console.log("Updated data: ", data, typeof data);
+    if(data !== {"status": "unreceived"}) {
+
+      if(data.error === true) {
+        async function waitOneSecond() {
+          await new Promise(resolve => setTimeout(resolve, 1000));
+        }
+        window.location.href = "http://localhost:3001/login?error=true";
+      }
+      else {
+        if(data.error === false) {
+          window.location.href = `http://localhost:3001/homepage?user_id=${data.student_id}`;
+        }
+      }
+        
+    }
+  }, [data]);
 
 
-  const handleUsernameChange = (event) => {
-    setUsername(event.target.value);
+
+  const handleEmailChange = (event) => {
+    setEmail(event.target.value);
   };
 
   const handlePasswordChange = (event) => {
     setPassword(event.target.value);
   };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
+  const handleSubmit = async (event) => {
+    await event.preventDefault();
 
-    axios.get(`http://192.168.1.23:3000/api/ranking?username=${username}&password=${password}`)
-    .then(response => {
+    axios.get(`http://localhost:3000/api/login?email=${email}&password=${password}`)
+    .then((response) => {
         setData(response.data);
-        const {error} = response.data;
-        const {user_id} = response.data;
+        // const {error} = response.data;
+        // const {user_id} = response.data;
+
+        console.log("data: ", data, typeof(data));
+        // console.log("error: ", error);
+        // console.log("user_id: ", user_id);
 
 
-        if(error === true) {
-          window.location.href = "http://localhost:3000/login?error=true";
-        }
-        else {
-          window.location.href = `http://localhost:3000/homepage?user_id=${user_id}`;
-        }
+
+        // if(error === true) {
+        //   // window.location.href = "http://localhost:3001/login?error=true";
+        // }
+        // else {
+        //   // window.location.href = `http://localhost:3000/homepage?user_id=${user_id}`;
+        // }
     })
     .catch(error => {
       console.error('Error fetching data:', error);
     });
 
 
-    console.log('Name:', username);
+    console.log('Email:', email);
     console.log('Password:', password);
   };
 
@@ -80,9 +103,9 @@ function Login({ history }) {
         <div className="loginClass">
           <Form onSubmit={handleSubmit}>
             <FormGroup row>
-              <Label for="usr" style={{ color: '#4860D4', fontWeight: 'bold' }} sm={1}>Username:</Label>
+              <Label for="usr" style={{ color: '#4860D4', fontWeight: 'bold' }} sm={1}>Email:</Label>
               <Col sm={2}>
-                <Input type="text" style={{ color: '#4860D4' }} id="usr" value={username} onChange={handleUsernameChange} />
+                <Input type="text" style={{ color: '#4860D4' }} id="usr" value={email} onChange={handleEmailChange} />
               </Col>
             </FormGroup>
             <FormGroup row>
