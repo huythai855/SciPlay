@@ -78,13 +78,13 @@ function Home() {
             <div className="text-wrapper-2">Cửa hàng</div>
             <img className="icon-2" alt="Icon" src={Icon4} />
           </div>
-          <div className="forum">
+          <div className="overlap-group-3">
             <img className="icon-3" alt="Icon" src={Icon3} />
             <div className="text-wrapper-3">Diễn đàn</div>
           </div>
           <div className="rankings">
             <div className="ranking">
-              <div className="overlap-group-3">
+              <div className="overlap-group-4">
                 <img className="icon-4" alt="Icon" src={Icon2} />
                 <div className="text-wrapper-4">Xếp hạng</div>
               </div>

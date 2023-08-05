@@ -4,6 +4,7 @@ import Home from './pages/Home/Home';
 import Lesson from './pages/Lesson/Lesson';
 import Login from './pages/Login/Login';
 import Learn from './pages/Learn/Learn';
+import Forum from './pages/Forum/Forum';
 import Coursepath from './pages/Course/Coursepath';
 
 function AppRouter() {
@@ -14,6 +15,7 @@ function AppRouter() {
           <Route path="/" exact element={<Home/>} />
           <Route path="/login" element={<Login/>} />
           <Route path="/learning" element={<Learn/>} />
+          <Route path="/forum" element={<Forum/>} />
           {/* <Route path="/homepage" element={<HomePage />} /> */}
           <Route path="/lesson/:id" element={<Lesson />} />
 

@@ -70,7 +70,7 @@ function Learn() {
               <div className="text-wrapper-2">Cửa hàng</div>
               <img className="vector-3" alt="Vector" src={Icon4} />
             </div>
-            <div className="forum">
+            <div className="overlap-group-3">
               <img className="layer" alt="Layer" src={Icon3} />
               <div className="text-wrapper-3">Diễn đàn</div>
             </div>
@@ -78,7 +78,7 @@ function Learn() {
               <div className="rankings">
                 <img className="rectangle-2" alt="Rectangle" src={Rectangle23} />
                 <div className="xep-hang">
-                  <div className="overlap-group-3">
+                  <div className="overlap-group-4">
                     <img className="layer-2" alt="Layer" src={Icon2} />
                     <div className="text-wrapper-4">Xếp hạng</div>
                   </div>
@@ -107,7 +107,7 @@ function Learn() {
                 <h1 className="h-1">KHOÁ HỌC VẬT LÝ CƠ BẢN</h1>
                 <p className="p">XÂY DỰNG NỀN TẢNG CĂN BẢN NHẤT CHO KHOA HỌC CƠ BẢN</p>
                 <div className="group-2">
-                  <div className="overlap-group-4">
+                  <div className="overlap-group-14">
                     <div className="text-wrapper-8">Tìm hiểu thêm</div>
                   </div>
                 </div>
