@@ -7,6 +7,7 @@ import Rankings from "./pages/Rankings/Rankings";
 import Learn from './pages/Learn/Learn';
 import Forum from './pages/Forum/Forum';
 import Coursepath from './pages/Course/Coursepath';
+import Interactive from './pages/Learn/Interactive/Interactive';
 
 import Quiz from "./pages/Lesson/Quiz/Quiz";
 import Flashcard from './pages/Learn/Flashcard/Flashcard';
@@ -34,6 +35,8 @@ function AppRouter() {
           <Route path="/quiz" element={<Quiz/>} />
           <Route path="/physic-page" element={<Coursepath/>} />
           <Route path="/course-path" element={<Coursepath/>} />
+          <Route path="/" element={<Login/>} />
+          <Route path = "/interactive" element={<Interactive/>} />
 
           {/* 404 page if you guy wanna edit :> */}
           {/*<Route path='*' element={<Home/>} />   */}
