@@ -130,30 +130,30 @@ function Learn() {
               <div className="rankings">
                 <img className="rectangle-2" alt="Rectangle" src={Rectangle23} />
                 <div className="xep-hang">
-                  <div className="overlap-group-4">
+                  <Link className="overlap-group-4" to={`/homepage?user_id=${userId}`}>
                     <img className="layer-2" alt="Layer" src={Icon2} />
                     <div className="text-wrapper-4">Xếp hạng</div>
-                  </div>
+                  </Link>
                 </div>
               </div>
               <div className="challenge">
                 <img className="layer-3" alt="Layer" src={Icon1} />
                 <div className="text-wrapper-5">Thử thách</div>
               </div>
-              <Link className="learn" to="/learning">
+              <Link className="learn" to={`/learning?user_id=${userId}`}>
                 <img className="layer-4" alt="Layer" src={Icon} />
                 <div className="text-wrapper-6">Học</div>
               </Link>
             </div>
             <div>
-            <Link className="home" to="/homepage">
+            <Link className="home" to={`/homepage?user_id=${userId}`}>
               <img className="layer-5" alt="Layer" src={Icon0} />
               <div className="text-wrapper-7">Trang chủ</div>
               </Link>
             </div>
           </div>
           {/* <img className="logo" alt="Logo" src={Logo} /> */}
-          <Link className="home" to="/homepage">
+          <Link className="home" to={`/homepage?user_id=${userId}`}>
             <img className="logo" alt="Icon" src={Logo} />
           </Link>
           <header className="header">
@@ -174,7 +174,7 @@ function Learn() {
             <div className="overlap-wrapper-2">
               <div className="overlap-4">
                 <div className="group-3">
-                <Link className='learn1' to ='/course-path'>
+                <Link className='learn1' to ={`/coursepath?user_id=${userId}`}>
                   <div className="overlap-group-5">
                     <div className="text-wrapper-9">{courses.length > 0 ? courses[0].name : "Vật lý cơ bản"}</div>
                     <div className="overlap-5">

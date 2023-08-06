@@ -122,30 +122,30 @@ function Home() {
             <div className="text-wrapper-3">Diễn đàn</div>
             </Link>
           </div>
-          <div className="rankings">
+          <Link className="rankings" to={`/ranking?user_id=${userId}`} >
             <div className="ranking">
               <div className="overlap-group-4">
                 <img className="icon-4" alt="Icon" src={Icon2} />
                 <div className="text-wrapper-4">Xếp hạng</div>
               </div>
             </div>
-          </div>
+          </Link>
           <div className="challenge">
             <img className="icon-5" alt="Icon" src={Icon1} />
             <div className="text-wrapper-5">Thử thách</div>
           </div>
           <div>
-          <Link className="learn" to="/learning">
+          <Link className="learn" to={`/leaning?user_id=${userId}`}>
             <img className="icon-6" alt="Icon" src={Icon} />
             <div className="text-wrapper-6">Học</div>
             </Link>
           </div>
-          <Link className="home" to="/homepage">
+          <Link className="home" to={`/homepage?user_id=${userId}`}>
             <img className="layer" alt="Layer" src={Icon0}/>
             <div className="text-wrapper-7">Trang chủ</div>
           </Link>
         </div>
-        <Link to="/homepage">
+        <Link to={`/homepage?user_id=${userId}`}>
           <img className="logo" alt="Logo" src={Logo} />
         </Link>
         <div className="calendar">

@@ -73,7 +73,9 @@ function Flashcard() {
             <div className="overlap-group-wrapper">
                 <div className="overlap-group">
                     <img className="group" alt="Group" src={Astro} />
-                    <img className="logo" alt="Logo" src={Logo} />
+                    <Link to={`/homepage?user_id=${userId}`}>
+                        <img className="logo" alt="Logo" src={Logo}/>
+                    </Link>
 
                     {totalCard}
 

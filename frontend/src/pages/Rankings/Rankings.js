@@ -135,27 +135,29 @@ function Rankings() {
                             <div className="text-wrapper-3">Diễn đàn</div>
                         </div>
                         <div className="xep-hang-wrapper">
-                            <div className="xep-hang">
+                            <Link className="xep-hang" to={`/ranking?user_id=${userId}`}>
                                 <div className="overlap-group-3">
                                     <img className="layer-2" alt="Layer" src={layer1_3} />
                                     <div className="text-wrapper-4">Xếp hạng</div>
                                 </div>
-                            </div>
+                            </Link>
                         </div>
                         <div className="challenge">
                             <img className="layer-3" alt="Layer" src={layer1_2} />
                             <div className="text-wrapper-5">Thử thách</div>
                         </div>
-                        <div className="learn">
+                        <Link className="learn" to={`/learning?user_id=${userId}`}>
                             <img className="layer-4" alt="Layer" src={layer1_1} />
                             <div className="text-wrapper-6">Học</div>
-                        </div>
-                        <div className="home">
+                        </Link>
+                        <Link className="home" to={`/homepage?user_id=${userId}`} >
                             <img className="layer-5" alt="Layer" src={layer1} />
                             <div className="text-wrapper-7">Trang chủ</div>
-                        </div>
+                        </Link>
                     </div>
+                    <Link to={`/homepage?user_id=${userId}`}>
                     <img className="logo" alt="Logo" src={logo} />
+                    </Link>
                 </div>
             </div>
         </div>
