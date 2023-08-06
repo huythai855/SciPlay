@@ -44,14 +44,15 @@ function Home() {
   const [student, setStudent] = useState({});
   const [courses, setCourses] = useState([]);
   const [lessons, setLessons] = useState([]);
+  const urlSearchParams = new URLSearchParams(window.location.search);
+  const userId = urlSearchParams.get('user_id');
 
   const onChange = date => {
     setDate(date);
   };
 
   useEffect(() =>  {
-    const urlSearchParams = new URLSearchParams(window.location.search);
-    const userId = urlSearchParams.get('user_id');
+    
     // console.log(userId);
 
      axios.get(`http://10.10.143.92:3000/api/course?user_id=${userId}`)
@@ -116,32 +117,36 @@ function Home() {
             <div className="text-wrapper-2">Cửa hàng</div>
             <img className="icon-2" alt="Icon" src={Icon4} />
           </div>
-          <div className="forum">
+          <div >
+          <Link className="overlap-group-3" to="/forum">
             <img className="icon-3" alt="Icon" src={Icon3} />
             <div className="text-wrapper-3">Diễn đàn</div>
+            </Link>
           </div>
-          <div className="rankings">
+          <Link className="rankings" to={`/ranking?user_id=${userId}`} >
             <div className="ranking">
-              <div className="overlap-group-3">
+              <div className="overlap-group-4">
                 <img className="icon-4" alt="Icon" src={Icon2} />
                 <div className="text-wrapper-4">Xếp hạng</div>
               </div>
             </div>
-          </div>
+          </Link>
           <div className="challenge">
             <img className="icon-5" alt="Icon" src={Icon1} />
             <div className="text-wrapper-5">Thử thách</div>
           </div>
-          <div className="learn">
+          <div>
+          <Link className="learn" to={`/leaning?user_id=${userId}`}>
             <img className="icon-6" alt="Icon" src={Icon} />
             <div className="text-wrapper-6">Học</div>
+            </Link>
           </div>
-          <Link className="home" to="/homepage">
+          <Link className="home" to={`/homepage?user_id=${userId}`}>
             <img className="layer" alt="Layer" src={Icon0}/>
             <div className="text-wrapper-7">Trang chủ</div>
           </Link>
         </div>
-        <Link to="/homepage">
+        <Link to={`/homepage?user_id=${userId}`}>
           <img className="logo" alt="Logo" src={Logo} />
         </Link>
         <div className="calendar">
@@ -163,15 +168,15 @@ function Home() {
                 11&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;12
               </p>
               <p className="element-2">
-                &nbsp;&nbsp;
+                &nbsp;
                 13&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;14&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;15&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;16&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                17&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 18&nbsp;&nbsp;&nbsp;&nbsp; 19
+                17&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 18&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 19
               </p>
               <p className="element-3">
                 &nbsp;&nbsp;
                 20&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;21&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;22&nbsp;&nbsp;&nbsp;&nbsp;
                 23&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                24&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;25&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;26
+                24&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;25&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;26
               </p>
               <p className="element-4">
                 &nbsp;&nbsp;
@@ -211,7 +216,8 @@ function Home() {
         </div>
         <div className="learning-class">
           <div className="text-wrapper-8">Các lớp đang học</div>
-          <div className="basic-phy">
+          <div>
+            <Link className='basic-phy' to="/coursepath">
             <div className="overlap-5">
               <div className="group-3">
                 <div className="overlap-group-5">
@@ -229,6 +235,7 @@ function Home() {
               </div>
               <img className="falling-apple" alt="Falling apple" src={courses.length > 0 ? gif_index[courses[0].course_id - 1] : Default} />
             </div>
+            </Link>
           </div>
           <div className="adv-phy">
             <div className="overlap-5">

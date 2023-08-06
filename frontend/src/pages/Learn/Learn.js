@@ -43,15 +43,17 @@ function Learn() {
   const [courses, setCourses] = useState([]);
   const [lessons, setLessons] = useState([]);
   const [recommend, setRecommend] = useState([]);
+  const urlSearchParams = new URLSearchParams(window.location.search);
+    const userId = urlSearchParams.get('user_id');
+    // console.log(userId);
+
 
   const onChange = date => {
     setDate(date);
   };
 
   useEffect(() =>  {
-    const urlSearchParams = new URLSearchParams(window.location.search);
-    const userId = urlSearchParams.get('user_id');
-    // console.log(userId);
+    
 
      axios.get(`http://10.10.143.92:3000/api/course?user_id=${userId}`)
         .then(response => {
@@ -120,38 +122,40 @@ function Learn() {
               <div className="text-wrapper-2">Cửa hàng</div>
               <img className="vector-3" alt="Vector" src={Icon4} />
             </div>
-            <div className="forum">
+            <div>
+            <Link className="overlap-group-3" to="/forum">
               <img className="layer" alt="Layer" src={Icon3} />
               <div className="text-wrapper-3">Diễn đàn</div>
+              </Link>
             </div>
             <div className="overlap-2">
               <div className="rankings">
                 <img className="rectangle-2" alt="Rectangle" src={Rectangle23} />
                 <div className="xep-hang">
-                  <div className="overlap-group-3">
+                  <Link className="overlap-group-4" to={`/homepage?user_id=${userId}`}>
                     <img className="layer-2" alt="Layer" src={Icon2} />
                     <div className="text-wrapper-4">Xếp hạng</div>
-                  </div>
+                  </Link>
                 </div>
               </div>
               <div className="challenge">
                 <img className="layer-3" alt="Layer" src={Icon1} />
                 <div className="text-wrapper-5">Thử thách</div>
               </div>
-              <Link className="learn" to="/learning">
+              <Link className="learn" to={`/learning?user_id=${userId}`}>
                 <img className="layer-4" alt="Layer" src={Icon} />
                 <div className="text-wrapper-6">Học</div>
               </Link>
             </div>
             <div>
-            <Link className="home" to="/homepage">
+            <Link className="home" to={`/homepage?user_id=${userId}`}>
               <img className="layer-5" alt="Layer" src={Icon0} />
               <div className="text-wrapper-7">Trang chủ</div>
               </Link>
             </div>
           </div>
           {/* <img className="logo" alt="Logo" src={Logo} /> */}
-          <Link className="home" to="/homepage">
+          <Link className="home" to={`/homepage?user_id=${userId}`}>
             <img className="logo" alt="Icon" src={Logo} />
           </Link>
           <header className="header">
@@ -160,7 +164,7 @@ function Learn() {
                 <h1 className="h-1">KHOÁ HỌC VẬT LÝ CƠ BẢN</h1>
                 <p className="p">XÂY DỰNG NỀN TẢNG CĂN BẢN NHẤT CHO KHOA HỌC CƠ BẢN</p>
                 <div className="group-2">
-                  <div className="overlap-group-4">
+                  <div className="overlap-group-14">
                     <div className="text-wrapper-8">Tìm hiểu thêm</div>
                   </div>
                 </div>
@@ -172,7 +176,7 @@ function Learn() {
             <div className="overlap-wrapper-2">
               <div className="overlap-4">
                 <div className="group-3">
-                <Link className='learn1' to ='/course-path'>
+                <Link className='learn1' to ={`/coursepath?user_id=${userId}`}>
                   <div className="overlap-group-5">
                     <div className="text-wrapper-9">{courses.length > 0 ? courses[0].name : "Vật lý cơ bản"}</div>
                     <div className="overlap-5">
