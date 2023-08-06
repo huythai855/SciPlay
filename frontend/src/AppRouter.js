@@ -7,7 +7,10 @@ import Rankings from "./pages/Rankings/Rankings";
 import Learn from './pages/Learn/Learn';
 import Forum from './pages/Forum/Forum';
 import Coursepath from './pages/Course/Coursepath';
+
+import Quiz from "./pages/Lesson/Quiz/Quiz";
 import Flashcard from './pages/Learn/Flashcard/Flashcard';
+
 import CourseDetail from './pages/Course/CourseDetail';
 import Quiz from "./pages/Lesson/Quiz/Quiz";
 

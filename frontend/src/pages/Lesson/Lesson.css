@@ -1,0 +1,104 @@
+.flashcard {
+    height: 470px;
+    width: 1040px;
+  }
+  
+  .flashcard .overlap {
+    height: 470px;
+    left: 5px;
+    position: relative;
+    width: 1029px;
+  }
+  
+  .flashcard .front {
+    height: 470px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 1029px;
+  }
+  
+  .flashcard .quest {
+    height: 470px;
+    width: 1031px;
+  }
+  
+  .flashcard .overlap-group {
+    border-radius: 115px;
+    height: 470px;
+    position: relative;
+    width: 1029px;
+  }
+  
+  .flashcard .text-wrapper {
+    color: #ffffff;
+    font-family: "Montserrat", Helvetica;
+    font-size: 64px;
+    font-weight: 600;
+    height: 375px;
+    left: 53px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 30px;
+    width: 883px;
+  }
+  
+  .flashcard .quest-2 {
+    color: #ffffff;
+    font-family: "Montserrat", Helvetica;
+    font-size: 64px;
+    font-weight: 600;
+    height: 375px;
+    left: 53px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 30px;
+    transform: rotateY(180deg);
+    width: 883px;
+  }
+  
+  .flashcard .back {
+    height: 470px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 1029px;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+  }
+  
+  .flashcard .quest-wrapper {
+    border-radius: 115px;
+    height: 470px;
+    position: relative;
+    width: 1029px;
+  }
+  
+  .flashcard .flashcard-unflipped {
+    transform: rotateY(180deg);
+  }
+  
+  .flashcard .property-1-0-flashcard-unflipped {
+    transform: rotateY(180deg);
+  }
+  
+  .flashcard .front.flashcard-unflipped .overlap-group {
+    background-color: #fc6b45;
+  }
+  
+  .flashcard .front.flashcard-flipped .overlap-group {
+    background-color: #40aeec;
+  }
+  
+  .flashcard .back.property-1-0-flashcard-unflipped .quest-wrapper {
+    background-color: #40aeec;
+  }
+  
+  .flashcard .back.property-1-0-flashcard-flipped .quest-wrapper {
+    background-color: #fc6b45;
+  }
+  
