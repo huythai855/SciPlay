@@ -1,3 +1,4 @@
+
 .homepage {
   background-color: #ffffff;
   display: flex;
@@ -481,7 +482,7 @@
   letter-spacing: 2.7px;
   line-height: normal;
   position: absolute;
-  top: -17px;
+  top: 0px;
   width: 272px;
 }
 
@@ -537,7 +538,7 @@
   letter-spacing: 0.9px;
   line-height: normal;
   position: absolute;
-  top: 215px;
+  top: 218px;
   width: 406px;
 }
 
@@ -565,7 +566,7 @@
   letter-spacing: 0.9px;
   line-height: normal;
   position: absolute;
-  top: 288px;
+  top: 315px;
   width: 407px;
 }
 
@@ -802,6 +803,14 @@
   width: 345px;
 }
 
+.homepage .overlap-group-20 {
+  background-color: #cab5eb;
+  border-radius: 19px;
+  height: 210px;
+  position: relative;
+  width: 345px;
+}
+
 .homepage .text-wrapper-12 {
   color: #465fd2;
   font-family: "Montserrat", Helvetica;
@@ -929,12 +938,12 @@
 }
 
 .homepage .dcim-afcc {
-  height: 70px;
-  left: 147px;
+  height: 98px;
+  left: 180px;
   object-fit: cover;
   position: absolute;
-  top: 85px;
-  width: 201px;
+  top: 60px;
+  width: 134px;
 }
 
 .homepage .basic-chem {
