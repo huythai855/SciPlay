@@ -481,7 +481,7 @@
   letter-spacing: 2.7px;
   line-height: normal;
   position: absolute;
-  top: -17px;
+  top: 0px;
   width: 272px;
 }
 
@@ -537,7 +537,7 @@
   letter-spacing: 0.9px;
   line-height: normal;
   position: absolute;
-  top: 215px;
+  top: 218px;
   width: 406px;
 }
 
@@ -565,7 +565,7 @@
   letter-spacing: 0.9px;
   line-height: normal;
   position: absolute;
-  top: 288px;
+  top: 315px;
   width: 407px;
 }
 

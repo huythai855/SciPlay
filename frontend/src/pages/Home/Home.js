@@ -129,15 +129,15 @@ function Home() {
                 11&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;12
               </p>
               <p className="element-2">
-                &nbsp;&nbsp;
+                &nbsp;
                 13&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;14&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;15&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;16&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                17&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 18&nbsp;&nbsp;&nbsp;&nbsp; 19
+                17&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 18&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 19
               </p>
               <p className="element-3">
                 &nbsp;&nbsp;
                 20&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;21&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;22&nbsp;&nbsp;&nbsp;&nbsp;
                 23&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                24&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;25&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;26
+                24&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;25&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;26
               </p>
               <p className="element-4">
                 &nbsp;&nbsp;
