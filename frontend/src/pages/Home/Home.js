@@ -21,17 +21,55 @@ import Logo from "../../assets/logo.png"
 import Line1 from "../../assets/line-1.png"
 import Arrow from "../../assets/layer-1-2.png"
 import Rectangle from "../../assets/rectangle-6.png"
-import Lac1 from "../../assets/lac1.gif"
-import Lac2 from "../../assets/lac2.gif"
-import Lac3 from "../../assets/lac3.gif"
+import Gif1 from "../../assets/course_header_image/1.gif"
+import Gif2 from "../../assets/course_header_image/2.gif"
+import Gif3 from "../../assets/course_header_image/3.gif"
+import Gif4 from "../../assets/course_header_image/4.gif"
+import Gif5 from "../../assets/course_header_image/5.gif"
+import Gif6 from "../../assets/course_header_image/6.gif"
+import Gif7 from "../../assets/course_header_image/7.gif"
+import Gif8 from "../../assets/course_header_image/8.gif"
+import Gif9 from "../../assets/course_header_image/9.gif"
+import Gif10 from "../../assets/course_header_image/10.gif"
+import Gif11 from "../../assets/course_header_image/11.gif"
+import Gif12 from "../../assets/course_header_image/12.gif"
+import Default from "../../assets/course_header_image/1.gif"
+
+let gif_index = [Gif1, Gif2, Gif3, Gif4, Gif5, Gif6, Gif7, Gif8, Gif9, Gif10, Gif11, Gif12];
 
 
-function Home() {  
+function Home() { 
   const [date, setDate] = useState(new Date());
+  const [data, setData] = useState({});
+  const [student, setStudent] = useState({});
+  const [courses, setCourses] = useState([]);
+  const [lessons, setLessons] = useState([]);
 
   const onChange = date => {
     setDate(date);
   };
+
+  useEffect(() =>  {
+    const urlSearchParams = new URLSearchParams(window.location.search);
+    const userId = urlSearchParams.get('user_id');
+    // console.log(userId);
+
+     axios.get(`http://10.10.143.92:3000/api/course?user_id=${userId}`)
+        .then(response => {
+            setData(response.data);
+            // console.log(data);
+            setStudent(response.data.student);
+            setCourses(response.data.courses);
+            // setLessons(data.lessons);
+            console.log(student);
+            console.log(courses);
+
+            
+        })
+        .catch(error => {
+            console.error('Error fetching data:', error);
+        });
+  }, [data, student, courses]);
 
   return (
     <div className="homepage">
@@ -51,7 +89,7 @@ function Home() {
         </div>
         <div className="info">
           <div className="stars">
-            <div className="text-wrapper">500</div>
+            <div className="text-wrapper">{student.stars ? student.stars : 200}</div>
             <img className="icon" alt="Icon" src={Icon5} />
             <img className="bell" alt="Bell" src={Bell} />
           </div>
@@ -59,7 +97,7 @@ function Home() {
             <div className="user-text">
               Xin chào,
               <br />
-              Huy Thái
+              {student.name ? student.name : "Hồng Quân"}
             </div>
             <div className="overlap-group-wrapper">
               <div className="overlap-group-2">
@@ -182,7 +220,7 @@ function Home() {
             <div className="overlap-5">
               <div className="group-3">
                 <div className="overlap-group-5">
-                  <div className="text-wrapper-12">Vật lý cơ bản</div>
+                  <div className="text-wrapper-12">{courses.length > 0 ? courses[0].name : "Vật lý cơ bản"}</div>
                   <div className="overlap-6">
                     <img className="rectangle-9" alt="Rectangle" src={Rectangle} />
                     <div className="text-wrapper-13">1 giờ</div>
@@ -194,15 +232,15 @@ function Home() {
                   </div>
                 </div>
               </div>
-              <img className="falling-apple" alt="Falling apple" src={Lac1} />
+              <img className="falling-apple" alt="Falling apple" src={courses.length > 0 ? gif_index[courses[0].course_id - 1] : Default} />
             </div>
             </Link>
           </div>
           <div className="adv-phy">
             <div className="overlap-5">
               <div className="group-3">
-                <div className="overlap-group-5">
-                  <div className="text-wrapper-12">Vật lý nâng cao</div>
+                <div className="overlap-group-20">
+                  <div className="text-wrapper-12">{courses.length > 0 ? courses[1].name : "Vật lý trung bình"}</div>
                   <div className="overlap-6">
                     <img className="rectangle-9" alt="Rectangle" src={Rectangle} />
                     <div className="text-wrapper-13">1 giờ</div>
@@ -214,14 +252,14 @@ function Home() {
               <div className="group-5">
                 <div className="text-wrapper-16">&nbsp;Tham gia &nbsp;&nbsp;▶</div>
               </div>
-              <img className="dcim-afcc" alt="Dcim afcc" src={Lac2} />
+              <img className="dcim-afcc" alt="Dcim afcc" src= {courses.length > 0 ? gif_index[courses[1].course_id - 1] : Default} />
             </div>
           </div>
           <div className="basic-chem">
             <div className="overlap-5">
               <div className="group-3">
                 <div className="overlap-group-6">
-                  <div className="text-wrapper-12">Hóa học cơ bản</div>
+                  <div className="text-wrapper-12">{courses.length > 0 ? courses[2].name : "Sinh học cơ bản"}</div>
                   <div className="overlap-6">
                     <img className="rectangle-9" alt="Rectangle" src={Rectangle} />
                     <div className="text-wrapper-13">1 giờ</div>
@@ -233,17 +271,18 @@ function Home() {
               <div className="group-5">
                 <div className="text-wrapper-16">&nbsp;Tham gia &nbsp;&nbsp;▶</div>
               </div>
-              <img className="img-2" alt="Img" src={Lac3} />
+              <img className="img-2" alt="Img" src={courses.length > 0 ? gif_index[courses[2].course_id - 1] : Default} />
             </div>
           </div>
         </div>
         <div className="welcome">
           <div className="overlap-7">
             <img className="logo-2" alt="Logo" src={Logo} />
-            <p className="text-wrapper-17">Chào Thái, hôm nay bạn muốn học gì nhỉ?</p>
+            <p className="text-wrapper-17">Chào {student.name ? student.name : "Hồng Quân"}, hôm nay bạn muốn học gì nhỉ?</p>
           </div>
         </div>
       </div>
+
     </div>
   </div>
   );

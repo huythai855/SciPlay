@@ -14,7 +14,7 @@ import Icon5 from "../../assets/icon5.png"
 import Icon6 from "../../assets/icon6.png"
 function Coursepath() {
   return (
-    <div className="physic-page">
+    <div className="course-path">
     <div className="overlap-wrapper">
       <div className="overlap">
         <img className="background" alt="Background" src={Background} />

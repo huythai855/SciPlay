@@ -1,3 +1,4 @@
+
 .homepage {
   background-color: #ffffff;
   display: flex;
@@ -802,6 +803,14 @@
   width: 345px;
 }
 
+.homepage .overlap-group-20 {
+  background-color: #cab5eb;
+  border-radius: 19px;
+  height: 210px;
+  position: relative;
+  width: 345px;
+}
+
 .homepage .text-wrapper-12 {
   color: #465fd2;
   font-family: "Montserrat", Helvetica;
@@ -929,12 +938,12 @@
 }
 
 .homepage .dcim-afcc {
-  height: 70px;
-  left: 147px;
+  height: 98px;
+  left: 180px;
   object-fit: cover;
   position: absolute;
-  top: 85px;
-  width: 201px;
+  top: 60px;
+  width: 134px;
 }
 
 .homepage .basic-chem {
