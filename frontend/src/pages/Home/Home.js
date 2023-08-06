@@ -78,13 +78,15 @@ function Home() {
             <div className="text-wrapper-2">Cửa hàng</div>
             <img className="icon-2" alt="Icon" src={Icon4} />
           </div>
-          <div className="forum">
+          <div >
+          <Link className="overlap-group-3" to="/forum">
             <img className="icon-3" alt="Icon" src={Icon3} />
             <div className="text-wrapper-3">Diễn đàn</div>
+            </Link>
           </div>
           <div className="rankings">
             <div className="ranking">
-              <div className="overlap-group-3">
+              <div className="overlap-group-4">
                 <img className="icon-4" alt="Icon" src={Icon2} />
                 <div className="text-wrapper-4">Xếp hạng</div>
               </div>
@@ -94,9 +96,11 @@ function Home() {
             <img className="icon-5" alt="Icon" src={Icon1} />
             <div className="text-wrapper-5">Thử thách</div>
           </div>
-          <div className="learn">
+          <div>
+          <Link className="learn" to="/learning">
             <img className="icon-6" alt="Icon" src={Icon} />
             <div className="text-wrapper-6">Học</div>
+            </Link>
           </div>
           <Link className="home" to="/homepage">
             <img className="layer" alt="Layer" src={Icon0}/>
@@ -173,7 +177,8 @@ function Home() {
         </div>
         <div className="learning-class">
           <div className="text-wrapper-8">Các lớp đang học</div>
-          <div className="basic-phy">
+          <div>
+            <Link className='basic-phy' to="/coursepath">
             <div className="overlap-5">
               <div className="group-3">
                 <div className="overlap-group-5">
@@ -191,6 +196,7 @@ function Home() {
               </div>
               <img className="falling-apple" alt="Falling apple" src={Lac1} />
             </div>
+            </Link>
           </div>
           <div className="adv-phy">
             <div className="overlap-5">
