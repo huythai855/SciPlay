@@ -19,12 +19,62 @@ import Logo from "../../assets/logo.png"
 import Rectangle23 from "../../assets/rectangle-23.png"
 import Rectangle from "../../assets/rectangle-6.png"
 import Arrow from "../../assets/layer-1-2.png"
-import Lac1 from "../../assets/lac1.gif"
-import Lac2 from "../../assets/lac2.gif"
-import Lac3 from "../../assets/lac3.gif"
+import Gif1 from "../../assets/course_header_image/1.gif"
+import Gif2 from "../../assets/course_header_image/2.gif"
+import Gif3 from "../../assets/course_header_image/3.gif"
+import Gif4 from "../../assets/course_header_image/4.gif"
+import Gif5 from "../../assets/course_header_image/5.gif"
+import Gif6 from "../../assets/course_header_image/6.gif"
+import Gif7 from "../../assets/course_header_image/7.gif"
+import Gif8 from "../../assets/course_header_image/8.gif"
+import Gif9 from "../../assets/course_header_image/9.gif"
+import Gif10 from "../../assets/course_header_image/10.gif"
+import Gif11 from "../../assets/course_header_image/11.gif"
+import Gif12 from "../../assets/course_header_image/12.gif"
+import Default from "../../assets/course_header_image/1.gif"
+
+let gif_index = [Gif1, Gif2, Gif3, Gif4, Gif5, Gif6, Gif7, Gif8, Gif9, Gif10, Gif11, Gif12];
+
 
 function Learn() {
-    
+  const [date, setDate] = useState(new Date());
+  const [data, setData] = useState({});
+  const [student, setStudent] = useState({});
+  const [courses, setCourses] = useState([]);
+  const [lessons, setLessons] = useState([]);
+  const [recommend, setRecommend] = useState([]);
+
+  const onChange = date => {
+    setDate(date);
+  };
+
+  useEffect(() =>  {
+    const urlSearchParams = new URLSearchParams(window.location.search);
+    const userId = urlSearchParams.get('user_id');
+    // console.log(userId);
+
+     axios.get(`http://10.10.143.92:3000/api/course?user_id=${userId}`)
+        .then(response => {
+            setData(response.data);
+            // console.log(data);
+            setStudent(response.data.student);
+            setCourses(response.data.courses);
+            setRecommend(response.data.recommend);
+            // setLessons(data.lessons);
+            console.log(student);
+            console.log(courses);
+            console.log(recommend);
+
+            
+        })
+        .catch(error => {
+            console.error('Error fetching data:', error);
+        });
+  }, [data, student, courses, recommend]);
+
+
+
+
   return (
 <div className="learning">
       <div className="overlap-wrapper">
@@ -44,7 +94,7 @@ function Learn() {
           </div>
           <div className="info">
             <div className="stars">
-              <div className="text-wrapper">500</div>
+              <div className="text-wrapper">{student.stars ? student.stars : 200}</div>
               <img className="icon" alt="Icon" src={Icon5} />
               <img className="bell" alt="Bell" src={Bell} />
             </div>
@@ -52,7 +102,7 @@ function Learn() {
               <div className="user-text">
                 Xin chào,
                 <br />
-                Huy Thái
+                {student.name ? student.name : "Quân"}
               </div>
               <div className="overlap-group-wrapper">
                 <div className="overlap-group-2">
@@ -100,7 +150,10 @@ function Learn() {
               </Link>
             </div>
           </div>
-          <img className="logo" alt="Logo" src={Logo} />
+          {/* <img className="logo" alt="Logo" src={Logo} /> */}
+          <Link className="home" to="/homepage">
+            <img className="logo" alt="Icon" src={Logo} />
+          </Link>
           <header className="header">
             <div className="div-wrapper">
               <div className="overlap-3">
@@ -119,9 +172,9 @@ function Learn() {
             <div className="overlap-wrapper-2">
               <div className="overlap-4">
                 <div className="group-3">
-                <Link className='learn1' to ='/physic-page'>
+                <Link className='learn1' to ='/course-path'>
                   <div className="overlap-group-5">
-                    <div className="text-wrapper-9">Vật lý cơ bản</div>
+                    <div className="text-wrapper-9">{courses.length > 0 ? courses[0].name : "Vật lý cơ bản"}</div>
                     <div className="overlap-5">
                       <img className="rectangle-3" alt="Rectangle" src={Rectangle} />
                       <div className="text-wrapper-10">1 giờ</div>
@@ -135,14 +188,14 @@ function Learn() {
                   </div>
                   </Link>
                 </div>
-                <img className="falling-apple" alt="Falling apple" src={Lac1} />
+                <img className="falling-apple" alt="Falling apple" src={courses.length > 0 ? gif_index[courses[0].course_id - 1] : Default} />
               </div>
             </div>
             <div className="overlap-wrapper-3">
               <div className="overlap-4">
                 <div className="group-3">
-                  <div className="overlap-group-5">
-                    <div className="text-wrapper-9">Vật lý nâng cao</div>
+                  <div className="overlap-group-20">
+                    <div className="text-wrapper-9">{courses.length > 0 ? courses[1].name : "Vật lý trung bình"}</div>
                     <div className="overlap-5">
                       <img className="rectangle-3" alt="Rectangle" src={Rectangle}/>
                       <div className="text-wrapper-10">1 giờ</div>
@@ -155,14 +208,14 @@ function Learn() {
                   <div className="text-wrapper-13">Tham gia</div>
                   <img className="vector-4" alt="Vector" src={Arrow} />
                 </div>
-                <img className="dcim-afcc" alt="Dcim afcc" src={Lac2} />
+                <img className="dcim-afcc" alt="Dcim afcc" src={courses.length > 0 ? gif_index[courses[1].course_id - 1] : Default} />
               </div>
             </div>
             <div className="overlap-wrapper-4">
               <div className="overlap-4">
                 <div className="group-3">
                   <div className="overlap-group-6">
-                    <div className="text-wrapper-9">Hóa học cơ bản</div>
+                    <div className="text-wrapper-9">{courses.length > 0 ? courses[2].name : "Sinh học cơ bản"}</div>
                     <div className="overlap-5">
                       <img className="rectangle-3" alt="Rectangle" src={Rectangle} />
                       <div className="text-wrapper-10">1 giờ</div>
@@ -175,14 +228,14 @@ function Learn() {
                   <div className="text-wrapper-13">Tham gia</div>
                   <img className="vector-4" alt="Vector" src={Arrow} />
                 </div>
-                <img className="img-2" alt="Img" src={Lac3} />
+                <img className="img-2" alt="Img" src={courses.length > 0 ? gif_index[courses[2].course_id - 1] : Default} />
               </div>
             </div>
             <div className="overlap-wrapper-5">
               <div className="overlap-4">
                 <div className="group-3">
-                  <div className="overlap-group-6">
-                    <div className="text-wrapper-9">Hóa học nâng cao</div>
+                  <div className="overlap-group-19">
+                    <div className="text-wrapper-9">{courses.length > 0 ? courses[3].name : "Toán học cơ bản"}</div>
                     <div className="overlap-5">
                       <img className="rectangle-3" alt="Rectangle" src={Rectangle}/>
                       <div className="text-wrapper-10">1 giờ</div>
@@ -195,7 +248,7 @@ function Learn() {
                   <div className="text-wrapper-13">Tham gia</div>
                   <img className="vector-4" alt="Vector" src={Arrow} />
                 </div>
-                <img className="img-3" alt="Img" src={Lac1} />
+                <img className="img-3" alt="Img" src={courses.length > 0 ? gif_index[courses[3].course_id - 1] : Default} />
               </div>
             </div>
           </div>
@@ -205,7 +258,7 @@ function Learn() {
               <div className="overlap-4">
                 <div className="group-3">
                   <div className="overlap-group-7">
-                    <div className="text-wrapper-9">Vật lý cơ bản</div>
+                    <div className="text-wrapper-9">{recommend.length > 0 ? recommend[0].name : "Hóa học cơ bản"}</div>
                     <div className="overlap-5">
                       <img className="rectangle-3" alt="Rectangle" src={Rectangle} />
                       <div className="text-wrapper-10">1 giờ</div>
@@ -218,14 +271,14 @@ function Learn() {
                     </div>
                   </div>
                 </div>
-                <img className="falling-apple" alt="Falling apple" src={Lac1} />
+                <img className="falling-apple" alt="Falling apple" src={recommend.length > 0 ? gif_index[recommend[0].course_id - 1] : Default}/>
               </div>
             </div>
             <div className="overlap-wrapper-3">
               <div className="overlap-4">
                 <div className="group-3">
-                  <div className="overlap-group-8">
-                    <div className="text-wrapper-9">Vật lý nâng cao</div>
+                  <div className="overlap-group-18">
+                    <div className="text-wrapper-9">{recommend.length > 0 ? recommend[1].name : "Hóa học trung bình"}</div>
                     <div className="overlap-5">
                       <img className="rectangle-3" alt="Rectangle" src={Rectangle} />
                       <div className="text-wrapper-10">1 giờ</div>
@@ -238,14 +291,14 @@ function Learn() {
                   <div className="text-wrapper-13">Tham gia</div>
                   <img className="vector-5" alt="Vector" src="/img/vector.png" />
                 </div>
-                <img className="dcim-afcc" alt="Dcim afcc" src={Lac2} />
+                <img className="dcim-afcc" alt="Dcim afcc" src={recommend.length > 0 ? gif_index[recommend[1].course_id - 1] : Default} />
               </div>
             </div>
             <div className="overlap-wrapper-4">
               <div className="overlap-4">
                 <div className="group-3">
                   <div className="overlap-group-9">
-                    <div className="text-wrapper-9">Hóa học cơ bản</div>
+                    <div className="text-wrapper-9">{recommend.length > 0 ? recommend[2].name : "Sinh học trung bình"}</div>
                     <div className="overlap-5">
                       <img className="rectangle-3" alt="Rectangle" src={Rectangle} />
                       <div className="text-wrapper-10">1 giờ</div>
@@ -258,14 +311,14 @@ function Learn() {
                   <div className="text-wrapper-13">Tham gia</div>
                   <img className="vector-5" alt="Vector" src="/img/vector.png" />
                 </div>
-                <img className="img-2" alt="Img" src={Lac1} />
+                <img className="img-2" alt="Img" src={recommend.length > 0 ? gif_index[recommend[2].course_id - 1] : Default} />
               </div>
             </div>
             <div className="overlap-wrapper-5">
               <div className="overlap-4">
                 <div className="group-3">
                   <div className="overlap-group-8">
-                    <div className="text-wrapper-9">Hóa học nâng cao</div>
+                    <div className="text-wrapper-9">{recommend.length > 0 ? recommend[3].name : "Toán học trung bình"}</div>
                     <div className="overlap-5">
                       <img className="rectangle-3" alt="Rectangle" src={Rectangle} />
                       <div className="text-wrapper-10">1 giờ</div>
@@ -278,7 +331,7 @@ function Learn() {
                   <div className="text-wrapper-13">Tham gia</div>
                   <img className="vector-5" alt="Vector" src="/img/vector.png" />
                 </div>
-                <img className="img-3" alt="Img" src={Lac2}/>
+                <img className="img-3" alt="Img" src={recommend.length > 0 ? gif_index[recommend[3].course_id - 1] : Default}/>
               </div>
             </div>
           </div>

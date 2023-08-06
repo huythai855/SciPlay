@@ -1,0 +1,666 @@
+.header-row{
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.rankings {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    zoom: 80%;
+
+}
+
+.rankings .overlap-wrapper {
+    background-color: #ffffff;
+    border: 1px none;
+    height: 1081px;
+    width: 1920px;
+}
+
+.rankings .overlap {
+    background-image: url(../../assets/Rankings/background.png);
+    background-position: 50% 50%;
+    background-size: cover;
+    height: 1078px;
+    position: relative;
+}
+
+.rankings .search-bar {
+    height: 79px;
+    left: 311px;
+    position: absolute;
+    top: 35px;
+    width: 768px;
+}
+
+.rankings .overlap-group {
+    border-radius: 46px;
+    height: 79px;
+    position: relative;
+    width: 766px;
+
+}
+
+.rankings .text {
+    color: #465fd2;
+    font-family: "Balsamiq Sans", Helvetica;
+    font-size: 36px;
+    font-weight: 400;
+    height: 43px;
+    left: 37px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 18px;
+    white-space: nowrap;
+}
+
+.rankings .rectangle {
+    border: 5px solid #465fd2;
+    border-radius: 46px;
+    height: 79px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 766px;
+}
+
+.rankings .group {
+    height: 43px;
+    left: 682px;
+    position: absolute;
+    top: 18px;
+    width: 43px;
+}
+
+.rankings .div {
+    height: 43px;
+    position: relative;
+    width: 45px;
+}
+
+.rankings .ellipse {
+    border: 3px solid #465fd2;
+    border-radius: 17px/16px;
+    height: 33px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 34px;
+}
+
+.rankings .line {
+    height: 16px;
+    left: 26px;
+    position: absolute;
+    top: 27px;
+    width: 19px;
+}
+
+.rankings .info {
+    height: 78px;
+    left: 1406px;
+    position: absolute;
+    top: 35px;
+    width: 481px;
+}
+
+.rankings .stars {
+    height: 62px;
+    left: 0;
+    position: absolute;
+    top: 11px;
+    width: 189px;
+}
+
+.rankings .text-wrapper {
+    color: #465fd2;
+    font-family: "Montserrat", Helvetica;
+    font-size: 32px;
+    font-weight: 600;
+    height: 39px;
+    left: 60px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 14px;
+}
+
+.rankings .icon {
+    height: 45px;
+    left: 8px;
+    position: absolute;
+    top: 7px;
+    width: 47px;
+}
+
+.rankings .bell {
+    height: 49px;
+    left: 145px;
+    object-fit: cover;
+    position: absolute;
+    top: 7px;
+    width: 42px;
+}
+
+.rankings .user {
+    height: 78px;
+    left: 231px;
+    position: absolute;
+    top: 0;
+    width: 252px;
+}
+
+.rankings .user-text {
+    color: #465fd2;
+    font-family: "Montserrat", Helvetica;
+    font-size: 32px;
+    font-weight: 600;
+    height: 78px;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 0;
+}
+
+.rankings .overlap-group-wrapper {
+    height: 74px;
+    left: 176px;
+    overflow: hidden;
+    position: absolute;
+    top: 3px;
+    width: 74px;
+}
+
+.rankings .overlap-group-2 {
+    height: 76px;
+    position: relative;
+    width: 73px;
+}
+
+.rankings .vector {
+    height: 73px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 73px;
+}
+
+.rankings .img {
+    height: 27px;
+    left: 9px;
+    position: absolute;
+    top: 39px;
+    width: 55px;
+}
+
+.rankings .vector-2 {
+    height: 21px;
+    left: 26px;
+    position: absolute;
+    top: 14px;
+    width: 21px;
+}
+
+.rankings .fill {
+    background-color: #465fd2;
+    border-radius: 13px;
+    height: 27px;
+    left: 46px;
+    position: absolute;
+    top: 49px;
+    width: 27px;
+}
+
+.rankings .level {
+    color: #ffffff;
+    font-family: "Montserrat", Helvetica;
+    font-size: 14px;
+    font-weight: 600;
+    height: 9px;
+    left: 50px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 61px;
+    white-space: nowrap;
+    width: 20px;
+}
+
+.rankings .board {
+    height: 730px;
+    left: 200px;
+    position: absolute;
+    top: 227px;
+    width: 1610px;
+}
+
+.rankings .overlap-2 {
+    border-radius: 57px;
+    height: 730px;
+    position: relative;
+}
+
+.rankings .div-line {
+    height: 3px;
+    left: 0;
+    position: absolute;
+    top: 95px;
+    width: 1610px;
+}
+
+.board-rank-header {
+    /* border: 3px solid #052fa8; */
+    /* border-radius: 57px;
+    box-shadow: 0 5px 7px #000000bf; */
+    height: 730px;
+    left: 0;
+    position: absolute;
+    margin-top: 30px;
+    top: 0;
+    width: 1610px;
+}
+
+.rankings .board-rank {
+    border: 3px solid #052fa8;
+    border-radius: 57px;
+    box-shadow: 0 5px 7px #000000bf;
+    height: 730px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 1610px;
+}
+
+.rankings .rank-info {
+    margin-top: 10px;
+    height: 65px;
+    left: 19px;
+    /* position: absolute; */
+    position: relative;
+    top: 108px;
+    width: 1557px;
+}
+
+.rankings .name {
+    color: #032da8;
+    font-family: "Montserrat", Helvetica;
+    font-size: 27px;
+    font-weight: 400;
+    height: 53px;
+    left: 119px;
+    padding-left: 30px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 0;
+    width: 340px;
+}
+
+.rankings .name-header {
+    color: #032da8;
+    font-family: "Montserrat", Helvetica;
+    font-size: 30px;
+    font-weight: 750;
+    height: 53px;
+    left: 160px;
+    padding-left: 30px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 0;
+    width: 340px;
+}
+
+.rankings .level-2 {
+    color: #032da8;
+    font-family: "Montserrat", Helvetica;
+    font-size: 27px;
+    font-weight: 400;
+    height: 53px;
+    left: 842px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 0;
+    width: 69px;
+}
+
+.rankings .level-header {
+    color: #032da8;
+    font-family: "Montserrat", Helvetica;
+    font-size: 30px;
+    font-weight: 750;
+    height: 100px;
+    left: 824px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 0;
+    width: 152px;
+}
+
+.rankings .stars-2 {
+    color: #032da8;
+    font-family: "Montserrat", Helvetica;
+    font-size: 27px;
+    font-weight: 400;
+    height: 53px;
+    left: 1379px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 0;
+    width: 152px;
+}
+
+.rankings .star-header {
+    color: #032da8;
+    font-family: "Montserrat", Helvetica;
+    font-size: 30px;
+    font-weight: 750;
+    height: 100px;
+    left: 1370px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 0;
+    width: 152px;
+}
+
+.rankings .line-2 {
+    height: 1px;
+    left: 0;
+    position: relative;
+    top: 40px;
+    width: 1549px;
+}
+
+.rankings .rank {
+    color: #032da8;
+    font-family: "Baloo Bhaijaan-Regular", Helvetica;
+    font-size: 27px;
+    font-weight: 400;
+    height: 53px;
+    left: 9px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 1px;
+    width: 78px;
+}
+
+.rankings .level-filter {
+    height: 60px;
+    left: 1096px;
+    position: absolute;
+    top: 147px;
+    width: 303px;
+}
+
+.rankings .div-wrapper {
+    background-color: #aff1ff;
+    border-radius: 30px;
+    height: 60px;
+    position: relative;
+    width: 301px;
+}
+
+.rankings .text-2 {
+    color: #052fa8;
+    font-family: "Montserrat", Helvetica;
+    font-size: 40px;
+    font-weight: 600;
+    height: 49px;
+    left: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 5px;
+}
+
+.rankings .star-filter {
+    height: 60px;
+    left: 1437px;
+    position: absolute;
+    top: 147px;
+    width: 303px;
+}
+
+.rankings .text-3 {
+    color: #052fa8;
+    font-family: "Montserrat", Helvetica;
+    font-size: 40px;
+    font-weight: 600;
+    height: 49px;
+    left: 29px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 5px;
+}
+
+.rankings .title {
+    color: #052fa8;
+    font-family: "Montserrat", Helvetica;
+    font-size: 48px;
+    font-weight: 600;
+    height: 59px;
+    left: 230px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 154px;
+}
+
+.rankings .nav-bar {
+    height: 737px;
+    left: 5px;
+    position: absolute;
+    top: 185px;
+    width: 112px;
+}
+
+.rankings .shop {
+    height: 76px;
+    left: 17px;
+    position: absolute;
+    top: 661px;
+    width: 82px;
+}
+
+.rankings .text-wrapper-2 {
+    color: #465fd2;
+    font-family: "Montserrat", Helvetica;
+    font-size: 16px;
+    font-weight: 600;
+    height: 20px;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 56px;
+}
+
+.rankings .vector-3 {
+    height: 53px;
+    left: 12px;
+    position: absolute;
+    top: 0;
+    width: 56px;
+}
+
+.rankings .forum {
+    height: 70px;
+    left: 18px;
+    position: absolute;
+    top: 530px;
+    width: 77px;
+}
+
+.rankings .layer {
+    height: 50px;
+    left: 6px;
+    position: absolute;
+    top: 0;
+    width: 63px;
+}
+
+.rankings .text-wrapper-3 {
+    color: #465fd2;
+    font-family: "Montserrat", Helvetica;
+    font-size: 16px;
+    font-weight: 600;
+    height: 20px;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 50px;
+}
+
+.rankings .xep-hang-wrapper {
+    background-color: #c9e7fa;
+    border-radius: 26px;
+    height: 97px;
+    left: 0;
+    position: absolute;
+    top: 383px;
+    width: 112px;
+}
+
+.rankings .xep-hang {
+    height: 75px;
+    left: 16px;
+    position: relative;
+    top: 13px;
+    width: 81px;
+}
+
+.rankings .overlap-group-3 {
+    height: 75px;
+    position: relative;
+    width: 79px;
+}
+
+.rankings .layer-2 {
+    height: 55px;
+    left: 11px;
+    position: absolute;
+    top: 0;
+    width: 53px;
+}
+
+.rankings .text-wrapper-4 {
+    color: #465fd2;
+    font-family: "Montserrat", Helvetica;
+    font-size: 16px;
+    font-weight: 600;
+    height: 20px;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 55px;
+}
+
+.rankings .challenge {
+    height: 68px;
+    left: 14px;
+    position: absolute;
+    top: 265px;
+    width: 86px;
+}
+
+.rankings .layer-3 {
+    height: 46px;
+    left: 10px;
+    position: absolute;
+    top: 0;
+    width: 57px;
+}
+
+.rankings .text-wrapper-5 {
+    color: #465fd2;
+    font-family: "Montserrat", Helvetica;
+    font-size: 16px;
+    font-weight: 600;
+    height: 20px;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 48px;
+}
+
+.rankings .learn {
+    height: 71px;
+    left: 22px;
+    position: absolute;
+    top: 133px;
+    width: 65px;
+}
+
+.rankings .layer-4 {
+    height: 49px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 63px;
+}
+
+.rankings .text-wrapper-6 {
+    color: #465fd2;
+    font-family: "Montserrat", Helvetica;
+    font-size: 16px;
+    font-weight: 600;
+    height: 20px;
+    left: 15px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 51px;
+}
+
+.rankings .home {
+    height: 71px;
+    left: 12px;
+    position: absolute;
+    top: 0;
+    width: 85px;
+}
+
+.rankings .layer-5 {
+    height: 50px;
+    left: 16px;
+    position: absolute;
+    top: 0;
+    width: 50px;
+}
+
+.rankings .text-wrapper-7 {
+    color: #465fd2;
+    font-family: "Montserrat", Helvetica;
+    font-size: 16px;
+    font-weight: 600;
+    height: 20px;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 51px;
+}
+
+.rankings .logo {
+    height: 58px;
+    left: 13px;
+    object-fit: cover;
+    position: absolute;
+    top: 73px;
+    width: 82px;
+}
