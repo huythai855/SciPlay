@@ -9,6 +9,7 @@ import logo from '../../../assets/logo.png';
 
 import axios from 'axios';
 import { Link, useParams } from 'react-router-dom';
+import line from "../../../assets/Rankings/line.png";
 
 function Quiz () {
     let ansStatus = ['none','none', 'none' ,'none']; //none || wrong || correct
@@ -27,40 +28,46 @@ function Quiz () {
         }
     };
 
+    const [data, setData] = useState({});
+    const [lesson, setLesson] = useState([]);
+    const [quizContent, setQuizContent] = useState([{answers: [{answer:"Isaac Newton",isCorrect:true},{answer:"Yuri Gagarin",isCorrect:false},{answer:"Albert Einstein",isCorrect:false},{answer:"Stephen Hawking",isCorrect:false}],explanation : null,question:"Ai là người đầu tiên phát hiện ra trọng lực ở Trái đất?"}]);
+    const [quizIndex, setQuizIndex] = useState(0);
+    const [numQuiz, setNumQuiz]  = useState(0);
+    let {uid} = useParams();
+    const urlSearchParams = new URLSearchParams(window.location.search);
+    const lessonId = urlSearchParams.get('lesson_id');
+    const userId = urlSearchParams.get('user_id');
+    const [lessonData, setLessonData] = useState({});
 
-    // const [data, setData] = useState({});
-    // const {lessonId} = useParams();
-    // console.log("Lesson id: ", lessonId);
-    // // const [ranking, setRanking] = useState([]);
-    // // const {id} = useParams();
-    // // let {uid} = useParams();
-    // // let rankingNumber = ["1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th"];
-    //
-    //
-    // useEffect(() =>  {
-    //
-    //     const urlSearchParams = new URLSearchParams(window.location.search);
-    //     const lessonId = urlSearchParams.get('lesson_id');
-    //     let content = urlSearchParams.get('content');
-    //     if (content === null){
-    //         content = "current type";
-    //     }
-    //
-    //     console.log("Lesson ID: ", lessonId);
-    //     console.log("Content: ", content);
-    //
-    //     axios.get(`https://node-de-vcl-huythai855.vercel.app/api/lesson?id=${lessonId}`)
-    //         .then(response => {
-    //             // const { student, rank } = response.data;
-    //             setData(response.data);
-    //             // setRanking(rank);
-    //
-    //             // console.log("Ranking: ", ranking);
-    //         })
-    //         .catch(error => {
-    //             console.error('Error fetching data:', error);
-    //         });
-    // }, /*[ranking]*/);
+    useEffect(() => {
+        async function fetchData() {
+            try {
+                const res = await axios.get(`http://localhost:3000/api/lesson?lesson_id=${lessonId}&user_id=${userId}`);
+                // console.log("LessonId: ", lessonId);
+                // console.log("UserId: ", userId);
+
+                // console.log(res.data.lesson.content);
+                setLessonData(res.data);
+                console.log("data: ", quizContent);
+
+                if(res.data.lesson !== undefined) {
+                    // await res.data.lesson.content.content.forEach(card => {
+                    //     FandB.push({front: card.front, back: card.back});
+                    //     // console.log("Card: ", card);
+                    // });
+                    console.log("res data", res.data.lesson)
+                    setQuizContent(res.data.lesson.content.content);
+                    setNumQuiz(quizContent.length);
+                    // console.log(cardContent.length);
+                }
+
+            }
+            catch (err) {
+                console.log(err);
+            }
+        }
+        fetchData();
+    }, []);
 
 
     return (
@@ -73,33 +80,36 @@ function Quiz () {
                         <div className="overlap-group">
                             <div className="quiz" onClick={handleClick}>
                                 <div className="OptionA" >
-                                    <div className={ansStatus[0] === 'none' ? 'none' : (ansStatus[0] === 'correct' ? 'correct' : 'wrong')} >
-                                        <p id="A" className="text"> Đây là đáp án A</p>
+                                    <div>
+                                        <p id="A" className="text">{quizContent[quizIndex].answers[0].answer}</p>
                                         <img id ="A" className="option-a" alt="Option a" src={opA} />
                                     </div>
                                 </div>
 
                                 <div className="OptionB">
-                                    <div className={ansStatus[1] === 'none' ? 'none' : (ansStatus[1] === 'correct' ? 'correct' : 'wrong')}>
+                                    <div>
                                         <img id="B" className="option-b" alt="Option b" src={opB} />
-                                        <p id="B" className="text">Đây là đáp án B</p>
+                                        <p id="B" className="text">{quizContent[quizIndex].answers[1].answer}</p>
                                     </div>
                                 </div>
                                 <div className="OptionC" >
-                                    <div className={ansStatus[2] === 'none' ? 'none' : (ansStatus[2] === 'correct' ? 'correct' : 'wrong')}>
+                                    <div>
                                         <img id="C" className="option-c" alt="Option c" src={opC} />
-                                        <p id="C" className="text">Đây là đáp án C</p>
+                                        <p id="C" className="text">{quizContent[quizIndex].answers[2%quizContent[quizIndex].answers.length].answer}</p>
                                     </div>
                                 </div>
                                 <div className="OptionD">
-                                    <div className={ansStatus[3] === 'none' ? 'none' : (ansStatus[3] === 'correct' ? 'correct' : 'wrong')}>
+                                    <div>
                                         <img id="D" className="option-d" alt="Option d" src={opD} />
-                                        <p id="D" className="text">Đây là đáp án D</p>
+                                        <p id="D" className="text">{quizContent[quizIndex].answers[3%quizContent[quizIndex].answers.length].answer}</p>
                                     </div>
                                 </div>
                                 <div className="question">
-                                    <h1 className="text">Đây là câu hỏi</h1>
+                                    <h1 className="text">{quizContent[quizIndex].question}</h1>
                                 </div>
+                            </div>
+                            <div className="btn-btn-primary">
+                                <button className="btn btn-primary" onClick={() => {setQuizIndex((quizIndex + 1)%numQuiz)}}>Tiếp</button>
                             </div>
                             <div className="char">
 

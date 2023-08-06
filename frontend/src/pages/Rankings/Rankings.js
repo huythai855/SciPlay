@@ -21,18 +21,20 @@ import { Link, useParams } from 'react-router-dom';
 function Rankings() {
     const [data, setData] = useState({});
     const [ranking, setRanking] = useState([]);
-    const {id} = useParams();
     let {uid} = useParams();
     let rankingNumber = ["1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th"];
+    const urlSearchParams = new URLSearchParams(window.location.search);
+    const userId = urlSearchParams.get('user_id');
 
 
     useEffect(() =>  {
-        const urlSearchParams = new URLSearchParams(window.location.search);
-        const userId = urlSearchParams.get('user_id');
         let ord = urlSearchParams.get('ord');
         if (ord === null){
             ord = "current_level";
         }
+        console.log(ord);
+
+        console.log("USER ID: ", userId);
 
          axios.get(`http://localhost:3000/api/ranking?user_id=${userId}&ord=${ord}`)
             .then(response => {
