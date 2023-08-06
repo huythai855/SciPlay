@@ -6,6 +6,7 @@ import Login from './pages/Login/Login';
 import Rankings from "./pages/Rankings/Rankings";
 import Learn from './pages/Learn/Learn';
 import Coursepath from './pages/Course/Coursepath';
+import Interactive from './pages/Learn/Interactive/Interactive';
 
 function AppRouter() {
   return (
@@ -20,7 +21,7 @@ function AppRouter() {
 
           <Route path="/course-path" element={<Coursepath/>} />
           <Route path="/" element={<Login/>} />
-
+          <Route path = "/interactive" element={<Interactive/>} />
           {/* 404 page if you guy wanna edit :> */}
           {/*<Route path='*' element={<Home/>} />   */}
         </Routes>
