@@ -43,15 +43,17 @@ function Learn() {
   const [courses, setCourses] = useState([]);
   const [lessons, setLessons] = useState([]);
   const [recommend, setRecommend] = useState([]);
+  const urlSearchParams = new URLSearchParams(window.location.search);
+    const userId = urlSearchParams.get('user_id');
+    // console.log(userId);
+
 
   const onChange = date => {
     setDate(date);
   };
 
   useEffect(() =>  {
-    const urlSearchParams = new URLSearchParams(window.location.search);
-    const userId = urlSearchParams.get('user_id');
-    // console.log(userId);
+    
 
      axios.get(`http://10.10.143.92:3000/api/course?user_id=${userId}`)
         .then(response => {
