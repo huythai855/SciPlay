@@ -35,9 +35,9 @@ function Login({ history }) {
     if(data !== {"status": "unreceived"}) {
 
       if(data.error === true) {
-        async function waitOneSecond() {
-          await new Promise(resolve => setTimeout(resolve, 1000));
-        }
+        // async function waitOneSecond() {
+        //   await new Promise(resolve => setTimeout(resolve, 1000));
+        // }
         window.location.href = "http://localhost:3001/login?error=true";
       }
       else {
