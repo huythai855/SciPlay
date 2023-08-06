@@ -5,7 +5,9 @@ import Lesson from './pages/Lesson/Lesson';
 import Login from './pages/Login/Login';
 import Rankings from "./pages/Rankings/Rankings";
 import Learn from './pages/Learn/Learn';
+import Forum from './pages/Forum/Forum';
 import Coursepath from './pages/Course/Coursepath';
+import CourseDetail from './pages/Course/CourseDetail';
 import Quiz from "./pages/Lesson/Quiz/Quiz";
 
 function AppRouter() {
@@ -17,6 +19,10 @@ function AppRouter() {
           <Route path="/login" element={<Login/>} />
           <Route path="/rankings" element={<Rankings/>} />
           <Route path="/learning" element={<Learn/>} />
+          <Route path="/forum" element={<Forum/>} />
+          <Route path="/coursepath" element={<Coursepath/>} />
+          <Route path="/coursedetail" element={<CourseDetail/>} />
+          {/* <Route path="/homepage" element={<HomePage />} /> */}
           <Route path="/lesson/:id" element={<Lesson />} />
           <Route path="/quiz" element={<Quiz/>} />
           <Route path="/physic-page" element={<Coursepath/>} />

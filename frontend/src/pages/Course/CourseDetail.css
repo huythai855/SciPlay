@@ -1,61 +1,43 @@
-.course-path {
+.physic-course {
     background-color: #ffffff;
     display: flex;
     flex-direction: row;
     justify-content: center;
     width: 100%;
-    zoom:80%;
   }
   
-  .course-path .overlap-wrapper {
+  .physic-course .overlap-wrapper {
     background-color: #ffffff;
     border: 1px none;
     height: 1081px;
-    overflow: hidden;
-    width: 1920px;
+    width: 2422px;
   }
   
-  .course-path .overlap {
+  .physic-course .overlap {
+    background-image: url(../../assets/x-1.png);
+    background-position: 50% 50%;
+    background-size: cover;
     height: 1081px;
     position: relative;
-    width: 2091px;
   }
   
-  .course-path .background {
-    height: 1080px;
-    left: 0;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    width: 1920px;
-  }
-  
-  .course-path .back-universe {
-    height: 1081px;
-    left: 0;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    width: 1920px;
-  }
-  
-  .course-path .group {
+  .physic-course .group {
     height: 60px;
-    left: 24px;
+    left: 34px;
     position: absolute;
-    top: 46px;
+    top: 90px;
     width: 84px;
   }
   
-  .course-path .navbar {
+  .physic-course .navbar {
     height: 735px;
-    left: 15px;
+    left: 24px;
     position: absolute;
-    top: 166px;
+    top: 210px;
     width: 112px;
   }
   
-  .course-path .learn {
+  .physic-course .learn {
     background-color: #966bd463;
     border-radius: 26px;
     height: 97px;
@@ -65,15 +47,15 @@
     width: 112px;
   }
   
-  .course-path .div {
+  .physic-course .div {
     height: 71px;
     left: 24px;
-    position: absolute;
+    position: relative;
     top: 24px;
     width: 65px;
   }
   
-  .course-path .icon {
+  .physic-course .icon {
     height: 49px;
     left: 0;
     position: absolute;
@@ -81,7 +63,7 @@
     width: 63px;
   }
   
-  .course-path .text-wrapper {
+  .physic-course .text-wrapper {
     color: #0fc0f0;
     font-family: "Montserrat", Helvetica;
     font-size: 16px;
@@ -94,7 +76,7 @@
     top: 51px;
   }
   
-  .course-path .challenge {
+  .physic-course .challenge {
     height: 68px;
     left: 14px;
     position: absolute;
@@ -102,7 +84,7 @@
     width: 86px;
   }
   
-  .course-path .img {
+  .physic-course .img {
     height: 46px;
     left: 10px;
     position: absolute;
@@ -110,7 +92,7 @@
     width: 57px;
   }
   
-  .course-path .text-wrapper-2 {
+  .physic-course .text-wrapper-2 {
     color: #0fc0f0;
     font-family: "Montserrat", Helvetica;
     font-size: 16px;
@@ -123,7 +105,7 @@
     top: 48px;
   }
   
-  .course-path .ranking {
+  .physic-course .ranking {
     height: 75px;
     left: 12px;
     position: absolute;
@@ -131,13 +113,13 @@
     width: 81px;
   }
   
-  .course-path .overlap-group {
+  .physic-course .overlap-group {
     height: 75px;
     position: relative;
     width: 79px;
   }
   
-  .course-path .icon-2 {
+  .physic-course .icon-2 {
     height: 55px;
     left: 11px;
     position: absolute;
@@ -145,7 +127,7 @@
     width: 53px;
   }
   
-  .course-path .text-wrapper-3 {
+  .physic-course .text-wrapper-3 {
     color: #0fc0f0;
     font-family: "Montserrat", Helvetica;
     font-size: 16px;
@@ -158,7 +140,7 @@
     top: 55px;
   }
   
-  .physic-page .overlap-group-4 {
+  .physic-course .overlap-group-4 {
     height: 70px;
     left: 11px;
     position: absolute;
@@ -166,7 +148,7 @@
     width: 77px;
   }
   
-  .course-path .icon-3 {
+  .physic-course .icon-3 {
     height: 50px;
     left: 6px;
     position: absolute;
@@ -174,7 +156,7 @@
     width: 63px;
   }
   
-  .course-path .text-wrapper-4 {
+  .physic-course .text-wrapper-4 {
     color: #0fc0f0;
     font-family: "Montserrat", Helvetica;
     font-size: 16px;
@@ -187,7 +169,7 @@
     top: 50px;
   }
   
-  .course-path .shop {
+  .physic-course .shop {
     height: 76px;
     left: 0;
     position: absolute;
@@ -195,7 +177,7 @@
     width: 82px;
   }
   
-  .course-path .text-wrapper-5 {
+  .physic-course .text-wrapper-5 {
     color: #0fc0f0;
     font-family: "Montserrat", Helvetica;
     font-size: 16px;
@@ -208,7 +190,7 @@
     top: 56px;
   }
   
-  .course-path .icon-4 {
+  .physic-course .icon-4 {
     height: 53px;
     left: 12px;
     position: absolute;
@@ -216,7 +198,7 @@
     width: 56px;
   }
   
-  .course-path .home {
+  .physic-course .home {
     height: 74px;
     left: 7px;
     position: absolute;
@@ -224,7 +206,7 @@
     width: 85px;
   }
   
-  .course-path .text-wrapper-6 {
+  .physic-course .text-wrapper-6 {
     color: #0fc0f0;
     font-family: "Montserrat", Helvetica;
     font-size: 16px;
@@ -237,7 +219,7 @@
     top: 54px;
   }
   
-  .course-path .icon-5 {
+  .physic-course .icon-5 {
     height: 50px;
     left: 18px;
     position: absolute;
@@ -245,97 +227,66 @@
     width: 50px;
   }
   
-  .course-path .gravity {
-    height: 328px;
-    left: 213px;
+  .physic-course .x {
+    height: 170px;
+    left: 168px;
+    object-fit: cover;
     position: absolute;
-    top: 585px;
-    width: 696px;
+    top: 775px;
+    width: 159px;
   }
   
-  .course-path .h-1-wrapper {
-    background-image: url(../../assets/island-03-1.png);
-    background-position: 50% 50%;
-    background-size: cover;
-    height: 328px;
-    position: relative;
-    width: 694px;
-  }
-  
-  .course-path .h-1 {
-    color: #ffffff;
-    font-family: "Potta One", Helvetica;
-    font-size: 64px;
-    font-weight: 400;
-    height: 87px;
-    left: 52px;
-    letter-spacing: 0;
-    line-height: normal;
+  .physic-course .x-level {
+    height: 173px;
+    left: 456px;
+    object-fit: cover;
     position: absolute;
-    top: 70px;
-    width: 438px;
+    top: 663px;
+    width: 160px;
   }
   
-  .course-path .spped {
-    height: 318px;
-    left: 1425px;
+  .physic-course .x-2 {
+    height: 168px;
+    left: 832px;
+    object-fit: cover;
     position: absolute;
-    top: 454px;
-    width: 666px;
+    top: 605px;
+    width: 166px;
   }
   
-  .course-path .div-wrapper {
-    background-image: url(../../assets/group.png);
-    background-size: 100% 100%;
-    height: 318px;
-    position: relative;
-    width: 495px;
-  }
-  
-  .course-path .text-wrapper-7 {
-    color: #ffffff;
-    font-family: "Potta One", Helvetica;
-    font-size: 64px;
-    font-weight: 400;
-    height: 87px;
-    left: 57px;
-    letter-spacing: 0;
-    line-height: normal;
+  .physic-course .x-3 {
+    height: 191px;
+    left: 1088px;
+    object-fit: cover;
     position: absolute;
-    text-align: center;
-    top: 72px;
-    width: 438px;
+    top: 727px;
+    width: 190px;
   }
   
-  .course-path .light {
-    height: 357px;
-    left: 835px;
+  .physic-course .x-4 {
+    height: 206px;
+    left: 1311px;
+    object-fit: cover;
     position: absolute;
-    top: 681px;
-    width: 794px;
+    top: 346px;
+    width: 192px;
   }
   
-  .course-path .overlap-2 {
-    background-image: url(../../assets/island-07-1.png);
-    background-position: 50% 50%;
-    background-size: cover;
-    height: 357px;
-    position: relative;
-    width: 792px;
-  }
-  
-  .course-path .text-wrapper-8 {
-    color: #ffffff;
-    font-family: "Potta One", Helvetica;
-    font-size: 64px;
-    font-weight: 400;
-    height: 87px;
-    left: 65px;
-    letter-spacing: 0;
-    line-height: normal;
+  .physic-course .x-5 {
+    height: 216px;
+    left: 1686px;
+    object-fit: cover;
     position: absolute;
-    text-align: center;
-    top: 60px;
-    width: 438px;
+    top: 579px;
+    width: 201px;
+  }
+  
+  .physic-course .x-6 {
+    height: 220px;
+    left: 2158px;
+    object-fit: cover;
+    position: absolute;
+    top: 469px;
+    width: 204px;
   }
   

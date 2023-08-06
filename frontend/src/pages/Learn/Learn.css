@@ -271,7 +271,7 @@
   width: 56px;
 }
 
-.learning .forum {
+.learning .overlap-group-3 {
   height: 70px;
   left: 20px;
   position: absolute;
@@ -511,7 +511,7 @@
   width: 280px;
 }
 
-.learning .overlap-group-4 {
+.learning .overlap-group-14 {
   border: 5px solid;
   border-color: #ffffff;
   border-radius: 81px;
@@ -522,7 +522,7 @@
 
 .learning .text-wrapper-8 {
   color: #ffffff;
-  font-family: "Inter", Helvetica;
+  font-family: "Montserrat", Helvetica;
   font-size: 26px;
   font-weight: 900;
   left: 41px;
