@@ -16,8 +16,14 @@
 }
 
 .learning .overlap {
-  height: 1121px;
-  position: relative;
+  background-image: url(../../assets/background.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 1080px;
+  width: 1920px;
+  position: absolute;
+  top: -9px;
+  left: 0px;
 }
 
 .learning .background {
