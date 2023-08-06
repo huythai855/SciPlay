@@ -36,9 +36,6 @@ function Login({ history }) {
     if(data !== {"status": "unreceived"}) {
 
       if(data.error === true) {
-        async function waitOneSecond() {
-          await new Promise(resolve => setTimeout(resolve, 1000));
-        }
         window.location.href = "http://localhost:3001/login?error=true";
       }
       else {
@@ -68,21 +65,8 @@ function Login({ history }) {
     axios.get(`http://localhost:3000/api/login?email=${email}&password=${password}`)
     .then((response) => {
         setData(response.data);
-        // const {error} = response.data;
-        // const {user_id} = response.data;
 
         console.log("data: ", data, typeof(data));
-        // console.log("error: ", error);
-        // console.log("user_id: ", user_id);
-
-
-
-        // if(error === true) {
-        //   // window.location.href = "http://localhost:3001/login?error=true";
-        // }
-        // else {
-        //   // window.location.href = `http://localhost:3000/homepage?user_id=${user_id}`;
-        // }
     })
     .catch(error => {
       console.error('Error fetching data:', error);

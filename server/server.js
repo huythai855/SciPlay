@@ -5,7 +5,7 @@ const { Storage } = require('@google-cloud/storage');
 const cors = require('cors');
 
 const app = express();
-const port = 8080; // Chọn cổng mà bạn muốn sử dụng
+const port = 3000; // Chọn cổng mà bạn muốn sử dụng
 
 
 // Credentials to connect to BigQuery.
@@ -13,11 +13,11 @@ const credentials = require('./../api_keys/sciplay-5a03294800fe.json');
 
 // Create a BigQuery client
 const bigqueryClient = new BigQuery({
-    projectId: credentials.project_id,
-    credentials: {
-        client_email: credentials.client_email,
-        private_key: credentials.private_key,
-    },
+  projectId: credentials.project_id,
+  credentials: {
+    client_email: credentials.client_email,
+    private_key: credentials.private_key,
+  },
 });
 
 const keyFilename = './api_keys/sciplay-5a03294800fe.json';
@@ -49,8 +49,8 @@ app.get('/api/data', async (req, res) => {
       action: 'read',
       expires: Date.now() + 15 * 60 * 1000, // URL hết hạn sau 15 phút
     });
-    
-    const rowName = rows.map(item => ({name: item.name, lesson_id : item.lesson_id ,url: url}));
+
+    const rowName = rows.map(item => ({ name: item.name, lesson_id: item.lesson_id, url: url }));
     console.log('rowName: ', rowName);
     res.json(rowName);
   } catch (error) {
@@ -85,21 +85,17 @@ app.get('/api/lesson', async (req, res) => {
   console.log('Lesson_ID: ', lesson_id);
 
   const query = 'SELECT * FROM `sciplay_dataset.lesson` WHERE lesson_id = ' + lesson_id + ';';
-    const options = {
-      query: query,
-      location: 'US', 
-    };
+  const options = {
+    query: query,
+    location: 'US',
+  };
 
   const [rows] = await bigqueryClient.query(options);
   console.log('Rows:', rows);
 
-
+  console.log(lesson_id);
   res.json(rows);
 });
-
-
-
-
 
 // Khởi động server
 app.listen(port, () => {

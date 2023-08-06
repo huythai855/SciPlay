@@ -16,8 +16,14 @@
 }
 
 .learning .overlap {
-  height: 1121px;
-  position: relative;
+  background-image: url(../../assets/background.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 1080px;
+  width: 1920px;
+  position: absolute;
+  top: -9px;
+  left: 0px;
 }
 
 .learning .background {
@@ -229,7 +235,7 @@
   line-height: normal;
   position: absolute;
   text-align: center;
-  top: 61px;
+  top: 54.5px;
   white-space: nowrap;
   width: 20px;
 }
@@ -317,11 +323,12 @@
 }
 
 .learning .rectangle-2 {
-  height: 97px;
-  left: 0;
+  height: 100px;
+  left: 12px;
   position: absolute;
-  top: 0;
+  top: 13px;
   width: 112px;
+  /* display: none; */
 }
 
 .learning .xep-hang {
@@ -448,7 +455,7 @@
 
 .learning .logo {
   height: 58px;
-  left: 13px;
+  left: 7px;
   object-fit: cover;
   position: absolute;
   top: 75px;
@@ -584,6 +591,14 @@
   width: 345px;
 }
 
+.learning .overlap-group-20 {
+  background-color: #cab5eb;
+  border-radius: 19px;
+  height: 210px;
+  position: relative;
+  width: 345px;
+}
+
 .learning .text-wrapper-9 {
   color: #465fd2;
   font-family: "Montserrat", Helvetica;
@@ -690,7 +705,7 @@
   height: 98px;
   left: 186px;
   position: absolute;
-  top: 67px;
+  top: 60px;
   width: 134px;
 }
 
@@ -711,12 +726,13 @@
 }
 
 .learning .dcim-afcc {
-  height: 70px;
-  left: 147px;
+  height: 98px;
+  left: 180px;
   object-fit: cover;
   position: absolute;
-  top: 85px;
-  width: 201px;
+  top: 60px;
+  width: 134px;
+  
 }
 
 .learning .overlap-wrapper-4 {
@@ -735,8 +751,16 @@
   width: 345px;
 }
 
+.learning .overlap-group-19 {
+  background-color: #c1f3c1;
+  border-radius: 19px;
+  height: 210px;
+  position: relative;
+  width: 345px;
+}
+
 .learning .img-2 {
-  height: 71px;
+  height: 80px;
   left: 173px;
   object-fit: cover;
   position: absolute;
@@ -753,12 +777,21 @@
 }
 
 .learning .img-3 {
-  height: 63px;
-  left: 155px;
+  height: 98px;
+  left: 165px;
   object-fit: cover;
   position: absolute;
-  top: 80px;
-  width: 152px;
+  top: 60px;
+  width: 134px;
+}
+
+.learning .img-4 {
+  height: 98px;
+  left: 165px;
+  object-fit: cover;
+  position: absolute;
+  top: 60px;
+  width: 134px;
 }
 
 .learning .couse-sugg {
@@ -785,8 +818,16 @@
   width: 15px;
 }
 
-.learning .overlap-group-8 {
+.learning .overlap-group-18 {
   background-color: #bdcfff;
+  border-radius: 19px;
+  height: 210px;
+  position: relative;
+  width: 345px;
+}
+
+.learning .overlap-group-8 {
+  background-color: #ddcae2;
   border-radius: 19px;
   height: 210px;
   position: relative;
