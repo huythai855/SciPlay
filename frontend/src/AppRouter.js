@@ -6,6 +6,7 @@ import Login from './pages/Login/Login';
 import Rankings from "./pages/Rankings/Rankings";
 import Learn from './pages/Learn/Learn';
 import Coursepath from './pages/Course/Coursepath';
+import Quiz from "./pages/Lesson/Quiz/Quiz";
 
 function AppRouter() {
   return (
@@ -17,7 +18,8 @@ function AppRouter() {
           <Route path="/rankings" element={<Rankings/>} />
           <Route path="/learning" element={<Learn/>} />
           <Route path="/lesson/:id" element={<Lesson />} />
-
+          <Route path="/quiz" element={<Quiz/>} />
+          <Route path="/physic-page" element={<Coursepath/>} />
           <Route path="/course-path" element={<Coursepath/>} />
           <Route path="/" element={<Login/>} />
 
