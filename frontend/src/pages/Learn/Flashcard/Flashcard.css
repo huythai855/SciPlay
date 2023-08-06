@@ -1,0 +1,119 @@
+
+
+body { 
+    font-family: sans-serif;
+    
+ }
+
+ .scene {
+    background-image: "../../../assets/backquiz.png";
+ }
+.scene {
+  display: inline-block;
+  width: 900px;
+  height: 500px;
+/*   border: 1px solid #CCC; */
+  margin: 40px 0;
+  perspective: 600px;
+  align-content: center;
+}
+
+.btn-btn-primary{
+    position: relative;
+    top: 60px;
+    left: 490px;
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transform-origin: center right;   
+  transition: transform 0.8s;
+  left:580px;
+  top:100px;
+    align-content: center;
+
+    display: flex;
+    flex-direction: column; /* Để căn chỉnh theo chiều dọc */
+    align-items: center;
+}
+
+.card.is-flipped {
+  transform: translateX(-100%) rotateY(-180deg);
+}
+
+.card__face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 50px;
+  padding-top: 180px;
+  line-height: fit-content;
+  color: white;
+  text-align: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 40px;
+  backface-visibility: hidden;
+
+  flex-direction: column; /* Để căn chỉnh theo chiều dọc */
+  align-items: center;
+}
+
+.card__face--front {
+  background: rgb(241, 142, 65);
+}
+
+.card__face--back {
+  background: slateblue;
+  transform: rotateY(180deg);
+}
+
+
+
+
+.trang-flashcard {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    zoom:80%;
+  }
+  
+  .trang-flashcard .overlap-group-wrapper {
+    background-color: #ffffff;
+    border: 1px none;
+    height: 1081px;
+    width: 1920px;
+  }
+  
+  .trang-flashcard .overlap-group {
+    background-image: url(../../../assets/backquiz.png);
+    background-position: 50% 50%;
+    background-size: cover;
+
+    /* height: 1081px; */
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  
+  .trang-flashcard .group {
+    height: 324px;
+    left: 264px;
+    position: absolute;
+    top: 685px;
+    width: 254px;
+  }
+  
+  .trang-flashcard .logo {
+    height: 60px;
+    left: 22px;
+    position: absolute;
+    top: 31px;
+    width: 84px;
+  }

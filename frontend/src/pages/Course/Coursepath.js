@@ -13,6 +13,10 @@ import Icon4 from "../../assets/icon4.png"
 import Icon5 from "../../assets/icon5.png"
 import Icon6 from "../../assets/icon6.png"
 function Coursepath() {
+  const urlSearchParams = new URLSearchParams(window.location.search);
+  const user_id = urlSearchParams.get("user_id");
+
+
   return (
     <div className="course-path">
     <div className="overlap-wrapper">
@@ -22,40 +26,44 @@ function Coursepath() {
         <img className="group" alt="Group" src={Owl1}/>
         <div className="navbar">
           <div className="learn">
-            <div className="div">
+            <Link className="div" to={`/learning?user_id=${user_id}`}>
               <img className="icon" alt="Icon" src={Icon2} />
               <div className="text-wrapper">Học</div>
-            </div>
+            </Link>
           </div>
           <div className="challenge">
             <img className="img" alt="Icon" src={Icon3} />
             <div className="text-wrapper-2">Thử thách</div>
           </div>
-          <div className="ranking">
+          <Link className="ranking" to={`/ranking?user_id=${user_id}`}>
             <div className="overlap-group">
               <img className="icon-2" alt="Icon" src={Icon4} />
               <div className="text-wrapper-3">Xếp hạng</div>
             </div>
-          </div>
-          <div className="forum">
+          </Link>
+          <div>
+          <Link className="overlap-group-4" to={`/forum?user_id=${user_id}`}>
             <img className="icon-3" alt="Icon" src={Icon5} />
             <div className="text-wrapper-4">Diễn đàn</div>
+            </Link>
           </div>
           <div className="shop">
             <div className="text-wrapper-5">Cửa hàng</div>
             <img className="icon-4" alt="Icon" src={Icon6} />
           </div>
           <div>
-          <Link className="home" to="/homepage">
+          <Link className="home" to={`/homepage?user_id=${user_id}`}>
             <div className="text-wrapper-6">Trang chủ</div>
             <img className="icon-5" alt="Icon" src={Icon1} />
             </Link>
           </div>
         </div>
-        <div className="gravity">
+        <div >
+        <Link className="gravity" to="/coursedetail">
           <div className="h-1-wrapper">
             <h1 className="h-1">TRỌNG LỰC</h1>
           </div>
+          </Link>
         </div>
         <div className="spped">
           <div className="div-wrapper">

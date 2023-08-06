@@ -16,8 +16,14 @@
 }
 
 .learning .overlap {
-  height: 1121px;
-  position: relative;
+  background-image: url(../../assets/background.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 1080px;
+  width: 1920px;
+  position: absolute;
+  top: -9px;
+  left: 0px;
 }
 
 .learning .background {
@@ -271,7 +277,7 @@
   width: 56px;
 }
 
-.learning .forum {
+.learning .overlap-group-3 {
   height: 70px;
   left: 20px;
   position: absolute;
@@ -511,7 +517,7 @@
   width: 280px;
 }
 
-.learning .overlap-group-4 {
+.learning .overlap-group-14 {
   border: 5px solid;
   border-color: #ffffff;
   border-radius: 81px;
@@ -522,7 +528,7 @@
 
 .learning .text-wrapper-8 {
   color: #ffffff;
-  font-family: "Inter", Helvetica;
+  font-family: "Montserrat", Helvetica;
   font-size: 26px;
   font-weight: 900;
   left: 41px;

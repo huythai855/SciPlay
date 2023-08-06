@@ -1,0 +1,235 @@
+@font-face {
+    font-family: Montserrat;
+    src: url(../../../fonts/Montserrat-Bold.ttf);
+}
+@font-face {
+    font-family: Baloo Bhaijaan;
+    src: url(../../../fonts/BalooBhaijaan2-Bold.ttf);
+}
+.quiz-page {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.quiz-page .overlap-wrapper {
+    background-color: #ffffff;
+    border: 1px none;
+    height: 1081px;
+    overflow: hidden;
+    width: 1920px;
+}
+
+.quiz-page .overlap {
+    height: 1081px;
+    left: -652px;
+    position: relative;
+    width: 3224px;
+}
+
+.quiz-page .back-quiz {
+    height: 1081px;
+    left: 652px;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    width: 1920px;
+}
+
+.quiz-page .logo {
+    height: 60px;
+    left: 678px;
+    position: absolute;
+    top: 42px;
+    width: 84px;
+}
+
+.quiz-page .quiz-sys {
+    height: 920px;
+    left: 0;
+    position: absolute;
+    top: 68px;
+    width: 3224px;
+}
+
+.quiz-page .overlap-group {
+    height: 946px;
+    left: 816px;
+    position: relative;
+    width: 1600px;
+}
+
+.quiz-page .quiz {
+    height: 920px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 1592px;
+}
+
+.quiz-page .OptionD {
+    height: 71px;
+    left: 891px;
+    position: absolute;
+    top: 306px;
+    width: 730px;
+    .text{
+        font-size: 40px;
+        font-weight: bolder;
+        font-family: Montserrat, ui-sans-serif;
+        top: 10px;
+        left: 80px;
+
+    }
+}
+
+
+.quiz-page .OptionC {
+    height: 71px;
+    left: 0;
+    position: absolute;
+    top: 306px;
+    width: 730px;
+    .text{
+        font-size: 40px;
+        font-weight: bolder;
+        font-family: Montserrat, ui-sans-serif;
+        top: 10px;
+        left: 80px;
+    }
+}
+
+.quiz-page .OptionB {
+    height: 71px;
+    left: 891px;
+    position: absolute;
+    top: 195px;
+    width: 730px;
+    .text{
+        font-size: 40px;
+        font-weight: bolder;
+        font-family: Montserrat, ui-sans-serif;
+        top: 10px;
+        left: 80px;
+    }
+}
+
+.quiz-page .OptionA {
+    height: 71px;
+    left: 0;
+    position: absolute;
+    top: 191px;
+    width: 730px;
+
+    .text{
+        font-size: 40px;
+        font-weight: bolder;
+        font-family: Montserrat, ui-sans-serif;
+        top: 10px;
+        left: 80px;
+
+    }
+
+.wrong{
+    background-color: #e80808;
+}
+.none{
+    background-color: -moz-default-background-color;
+}
+.correct{
+    background-color: darkgreen;
+}
+
+.quiz-page .question {
+    height: 121px;
+    left: 322px;
+    position: absolute;
+    top: 14px;
+    width: 1113px;
+}
+
+.quiz-page .text {
+    color: #ffffff;
+    font-family: "Baloo Bhaijaan", Helvetica, serif;
+    font-size: 64px;
+    font-weight: 400;
+    height: 121px;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 0;
+    width: 1111px;
+}
+
+.quiz-page .char {
+    height: 522px;
+    left: 35px;
+    position: absolute;
+    top: 424px;
+    width: 1565px;
+}
+
+.quiz-page .player-health-bar-wrapper {
+    background-image: url(../../../assets/Quiz/phihanhgia.png);
+    background-size: 100% 100%;
+    height: 324px;
+    left: 0;
+    position: absolute;
+    top: 120px;
+    width: 254px;
+}
+
+.quiz-page .enemy-health-bar-wrapper {
+    background-image: url(../../../assets/Quiz/alien.png);
+    background-size: 100% 100%;
+    height: 522px;
+    left: 1049px;
+    position: absolute;
+    top: 0;
+    width: 516px;
+}
+
+.quiz-page .enemy-health-bar {
+    background-color: #c2c2c2;
+    border: 1px solid #000000;
+    border-radius: 9px;
+    height: 19px;
+    left: 155px;
+    position: relative;
+    top: 67px;
+    width: 183px;
+}
+
+.quiz-page .health {
+    background-color: #e80808;
+    border: 1px solid #000000;
+    border-radius: 9px;
+    height: 19px;
+    left: -1px;
+    position: relative;
+    top: -1px;
+}
+
+.quiz-page .player-health-bar {
+    background-color: #c2c2c2;
+    border: 1px solid #000000;
+    border-radius: 9px;
+    height: 19px;
+    left: 47px;
+    position: relative;
+    top: -50px;
+    width: 183px;
+}
+
+.quiz-page .div {
+    background-color: #6ae808;
+    border: 1px solid #000000;
+    border-radius: 9px;
+    height: 19px;
+    left: 0px;
+    position: relative;
+    top: 0px;
+}
