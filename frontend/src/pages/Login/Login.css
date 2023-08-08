@@ -93,6 +93,7 @@
     background-image: url(../../assets/background1.png);
     background-size: cover;
     position: fixed;
+    left: 0;
     background-color: #DBF1FF;
 }
 

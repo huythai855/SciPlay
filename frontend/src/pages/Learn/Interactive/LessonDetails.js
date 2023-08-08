@@ -21,32 +21,31 @@ const LessonDetails = () => {
     useEffect(() => {
         async function fetchLessonData() {
             try {
-                const response = await axios.get(
-                    `http://localhost:3000/api/lesson?user_id=${userId}&lesson_id=${lessonId}`
+
+                const response = await axios.get(`
+                    http://localhost:3000/api/lesson?user_id=${userId}&lesson_id=${lessonId}`
                 );
                 setLessonData(response.data);
                 // setName(response.data.student.name);
-                
+
             } catch (error) {
                 console.error("Error fetching data:", error);
             }
         }
         fetchLessonData();
-        
     }, [userId, lessonId]);
+  
 
     const showNextLine = () => {
         if(lessonData !== null) {
             if (currentLineIndex <= lessonData.lesson.content.content.length - 1) {
                 setCurrentLineIndex(currentLineIndex + 1);
             }
-            
             if(lessonData.lesson.content.content[currentLineIndex].lines !== undefined) {
                 setDisplayedText(lessonData.lesson.content.content[currentLineIndex].lines[0]);
             }
 
         }
-        
     };
 
     const typingSpeed = 30; // Tốc độ đánh chữ (ms)
@@ -56,7 +55,6 @@ const LessonDetails = () => {
             <div className="div">
                 <div className="overlap">
                     <img className="learner" alt="Learner" src={Learner} />
-                    
 
                     <div className="text-box">
                         <div className="overlap-group">
@@ -73,11 +71,8 @@ const LessonDetails = () => {
                             <div className="next-button">
                                 <button type="button" class="btn btn-primary" onClick={showNextLine}>Tiếp theo</button>
                             </div>
-
-                            
                         </div>
                     </div>
-            
 
                     <img className="mentor" alt="Mentor" src={Mentor} />
                 </div>

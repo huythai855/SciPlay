@@ -18,32 +18,17 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 
-// async function Test () {
-//     const stu = await getRanking('current_level', '10');
-//     console.log(stu);
-// }
-// Test();
 
 app.get('/api/login', async (req, res) => {
-    console.log("Login API triggered");
-    console.log(req.query);
     const email = req.query.email;
     const password = req.query.password;
     const user = await getUser(email, password);
-    
-    console.log(email);
-    console.log(password);
-    console.log(user);
-
 
     try {
         const email = req.query.email;
         const password = req.query.password;
         const user = await getUser(email, password);
         
-        // console.log(email);
-        // console.log(password);
-        console.log("User: ", user);
 
         if (user === undefined) {
             res.json({ "error": true, "student_id" : undefined});
@@ -68,7 +53,6 @@ app.get('/api/homepage', async (req, res) => {
             courses,
             lessons
         }
-        // console.log(data);
         res.json(data);
     } catch (err) {
         res.status(500).json({ message: 'Cannot fetch data' });
@@ -90,7 +74,6 @@ app.get('/api/course', async (req, res) => {
                 courses,
                 recommend
             }
-            console.log(data)
             res.json(data);
         } else {
             if (course_path_id === undefined) {
@@ -100,7 +83,6 @@ app.get('/api/course', async (req, res) => {
                     student,
                     topics,
                 };
-                // console.log(data);
                 res.json(data);
             }
             else {
@@ -129,7 +111,6 @@ app.get('/api/lesson', async (req, res) => {
             student,
             lesson,
         }
-        // console.log(data);
         res.json(data);
     } catch (err) {
         res.status(500).json({ message: 'Cannot fetch data' });
@@ -146,7 +127,6 @@ app.get('/api/user', async (req, res) => {
             student,
             fin_courses,
         }
-        // console.log(data);
         res.json(data);
     } catch (err) {
         res.status(500).json({ message: 'Cannot fetch data' });

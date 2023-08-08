@@ -131,12 +131,12 @@ function Rankings() {
                             <div className="text-wrapper-2">Cửa hàng</div>
                             <img className="vector-3" alt="Vector" src={vector} />
                         </div>
-                        <div className="forum">
+                        <div className="overlap-group-4">
                             <img className="layer" alt="Layer" src={layer1_4} />
                             <div className="text-wrapper-3">Diễn đàn</div>
                         </div>
                         <div className="xep-hang-wrapper">
-                            <Link className="xep-hang" to={`/ranking?user_id=${userId}`}>
+                            <Link className="xep-hang" to={`/rankings?user_id=${userId}`}>
                                 <div className="overlap-group-3">
                                     <img className="layer-2" alt="Layer" src={layer1_3} />
                                     <div className="text-wrapper-4">Xếp hạng</div>

@@ -132,7 +132,7 @@ function Learn() {
               <div className="rankings">
                 <img className="rectangle-2" alt="Rectangle" src={Rectangle23} />
                 <div className="xep-hang">
-                  <Link className="overlap-group-4" to={`/homepage?user_id=${userId}`}>
+                  <Link className="overlap-group-44" to={`/rankings?user_id=${userId}`}>
                     <img className="layer-2" alt="Layer" src={Icon2} />
                     <div className="text-wrapper-4">Xếp hạng</div>
                   </Link>
@@ -212,7 +212,7 @@ function Learn() {
                   <div className="text-wrapper-13">Tham gia</div>
                   <img className="vector-4" alt="Vector" src={Arrow} />
                 </div>
-                <img className="dcim-afcc" alt="Dcim afcc" src={courses.length > 0 ? gif_index[courses[1].course_id - 1] : Default} />
+                <img className="dcim-afcc" alt="Dcim afcc" src={courses.length > 0 ? gif_index[courses[1].course_id - 1] : Gif2} />
               </div>
             </div>
             <div className="overlap-wrapper-4">
@@ -232,7 +232,7 @@ function Learn() {
                   <div className="text-wrapper-13">Tham gia</div>
                   <img className="vector-4" alt="Vector" src={Arrow} />
                 </div>
-                <img className="img-2" alt="Img" src={courses.length > 0 ? gif_index[courses[2].course_id - 1] : Default} />
+                <img className="img-2" alt="Img" src={courses.length > 0 ? gif_index[courses[2].course_id - 1] : Gif4} />
               </div>
             </div>
             <div className="overlap-wrapper-5">
@@ -252,7 +252,7 @@ function Learn() {
                   <div className="text-wrapper-13">Tham gia</div>
                   <img className="vector-4" alt="Vector" src={Arrow} />
                 </div>
-                <img className="img-3" alt="Img" src={courses.length > 0 ? gif_index[courses[3].course_id - 1] : Default} />
+                <img className="img-3" alt="Img" src={courses.length > 0 ? gif_index[courses[3].course_id - 1] : Gif10} />
               </div>
             </div>
           </div>
@@ -275,7 +275,7 @@ function Learn() {
                     </div>
                   </div>
                 </div>
-                <img className="falling-apple" alt="Falling apple" src={recommend.length > 0 ? gif_index[recommend[0].course_id - 1] : Default}/>
+                <img className="falling-apple" alt="Falling apple" src={recommend.length > 0 ? gif_index[recommend[0].course_id - 1] : Gif7}/>
               </div>
             </div>
             <div className="overlap-wrapper-3">
@@ -295,7 +295,7 @@ function Learn() {
                   <div className="text-wrapper-13">Tham gia</div>
                   <img className="vector-5" alt="Vector" src="/img/vector.png" />
                 </div>
-                <img className="dcim-afcc" alt="Dcim afcc" src={recommend.length > 0 ? gif_index[recommend[1].course_id - 1] : Default} />
+                <img className="dcim-afcc" alt="Dcim afcc" src={recommend.length > 0 ? gif_index[recommend[1].course_id - 1] : Gif8} />
               </div>
             </div>
             <div className="overlap-wrapper-4">
@@ -315,7 +315,7 @@ function Learn() {
                   <div className="text-wrapper-13">Tham gia</div>
                   <img className="vector-5" alt="Vector" src="/img/vector.png" />
                 </div>
-                <img className="img-2" alt="Img" src={recommend.length > 0 ? gif_index[recommend[2].course_id - 1] : Default} />
+                <img className="img-2" alt="Img" src={recommend.length > 0 ? gif_index[recommend[2].course_id - 1] : Gif5} />
               </div>
             </div>
             <div className="overlap-wrapper-5">
@@ -335,7 +335,7 @@ function Learn() {
                   <div className="text-wrapper-13">Tham gia</div>
                   <img className="vector-5" alt="Vector" src="/img/vector.png" />
                 </div>
-                <img className="img-3" alt="Img" src={recommend.length > 0 ? gif_index[recommend[3].course_id - 1] : Default}/>
+                <img className="img-3" alt="Img" src={recommend.length > 0 ? gif_index[recommend[3].course_id - 1] : Gif11}/>
               </div>
             </div>
           </div>
