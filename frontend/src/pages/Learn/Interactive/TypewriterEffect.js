@@ -26,4 +26,5 @@ const TypewriterEffect = ({ text, speed }) => {
   );
 };
 
+
 export default TypewriterEffect;

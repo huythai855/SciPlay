@@ -5,4 +5,5 @@ const LineItem = ({line}) => {
   return <p>{line}</p>;
 };
 
+
 export default LineItem;
