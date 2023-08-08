@@ -1,0 +1,132 @@
+.interactive-theory {
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .interactive-theory .div {
+    background-image: url(../../../assets/interactive/background.png);
+    background-size: 100% 100%;
+    border: 1px none;
+    height: 1078.88px;
+    position: relative;
+    width: 1922.01px;
+
+  }
+
+  .interactive-theory .overlap {
+    height: 970px;
+    left: 235px;
+    position: absolute;
+    top: 77px;
+    width: 1628px;
+  }
+
+  .interactive-theory .learner {
+    height: 439px;
+    left: 0;
+    position: absolute;
+    top: 531px;
+    width: 344px;
+  }
+
+  .interactive-theory .text-box {
+    height: 535px;
+    left: 6px;
+    position: absolute;
+    top: 0;
+    width: 1328px;
+  }
+
+  .interactive-theory .overlap-group {
+    height: 535px;
+    position: relative;
+    width: 1326px;
+  }
+
+  .interactive-theory .next-button {
+    color: #ffffff;
+    font-family: "Montserrat", Helvetica;
+    font-size: 32px;
+    font-weight: 600;
+    height: 39px;
+    left: 1110px;
+    opacity: 50%;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 358px;
+    width: 122px;
+  }
+
+  .interactive-theory .text {
+    height: 535px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 1326px;
+  }
+
+  .interactive-theory .mentor {
+    height: 473px;
+    left: 1252px;
+    position: absolute;
+    top: 386px;
+    width: 376px;
+  }
+
+  .interactive-theory .logo {
+    height: 59px;
+    left: 25px;
+    position: absolute;
+    top: 46px;
+    width: 83px;
+  }
+
+  /* GLOBAL STYLES */
+body {
+    background: #333;
+    /* padding-top: 5em; */
+    display: flex;
+    justify-content: center;
+  }
+
+  /* DEMO-SPECIFIC STYLES */
+  .typewriter h1 {
+    color: #ffffff;
+    width:absolute - 100px;
+    font-family: "Montserrat", Helvetica;
+    font-weight: 900;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange; /* The typwriter cursor */
+    white-space: normal; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    margin-left: 30px;
+    padding-top: 20px;
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 2s steps(30, end),
+      blink-caret .5s step-end infinite;
+  }
+
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 100% }
+    to { width: 100% }
+  }
+
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: transparent, }
+  }
+
+  .type-wrapper{
+    width: 92%;
+    height: 100%;
+    display: flex;
+
+  }

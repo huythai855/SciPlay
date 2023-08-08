@@ -19,11 +19,19 @@
   background-image: url(../../assets/background.png);
   background-position: 50% 50%;
   background-size: cover;
-  height: 1080px;
+  height: 1680px;
   width: 1920px;
   position: absolute;
   top: -9px;
   left: 0px;
+}
+
+.learning .overlap-group-44 {
+  height: 157px;
+  position: relative;
+  width: 352px;
+  top: 80px;
+  left: 10px;
 }
 
 .learning .background {
@@ -360,6 +368,7 @@
   font-weight: 600;
   height: 20px;
   left: 0;
+  top: 20px;
   letter-spacing: 0;
   line-height: normal;
   position: absolute;
@@ -602,7 +611,7 @@
 .learning .text-wrapper-9 {
   color: #465fd2;
   font-family: "Montserrat", Helvetica;
-  font-size: 28px;
+  font-size: 25px;
   font-weight: 600;
   height: 39px;
   left: 14px;

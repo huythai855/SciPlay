@@ -11,7 +11,7 @@ function Flashcard() {
     const [onClick, setOnClick] = useState(false);
 
     const [cardIndex, setCardIndex] = useState(0);
-    const [totalCard, setTotalCard] = useState(0);
+    const [totalCard, setTotalCard] = useState(6);
 
 
 
@@ -23,8 +23,32 @@ function Flashcard() {
 
 
     const [lessonData, setLessonData] = useState({});
-    const [cardContent, setCardContent] = useState([]);
-    let FandB = [];
+    const [cardContent, setCardContent] = useState([
+        {
+            back:"là lực hút giữa các vật có khối lượng và năng lượng với nhau.",
+            front:"Lực hấp dẫn"
+        },
+        {
+            back:"là lực hút của Trái đất lên vật theo chiều hướng xuống dưới.",
+            front:"Trọng lực"
+        },
+        {
+            back:"là sự rơi của vật khi chỉ chịu tác dụng của trọng lực.",
+            front:"Sự rơi tự do"
+        },
+        {
+            back:"là độ lớn của trọng lực tác dụng lên vật.",
+            front:"Trọng lượng"
+        },
+        {
+            back:"cùng lúc.",
+            front:"Các vật khối lượng khác nhau bắt đầu rơi tự do cùng một lúc sẽ chạm đất…"
+        },
+        {
+            back:"khác nhau / như nhau",
+            front:"Trên các hành tinh khác nhau, trọng lượng của một vật là…, khối lượng của một vật là…"
+        }
+    ]);
 
     const handleClick = () => {
         setOnClick(true);
@@ -35,26 +59,26 @@ function Flashcard() {
     useEffect(() => {
         async function fetchData() {
             try {
-                const res = await axios.get(`http://localhost:3000/api/lesson?lesson_id=${lessonId}&user_id=${userId}`);
-                console.log("LessonId: ", lessonId);
-                console.log("UserId: ", userId);
+                // const res = await axios.get(`http://localhost:3000/api/lesson?lesson_id=${lessonId}&user_id=${userId}`);
+                // console.log("LessonId: ", lessonId);
+                // console.log("UserId: ", userId);
 
-                // console.log(res.data.lesson.content);
-                setLessonData(res.data);
+                // // console.log(res.data.lesson.content);
+                // setLessonData(res.data);
                 
-                if(res.data.lesson !== undefined) {
-                    // await res.data.lesson.content.content.forEach(card => {
-                    //     FandB.push({front: card.front, back: card.back});
-                    //     // console.log("Card: ", card);
-                    // });
-                    // setTotalCard(FandB.length);
-                    // console.log("Card length: ", FandB.length);
-                    // console.log(FandB[0].back);
-                    setCardContent(res.data.lesson.content.content);
-                    setTotalCard(cardContent.length);
-                    console.log("Card content: ", cardContent);
-                    console.log(cardContent.length);
-                }
+                // if(res.data.lesson !== undefined) {
+                //     // await res.data.lesson.content.content.forEach(card => {
+                //     //     FandB.push({front: card.front, back: card.back});
+                //     //     // console.log("Card: ", card);
+                //     // });
+                //     // setTotalCard(FandB.length);
+                //     // console.log("Card length: ", FandB.length);
+                //     // console.log(FandB[0].back);
+                //     setCardContent(res.data.lesson.content.content);
+                //     setTotalCard(cardContent.length);
+                //     console.log("Card content: ", cardContent);
+                //     console.log(cardContent.length);
+                // }
 
             }
             catch (err) {
