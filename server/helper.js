@@ -2,9 +2,8 @@ const { getDataFromBigQuery } = require('./big_query/query.js');
 const { insertDataToBigQuery } = require('./big_query/insert.js');
 const { updateDataInBigQuery } = require('./big_query/update.js');
 const { bigqueryClient } = require('./big_query_client.js');
-// const { get } = require('mongoose');
 
-// Student informations
+
 async function getStudent(user_id) {
     const [rows] = await getDataFromBigQuery(bigqueryClient, {
         datasetId: 'sciplay_dataset',
@@ -13,10 +12,8 @@ async function getStudent(user_id) {
         conditions: [`student_id = ${user_id}`],
         limit: 1,
     });
-    // console.log(rows);
 
     let name = rows.fullname.split(/\s+/);
-    console.log(name);
     const nameArray = name.slice(-2).join(' ');
     name = nameArray
     const year = rows.date_of_birth.value.split('-');
@@ -66,7 +63,6 @@ async function getStudentCourses(user_id) {
         conditions: [`student_id=${user_id}`],
         limit: 4,
     });
-    // console.log(rows);
 
     for (let i = 0; i < rows.length; i++) {
         const { course_id } = rows[i];
@@ -85,7 +81,6 @@ async function getFinishedCourses(user_id) {
         limit: 5,
     });
 
-    // console.log(rows);
     for (let i = 0; i < rows.length; i++) {
         const { course_id } = rows[i];
         rows[i] = await getCourse(course_id);
@@ -138,7 +133,6 @@ async function getStudentLessons(user_id) {
         conditions: [`student_id=${user_id}`],
         limit: 3,
     });
-    // console.log(rows);
 
     // rows = [{lesson_id : '1'}, {lesson_id : '2'}, {lesson_id : '3'}, {lesson_id : '4'}]
     for (let i = 0; i < rows.length; i++) {
@@ -147,7 +141,6 @@ async function getStudentLessons(user_id) {
         rows[i] = lesson;
     }
 
-    // console.log(rows);
     return rows;
 }
 // Lesson inside a topic
@@ -207,7 +200,6 @@ async function getThread(thread_id){
         conditions: [`thread_id = ${thread_id}`],
         limit: 1,
     });
-    console.log(row.date_time.value.toString().slice('T'));
     const [date, time] = row.date_time.value.slice('-');
     row.time = time;
     row.date = date;
