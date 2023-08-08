@@ -1,9 +1,9 @@
 .physic-course {
     background-color: #ffffff;
-    display: flex;
+    display: absolute;
     flex-direction: row;
-    justify-content: center;
-    width: 100%;
+    justify-content: left;
+    width: 90%;
   }
   
   .physic-course .overlap-wrapper {

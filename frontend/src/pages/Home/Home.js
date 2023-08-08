@@ -123,9 +123,9 @@ function Home() {
             <div className="text-wrapper-3">Diễn đàn</div>
             </Link>
           </div>
-          <Link className="rankings" to={`/ranking?user_id=${userId}`} >
+          <Link className="rankings" to={`/rankings?user_id=${userId}`} >
             <div className="ranking">
-              <div className="overlap-group-4">
+              <div className="overlap-group-44">
                 <img className="icon-4" alt="Icon" src={Icon2} />
                 <div className="text-wrapper-4">Xếp hạng</div>
               </div>
@@ -136,7 +136,7 @@ function Home() {
             <div className="text-wrapper-5">Thử thách</div>
           </div>
           <div>
-          <Link className="learn" to={`/leaning?user_id=${userId}`}>
+          <Link className="learn" to={`/learning?user_id=${userId}`}>
             <img className="icon-6" alt="Icon" src={Icon} />
             <div className="text-wrapper-6">Học</div>
             </Link>
@@ -253,7 +253,7 @@ function Home() {
               <div className="group-5">
                 <div className="text-wrapper-16">&nbsp;Tham gia &nbsp;&nbsp;▶</div>
               </div>
-              <img className="dcim-afcc" alt="Dcim afcc" src= {courses.length > 0 ? gif_index[courses[1].course_id - 1] : Default} />
+              <img className="dcim-afcc" alt="Dcim afcc" src= {courses.length > 0 ? gif_index[courses[1].course_id - 1] : Gif2} />
             </div>
           </div>
           <div className="basic-chem">
@@ -272,7 +272,7 @@ function Home() {
               <div className="group-5">
                 <div className="text-wrapper-16">&nbsp;Tham gia &nbsp;&nbsp;▶</div>
               </div>
-              <img className="img-2" alt="Img" src={courses.length > 0 ? gif_index[courses[2].course_id - 1] : Default} />
+              <img className="img-2" alt="Img" src={courses.length > 0 ? gif_index[courses[2].course_id - 1] : Gif4} />
             </div>
           </div>
         </div>

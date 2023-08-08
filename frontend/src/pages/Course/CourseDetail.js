@@ -26,45 +26,32 @@ function CourseDetail() {
     <div className="physic-course">
       <div className="overlap-wrapper">
         <div className="overlap">
+
+          <Link to="/homepage?user_id=1">
           <img className="group" alt="Group" src={Owl1} />
+          </Link>
+
           <div className="navbar">
-            <div className="learn">
-              <div className="div">
-                <img className="icon" alt="Icon" src={Icon2} />
-                <div className="text-wrapper">Học</div>
-              </div>
-            </div>
-            <div className="challenge">
-              <img className="img" alt="Icon" src={Icon3} />
-              <div className="text-wrapper-2">Thử thách</div>
-            </div>
-            <Link className="ranking" to={`/ranking?user_id=${user_id}`}>
-              <div className="overlap-group">
-                <img className="icon-2" alt="Icon" src={Icon4} />
-                <div className="text-wrapper-3">Xếp hạng</div>
-              </div>
-            </Link>
-            <div>
-            <Link className="overlap-group-4" to={`/forum?user_id=${user_id}`}>
-              <img className="icon-3" alt="Icon" src={Icon5} />
-              <div className="text-wrapper-4">Diễn đàn</div>
-              </Link>
-            </div>
-            <div className="shop">
-              <div className="text-wrapper-5">Cửa hàng</div>
-              <img className="icon-4" alt="Icon" src={Icon6} />
-            </div>
-            <div>
-            <Link className="home" to={`/homepage?user_id=${user_id}`}>
-              <div className="text-wrapper-6">Trang chủ</div>
-              <img className="icon-5" alt="Icon" src={Icon1} />
-              </Link>
-            </div>
+   
+      
           </div>
+          <Link to="">
           <img className="x" alt="X" src={Level1} />
+          </Link>
+
+          <Link to="/interactive?user_id=1&lesson_id=1">
           <img className="x-level" alt="X" src={Level2} />
+          </Link>
+
+          <Link to="/flashcard?user_id=1&lesson_id=4">
           <img className="x-2" alt="X" src={Level3} />
-          <img className="x-3" alt="X" src={Level4} />
+          </Link>
+
+          <Link to="/quiz?user_id=1&lesson_id=3">
+              <img className="x-3" alt="X" src={Level4} />
+          </Link>
+
+
           <img className="x-4" alt="X" src={Level5} />
           <img className="x-5" alt="X" src={Level6} />
           <img className="x-6" alt="X" src={Level7} />

@@ -334,6 +334,7 @@
   font-weight: 600;
   height: 20px;
   left: 0;
+  top: 20px;
   letter-spacing: 0;
   line-height: normal;
   position: absolute;
@@ -611,6 +612,15 @@
   height: 157px;
   position: relative;
   width: 352px;
+  top: 20px;
+}
+
+.homepage .overlap-group-44 {
+  height: 157px;
+  position: relative;
+  width: 352px;
+  top: 90px;
+  left: 10px;
 }
 
 .homepage .rectangle-3 {
