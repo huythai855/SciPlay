@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import { backendUrl } from '../../index.js';
 import './CourseDetail.css'
 
 import Owl1 from "../../assets/group-51.png"

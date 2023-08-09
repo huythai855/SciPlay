@@ -36,17 +36,21 @@ function Login({ history }) {
     if(data !== {"status": "unreceived"}) {
 
       if(data.error === true) {
-        window.location.href = "http://localhost:3001/login?error=true";
+        window.location.href = "https://sciplay.vercel.app/login?error=true";
       }
       else {
         if(data.error === false) {
-          window.location.href = `http://localhost:3001/homepage?user_id=${data.student_id}`;
+          window.location.href = `https://sciplay.vercel.app/homepage?user_id=${data.student_id}`;
         }
       }
         
     }
   }, [data]);
 
+  // const dotenv = require('dotenv');
+  // dotenv.config();
+  const backendUrl = process.env.REACT_APP_BACKEND_URL;
+  const url = (backendUrl !== undefined) ? backendUrl : 'https://sci-play-server.vercel.app/';
 
 
   const handleEmailChange = (event) => {
@@ -62,7 +66,7 @@ function Login({ history }) {
 
     await event.preventDefault();
 
-    axios.get(`http://localhost:3000/api/login?email=${email}&password=${password}`)
+    axios.get(url + `api/login?email=${email}&password=${password}`)
     .then((response) => {
         setData(response.data);
 

@@ -44,8 +44,13 @@ function Learn() {
   const [lessons, setLessons] = useState([]);
   const [recommend, setRecommend] = useState([]);
   const urlSearchParams = new URLSearchParams(window.location.search);
-    const userId = urlSearchParams.get('user_id');
+  const userId = urlSearchParams.get('user_id');
     // console.log(userId);
+
+  // const dotenv = require('dotenv');
+  // dotenv.config();
+  const backendUrl = process.env.REACT_APP_BACKEND_URL;
+  const url = (backendUrl !== undefined) ? backendUrl : 'https://sci-play-server.vercel.app/';
 
 
   const onChange = date => {
@@ -53,9 +58,11 @@ function Learn() {
   };
 
   useEffect(() =>  {
+
+    
     
 
-     axios.get(`http://10.10.143.92:3000/api/course?user_id=${userId}`)
+     axios.get(url + `api/course?user_id=${userId}`)
         .then(response => {
             setData(response.data);
             // console.log(data);

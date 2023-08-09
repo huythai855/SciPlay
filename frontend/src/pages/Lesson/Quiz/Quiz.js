@@ -39,10 +39,15 @@ function Quiz () {
     const userId = urlSearchParams.get('user_id');
     const [lessonData, setLessonData] = useState({});
 
+    // const dotenv = require('dotenv');
+    // dotenv.config();
+    const backendUrl = process.env.REACT_APP_BACKEND_URL;
+    const url = (backendUrl !== undefined) ? backendUrl : 'https://sci-play-server.vercel.app/';
+
     useEffect(() => {
         async function fetchData() {
             try {
-                const res = await axios.get(`http://localhost:3000/api/lesson?lesson_id=${lessonId}&user_id=${userId}`);
+                const res = await axios.get(url + `api/lesson?lesson_id=${lessonId}&user_id=${userId}`);
                 // console.log("LessonId: ", lessonId);
                 // console.log("UserId: ", userId);
 

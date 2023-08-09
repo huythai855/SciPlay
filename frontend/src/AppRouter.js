@@ -36,11 +36,10 @@ function AppRouter() {
           <Route path="/quiz" element={<Quiz/>} />
           <Route path="/physic-page" element={<Coursepath/>} />
           <Route path="/course-path" element={<Coursepath/>} />
-          <Route path="/" element={<Login/>} />
           <Route path = "/interactive" element={<Interactive/>} />
 
           {/* 404 page if you guy wanna edit :> */}
-          {/*<Route path='*' element={<Home/>} />   */}
+          {/*<Route path='*' element={<Page404/>} />   */}
         </Routes>
       </div>
     </Router>

@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import backendUrl from '../../index.js';
 // import Calendar from 'react-calendar';
 // import 'react-calendar/dist/Calendar.css';
 import './Home.css'
+
 
 import Line2 from "../../assets/line-2.png"
 import Icon5 from "../../assets/icon-5.png"
@@ -47,6 +49,12 @@ function Home() {
   const urlSearchParams = new URLSearchParams(window.location.search);
   const userId = urlSearchParams.get('user_id');
 
+
+  // const dotenv = require('dotenv');
+  // dotenv.config();
+  const backendUrl = process.env.REACT_APP_BACKEND_URL;
+  const url = (backendUrl !== undefined) ? backendUrl : 'https://sci-play-server.vercel.app/';
+
   const onChange = date => {
     setDate(date);
   };
@@ -55,7 +63,7 @@ function Home() {
     
     // console.log(userId);
 
-     axios.get(`http://10.10.143.92:3000/api/course?user_id=${userId}`)
+     axios.get(url + `api/course?user_id=${userId}`)
         .then(response => {
             setData(response.data);
             // console.log(data);
@@ -64,7 +72,7 @@ function Home() {
             // setLessons(data.lessons);
             console.log(student);
             console.log(courses);
-
+            console.log("Axios.get.then logged");
             
         })
         .catch(error => {

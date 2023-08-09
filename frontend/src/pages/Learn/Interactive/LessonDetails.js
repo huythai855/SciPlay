@@ -18,12 +18,16 @@ const LessonDetails = () => {
     const [currentLineIndex, setCurrentLineIndex] = useState(0);
     const [displayedText, setDisplayedText] = useState("");
 
+    // const dotenv = require('dotenv');
+    // dotenv.config();
+    const backendUrl = process.env.REACT_APP_BACKEND_URL;
+    const url = (backendUrl !== undefined) ? backendUrl : 'https://sci-play-server.vercel.app/';
+
     useEffect(() => {
         async function fetchLessonData() {
             try {
 
-                const response = await axios.get(`
-                    http://localhost:3000/api/lesson?user_id=${userId}&lesson_id=${lessonId}`
+                const response = await axios.get(url + `api/lesson?user_id=${userId}&lesson_id=${lessonId}`
                 );
                 setLessonData(response.data);
                 // setName(response.data.student.name);
